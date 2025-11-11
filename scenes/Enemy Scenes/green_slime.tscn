@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=3 uid="uid://ca3mwltgnqspm"]
+
+[ext_resource type="Script" path="res://scripts/GreenSlime.gd" id="1_p3tbu"]
+[ext_resource type="Texture2D" uid="uid://ddyonvian51fl" path="res://assets/Enemies/Green Slime.png" id="2_l28gi"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_00xmp"]
+radius = 7.22737
+height = 36.2481
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rmjdx"]
+radius = 8.0732
+height = 38.0742
+
+[node name="GreenSlime" type="CharacterBody2D"]
+script = ExtResource("1_p3tbu")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -3.93306)
+scale = Vector2(1.6827, 1.49054)
+texture = ExtResource("2_l28gi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.117985, 7.72797)
+rotation = 1.56948
+shape = SubResource("CapsuleShape2D_00xmp")
+
+[node name="DirectionTimer" type="Timer" parent="."]
+autostart = true
+
+[node name="SlimeHitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SlimeHitbox"]
+position = Vector2(-0.546875, 7.43964)
+rotation = 1.56348
+shape = SubResource("CapsuleShape2D_rmjdx")
+
+[node name="SlimeDealDamage" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SlimeDealDamage"]
+
+[connection signal="timeout" from="DirectionTimer" to="." method="_on_direction_timer_timeout"]
+[connection signal="area_entered" from="SlimeHitbox" to="." method="_on_slime_hitbox_area_entered"]

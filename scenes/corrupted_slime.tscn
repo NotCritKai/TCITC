@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4lvk5scxux8d"]
+
+[ext_resource type="Texture2D" uid="uid://dwbo5srjv25ej" path="res://assets/Enemies/Corrupted Slime.png" id="1_88bfo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rvhab"]
+size = Vector2(26, 15)
+
+[node name="Corrupted Slime" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_88bfo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, 5.5)
+shape = SubResource("RectangleShape2D_rvhab")

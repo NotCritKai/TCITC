@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://0kmhx66owgqi"]
+
+[ext_resource type="PackedScene" uid="uid://t25invibtx27" path="res://scenes/KnightPlayer.tscn" id="1_ourim"]
+[ext_resource type="Texture2D" uid="uid://1v5j3gbu11t6" path="res://Backgrounds/OpenGround_Castleinback.jpeg" id="2_8mqdj"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_s7q1j"]
+distance = -45.0
+
+[node name="Game" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_ourim")]
+position = Vector2(7, 10)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(2, 2)
+position_smoothing_enabled = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(7, 0)
+shape = SubResource("WorldBoundaryShape2D_s7q1j")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.2, 0.2)
+motion_mirroring = Vector2(2600, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(1302, 35)
+scale = Vector2(1.47175, 1.5449)
+texture = ExtResource("2_8mqdj")
