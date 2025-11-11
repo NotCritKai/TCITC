@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://fclsmxnwy61k"]
+
+[ext_resource type="Texture2D" uid="uid://bplpxby0i8y5g" path="res://Backgrounds/InsideVillageHouse.jpg" id="1_p8e7a"]
+
+[node name="Village_House_Interior" type="Node2D"]
+scale = Vector2(0.332065, 0.834152)
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(578.562, 354.053)
+scale = Vector2(1.80762, 1.19577)
+texture = ExtResource("1_p8e7a")
