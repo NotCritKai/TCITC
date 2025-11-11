@@ -238,6 +238,6 @@ root_node = NodePath("../PickupCoins")
 libraries = {
 "": SubResource("AnimationLibrary_nmrvb")
 }
-speed_scale = 6.0
+speed_scale = 3.0
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
