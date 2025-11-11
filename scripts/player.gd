@@ -1,18 +1,14 @@
 extends CharacterBody2D
 
-	
+
 const SPEED = 225.0
 const JUMP_VELOCITY = -250.0
 var coins = 0
 
-const DASH_SPEED = 500.0
-const DASH_TIME = 0.2
-
-var atttack_type: String
-var current_attack = false 
-	
-var is_dashing = false
-var dash_timer = 0.0
+#Health
+@export var maxHealth = 100
+@onready var currentHealth: int = maxHealth
+signal healthChanged
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
