@@ -1,10 +1,11 @@
-[gd_scene load_steps=26 format=3 uid="uid://yraoo1bj3kcx"]
+[gd_scene load_steps=27 format=3 uid="uid://yraoo1bj3kcx"]
 
 [ext_resource type="PackedScene" uid="uid://t25invibtx27" path="res://scenes/KnightPlayer.tscn" id="1_pchtj"]
 [ext_resource type="Script" path="res://scripts/gamemanager.gd" id="1_smjvn"]
 [ext_resource type="Texture2D" uid="uid://b87balc085ves" path="res://Backgrounds/morning_background.png" id="2_nq4oj"]
 [ext_resource type="Texture2D" uid="uid://cwfojucnvsas2" path="res://assets/Sprites/TileMaps/CartoonyBlocks.png" id="3_0p4na"]
 [ext_resource type="Texture2D" uid="uid://b1vhdxh668vwl" path="res://assets/Sprites/TileMaps/BasicFillerBlocks.png" id="3_f87g4"]
+[ext_resource type="Script" path="res://scripts/healthBar.gd" id="3_kvnlo"]
 [ext_resource type="Texture2D" uid="uid://df0k7jwx22p8q" path="res://assets/Sprites/TileMaps/Houses/CartoonyContinued.png" id="5_nqwq8"]
 [ext_resource type="Texture2D" uid="uid://bi3gta8gncg4r" path="res://assets/Sprites/TileMaps/Houses/house1.png" id="6_3acdx"]
 [ext_resource type="Texture2D" uid="uid://b4cp74kvcp4vt" path="res://assets/Sprites/TileMaps/Houses/house2.png" id="7_phbo7"]
@@ -12340,11 +12341,17 @@ position = Vector2(263, -2)
 [node name="CanvasLayer" type="CanvasLayer" parent="GameManager"]
 
 [node name="CoinLabel" type="Label" parent="GameManager/CanvasLayer"]
-offset_left = -18.0
-offset_right = 124.0
-offset_bottom = 83.0
+offset_left = -21.0
+offset_top = 42.0
+offset_right = 121.0
+offset_bottom = 125.0
 theme_override_font_sizes/font_size = 60
 horizontal_alignment = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="GameManager/CanvasLayer"]
+offset_right = 115.0
+offset_bottom = 42.0
+script = ExtResource("3_kvnlo")
 
 [node name="Player" parent="." instance=ExtResource("1_pchtj")]
 position = Vector2(7, -22)
