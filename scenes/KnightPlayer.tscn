@@ -7,10 +7,10 @@
 radius = 5.11611
 height = 15.5037
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["player"]]
 z_index = 10
 position = Vector2(0, -2)
-collision_layer = 2
+collision_layer = 3
 script = ExtResource("1_uyc6u")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

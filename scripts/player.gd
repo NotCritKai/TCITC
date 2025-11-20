@@ -57,18 +57,20 @@ func _physics_process(delta: float) -> void:
 func take_damage(amount: int) -> void:
 	if canTakeDamage:
 		currentHealth -= amount
+
+		# Print health every time damage is taken
+		print("Player took", amount, "damage. Current health:", currentHealth)
+
+		# Optional: emit signal if you want UI later
 		emit_signal("healthChanged", currentHealth)
-		print("Player health:", currentHealth)
 
 		if currentHealth <= 0:
 			die()
 
-		# Start cooldown so damage isn’t applied every frame
+		# Start cooldown so player can't take damage instantly again
 		canTakeDamage = false
-		# Use a timer to reset damage flag
 		var timer := get_tree().create_timer(damageCooldown)
-		timer.timeout.connect(func():
-			canTakeDamage = true)
+		timer.timeout.connect(func(): canTakeDamage = true)
 
 func die() -> void:
 	print("Player has died!")

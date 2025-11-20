@@ -12398,4 +12398,3 @@ shape = SubResource("WorldBoundaryShape2D_ngb14")
 
 [node name="Enemy" parent="." instance=ExtResource("17_y0fbc")]
 position = Vector2(168, -5)
-player = NodePath("../Player")
