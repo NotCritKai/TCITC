@@ -1,0 +1,160 @@
+[gd_scene load_steps=12 format=3 uid="uid://cwgd3l2k0pyby"]
+
+[ext_resource type="Texture2D" uid="uid://cgiyua7iji2qf" path="res://assets/Screenshot 2025-11-20 110308.png" id="1_dg3nq"]
+[ext_resource type="Script" path="res://scenes/Main_Menu.gd" id="1_mf5wf"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yul0p"]
+texture = ExtResource("1_dg3nq")
+modulate_color = Color(0.529066, 0.529067, 0.529067, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ivp22"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_size = 3
+shadow_offset = Vector2(0, 1.2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f2qmn"]
+bg_color = Color(0.505882, 0.505882, 0.505882, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_size = 3
+shadow_offset = Vector2(0, 1.2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6nmnj"]
+bg_color = Color(0.34902, 0.34902, 0.34902, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_size = 3
+shadow_offset = Vector2(0, 1.2)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_25u8g"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1sgxt"]
+bg_color = Color(0.996078, 0.996078, 0.996078, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_size = 3
+shadow_offset = Vector2(0, 1.2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uo1hf"]
+bg_color = Color(0.505882, 0.505882, 0.505882, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_size = 3
+shadow_offset = Vector2(0, 1.2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ixbhl"]
+bg_color = Color(0.34902, 0.34902, 0.34902, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_size = 3
+shadow_offset = Vector2(0, 1.2)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r6w42"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_right = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mf5wf")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_yul0p")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -127.0
+offset_top = 110.0
+offset_right = 127.0
+offset_bottom = 233.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 5
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.00392157, 0.00392157, 0.00392157, 1)
+theme_override_font_sizes/font_size = 27
+theme_override_styles/normal = SubResource("StyleBoxFlat_ivp22")
+theme_override_styles/hover = SubResource("StyleBoxFlat_f2qmn")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6nmnj")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_25u8g")
+text = "Start Game"
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 27
+theme_override_styles/normal = SubResource("StyleBoxFlat_1sgxt")
+theme_override_styles/hover = SubResource("StyleBoxFlat_uo1hf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ixbhl")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_r6w42")
+text = "Quit"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -345.0
+offset_top = -185.0
+offset_right = 79.0
+offset_bottom = -110.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 50
+text = "The Crusade into "
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 83.0
+offset_top = -185.0
+offset_right = 353.0
+offset_bottom = -109.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.654902, 0, 0.654902, 1)
+theme_override_font_sizes/font_size = 50
+text = "Corruption"
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_quit_pressed"]
