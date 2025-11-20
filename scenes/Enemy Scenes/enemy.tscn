@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://c406akgi71htn"]
+
+[ext_resource type="Script" path="res://scripts/Enemy.gd" id="1_fke3w"]
+[ext_resource type="Texture2D" uid="uid://dwbo5srjv25ej" path="res://assets/Enemies/Corrupted Slime.png" id="2_na1vi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qlhh0"]
+size = Vector2(16.1668, 15.2467)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8y4tv"]
+height = 41.4822
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_fke3w")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_na1vi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 8)
+scale = Vector2(1.2371, 0.524702)
+shape = SubResource("RectangleShape2D_qlhh0")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-1, 6)
+rotation = 1.57171
+scale = Vector2(1.32339, 0.964268)
+shape = SubResource("CapsuleShape2D_8y4tv")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
