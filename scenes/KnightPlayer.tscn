@@ -3,9 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://cubxiovs5kdu" path="res://assets/Knight with No Weapon.png" id="1_ajwlp"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_uyc6u"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_o55lt"]
-radius = 15.7143
-height = 57.1429
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lohmf"]
+radius = 5.11611
+height = 15.5037
 
 [node name="Player" type="CharacterBody2D"]
 z_index = 10
@@ -19,9 +19,9 @@ scale = Vector2(0.925, 1.07105)
 texture = ExtResource("1_ajwlp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(8, 9)
-scale = Vector2(1.99528, -0.80825)
-shape = SubResource("CapsuleShape2D_o55lt")
+position = Vector2(7, 10)
+scale = Vector2(-1.56369, -2.19302)
+shape = SubResource("CapsuleShape2D_lohmf")
 
 [node name="DashTimer" type="Timer" parent="."]
 wait_time = 3.5

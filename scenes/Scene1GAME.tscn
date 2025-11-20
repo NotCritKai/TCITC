@@ -5,7 +5,6 @@
 [ext_resource type="Texture2D" uid="uid://b87balc085ves" path="res://Backgrounds/morning_background.png" id="2_nq4oj"]
 [ext_resource type="Texture2D" uid="uid://cwfojucnvsas2" path="res://assets/Sprites/TileMaps/CartoonyBlocks.png" id="3_0p4na"]
 [ext_resource type="Texture2D" uid="uid://b1vhdxh668vwl" path="res://assets/Sprites/TileMaps/BasicFillerBlocks.png" id="3_f87g4"]
-[ext_resource type="Script" path="res://scripts/healthBar.gd" id="3_kvnlo"]
 [ext_resource type="Texture2D" uid="uid://df0k7jwx22p8q" path="res://assets/Sprites/TileMaps/Houses/CartoonyContinued.png" id="5_nqwq8"]
 [ext_resource type="Texture2D" uid="uid://bi3gta8gncg4r" path="res://assets/Sprites/TileMaps/Houses/house1.png" id="6_3acdx"]
 [ext_resource type="Texture2D" uid="uid://bm3mmupfvm1vh" path="res://assets/Sprites/TileMaps/Lamp Post 1.png" id="6_fpj81"]
@@ -16,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://c7omhii7y244y" path="res://assets/Sprites/TileMaps/Houses/housebrickdoor.png" id="11_yq0yi"]
 [ext_resource type="PackedScene" uid="uid://dd265nbuupss1" path="res://scenes/coin.tscn" id="12_phtsk"]
 [ext_resource type="PackedScene" uid="uid://chtln2rqxng86" path="res://scenes/kill_zone.tscn" id="14_0kutp"]
+[ext_resource type="PackedScene" uid="uid://c406akgi71htn" path="res://scenes/Enemy Scenes/enemy.tscn" id="17_y0fbc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4jjo7"]
 texture = ExtResource("6_fpj81")
@@ -12363,11 +12363,6 @@ offset_bottom = 125.0
 theme_override_font_sizes/font_size = 60
 horizontal_alignment = 2
 
-[node name="ProgressBar" type="ProgressBar" parent="GameManager/CanvasLayer"]
-offset_right = 115.0
-offset_bottom = 42.0
-script = ExtResource("3_kvnlo")
-
 [node name="Player" parent="." instance=ExtResource("1_pchtj")]
 position = Vector2(7, -22)
 
@@ -12400,3 +12395,7 @@ position = Vector2(-257, 250)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone"]
 shape = SubResource("WorldBoundaryShape2D_ngb14")
+
+[node name="Enemy" parent="." instance=ExtResource("17_y0fbc")]
+position = Vector2(168, -5)
+player = NodePath("../Player")

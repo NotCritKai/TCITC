@@ -12,10 +12,18 @@ var start_position: Vector2
 var direction: int = 1
 var player_node: Node2D
 
-func _ready():
+func _ready() -> void:
 	start_position = global_position
+
+	# Safely get the player node if assigned in Inspector
 	if player != null and str(player) != "":
-		player_node = get_node(player)
+		var node := get_node_or_null(player)
+		if node:
+			player_node = node
+		else:
+			push_warning("Enemy: Could not find player node at path: " + str(player))
+	else:
+		push_warning("Enemy: Player path not set in Inspector.")
 
 func _physics_process(delta: float) -> void:
 	# Apply gravity
@@ -36,21 +44,20 @@ func patrol() -> void:
 		direction *= -1
 
 func chase_player() -> void:
-	var direction_to_player = (player_node.global_position - global_position).normalized()
+	var direction_to_player := (player_node.global_position - global_position).normalized()
 	velocity.x = direction_to_player.x * speed
 
 func is_player_in_range() -> bool:
-	return global_position.distance_to(player_node.global_position) <= detection_range
+	return player_node and global_position.distance_to(player_node.global_position) <= detection_range
 
 # -------------------------
 # Damage System
 # -------------------------
 
-func _on_area_2d_body_entered(body):
-		# Debug print to confirm collision
+func _on_Area2D_body_entered(body: Node2D) -> void:
+	# Debug print to confirm collision
 	print("Enemy collided with:", body.name)
 
 	# Only damage if the body has a take_damage() function
 	if body.has_method("take_damage"):
 		body.take_damage(damage)
-	
