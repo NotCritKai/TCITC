@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const SPEED = 225.0
+const SPEED = 200.0
 const JUMP_VELOCITY = -250.0
 var coins = 0
 
@@ -67,11 +67,11 @@ func take_damage(amount: int) -> void:
 		if currentHealth <= 0:
 			die()
 
-		# Start cooldown so player can't take damage instantly again
+		# Start cooldown so player can't take damage instantly again(work in progress) 
 		canTakeDamage = false
 		var timer := get_tree().create_timer(damageCooldown)
 		timer.timeout.connect(func(): canTakeDamage = true)
 
 func die() -> void:
 	print("Player has died!")
-	# Add respawn or game over logic here
+	# We can add a death animation or death screen here eventually. 

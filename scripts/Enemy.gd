@@ -3,7 +3,7 @@ extends CharacterBody2D
 # -------------------------
 # Exported variables (editable in Inspector)
 # -------------------------
-@export var speed: float = 100.0            # Movement speed
+@export var speed: float = 155.0            # Movement speed
 @export var patrol_distance: float = 200.0  # How far the enemy walks before turning around
 @export var detection_range: float = 250.0  # How close the player must be before enemy chases
 @export var follow_always: bool = true      # If true, enemy always chases player
