@@ -1,7 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://bkjdjq0pbt8ys"]
+[gd_scene load_steps=13 format=3 uid="uid://bkjdjq0pbt8ys"]
 
 [ext_resource type="Texture2D" uid="uid://cgiyua7iji2qf" path="res://assets/Screenshot 2025-11-20 110308.png" id="1_dg3nq"]
 [ext_resource type="Script" path="res://scenes/Main_Menu.gd" id="1_mf5wf"]
+[ext_resource type="AudioStream" uid="uid://cgweudng7qyhg" path="res://assets/Sounds/TCITC Main Menu.wav" id="3_ps2ol"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yul0p"]
 texture = ExtResource("1_dg3nq")
@@ -155,6 +156,10 @@ grow_vertical = 2
 theme_override_colors/font_color = Color(0.654902, 0, 0.654902, 1)
 theme_override_font_sizes/font_size = 50
 text = "Corruption"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_ps2ol")
+autoplay = true
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_quit_pressed"]
