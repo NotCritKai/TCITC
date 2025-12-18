@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=3 uid="uid://bkjdjq0pbt8ys"]
 
 [ext_resource type="Texture2D" uid="uid://cgiyua7iji2qf" path="res://assets/Screenshot 2025-11-20 110308.png" id="1_dg3nq"]
-[ext_resource type="Script" path="res://scenes/Main_Menu.gd" id="1_mf5wf"]
+[ext_resource type="Script" path="res://scripts/Main_Menu.gd" id="1_mf5wf"]
 [ext_resource type="AudioStream" uid="uid://cgweudng7qyhg" path="res://assets/Sounds/TCITC Main Menu.wav" id="3_ps2ol"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yul0p"]

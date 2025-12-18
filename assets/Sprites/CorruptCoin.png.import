@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c4mecru7bwpc3"
-path="res://.godot/imported/Coin1_Cropped.png-a4d131728bc8dc5f4fbfe1b61d493677.ctex"
+uid="uid://ppp4yn3rvswn"
+path="res://.godot/imported/CorruptCoin.png-bf17bf72fd381c5e00ebeee23dfa529e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprites/Coin1_Cropped.png"
-dest_files=["res://.godot/imported/Coin1_Cropped.png-a4d131728bc8dc5f4fbfe1b61d493677.ctex"]
+source_file="res://assets/Sprites/CorruptCoin.png"
+dest_files=["res://.godot/imported/CorruptCoin.png-bf17bf72fd381c5e00ebeee23dfa529e.ctex"]
 
 [params]
 
