@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=3 uid="uid://dd265nbuupss1"]
 
 [ext_resource type="Script" path="res://scripts/coin.gd" id="1_rnpym"]
-[ext_resource type="Texture2D" path="res://assets/Sprites/CorruptCoin.png" id="2_rdda0"]
+[ext_resource type="Texture2D" uid="uid://ppp4yn3rvswn" path="res://assets/Sprites/CorruptCoin.png" id="2_rdda0"]
 [ext_resource type="AudioStream" uid="uid://f03o7p8ynq6j" path="res://assets/Sounds/Pickup Coin.wav" id="3_ckfdd"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jiics"]
