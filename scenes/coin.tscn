@@ -1,26 +1,26 @@
 [gd_scene load_steps=14 format=3 uid="uid://dd265nbuupss1"]
 
 [ext_resource type="Script" path="res://scripts/coin.gd" id="1_rnpym"]
-[ext_resource type="Texture2D" uid="uid://ppp4yn3rvswn" path="res://assets/Sprites/CorruptCoin.png" id="2_rdda0"]
+[ext_resource type="Texture2D" path="res://assets/Sprites/CorruptCoin.png" id="2_rdda0"]
 [ext_resource type="AudioStream" uid="uid://f03o7p8ynq6j" path="res://assets/Sounds/Pickup Coin.wav" id="3_ckfdd"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_qpj46"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_jiics"]
 atlas = ExtResource("2_rdda0")
 region = Rect2(0, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_o1imw"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_18l08"]
 atlas = ExtResource("2_rdda0")
 region = Rect2(32, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_txyr8"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_b47k8"]
 atlas = ExtResource("2_rdda0")
 region = Rect2(0, 32, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_68ifq"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_c5thi"]
 atlas = ExtResource("2_rdda0")
 region = Rect2(32, 32, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_0bgan"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_3chhj"]
 atlas = ExtResource("2_rdda0")
 region = Rect2(0, 64, 32, 32)
 
@@ -28,23 +28,23 @@ region = Rect2(0, 64, 32, 32)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_qpj46")
+"texture": SubResource("AtlasTexture_jiics")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_o1imw")
+"texture": SubResource("AtlasTexture_18l08")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_txyr8")
+"texture": SubResource("AtlasTexture_b47k8")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_68ifq")
+"texture": SubResource("AtlasTexture_c5thi")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_0bgan")
+"texture": SubResource("AtlasTexture_3chhj")
 }],
 "loop": true,
 "name": &"new_animation",
-"speed": 6.0
+"speed": 5.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4p8fv"]
@@ -156,7 +156,6 @@ script = ExtResource("1_rnpym")
 sprite_frames = SubResource("SpriteFrames_dhfhb")
 animation = &"new_animation"
 autoplay = "new_animation"
-frame_progress = 0.452074
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_4p8fv")

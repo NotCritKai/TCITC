@@ -6,7 +6,7 @@
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_s7q1j"]
 distance = -45.0
 
-[node name="Game" type="Node2D"]
+[node name="Game2" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_ourim")]
 position = Vector2(7, 10)
