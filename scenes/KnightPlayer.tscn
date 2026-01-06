@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://t25invibtx27"]
+[gd_scene load_steps=6 format=3 uid="uid://t25invibtx27"]
 
 [ext_resource type="Texture2D" uid="uid://cubxiovs5kdu" path="res://assets/Knight with No Weapon.png" id="1_ajwlp"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_uyc6u"]
@@ -6,6 +6,12 @@
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lohmf"]
 radius = 5.11611
 height = 15.5037
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_axt0f"]
+bg_color = Color(0.380392, 0.109804, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4afuj"]
+bg_color = Color(0, 0.721569, 0.313726, 1)
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 z_index = 10
@@ -25,3 +31,21 @@ shape = SubResource("CapsuleShape2D_lohmf")
 
 [node name="DashTimer" type="Timer" parent="."]
 wait_time = 3.5
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer"]
+light_mask = 1023
+visibility_layer = 1023
+offset_left = -5.0
+offset_top = -55.0
+offset_right = 61.0
+offset_bottom = -28.0
+scale = Vector2(0.565861, 0.722898)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.345098, 0.345098, 0.345098, 1)
+theme_override_styles/background = SubResource("StyleBoxFlat_axt0f")
+theme_override_styles/fill = SubResource("StyleBoxFlat_4afuj")
+value = 100.0
+rounded = true
