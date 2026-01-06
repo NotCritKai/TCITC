@@ -22163,6 +22163,42 @@ position = Vector2(184, -2)
 [node name="Coin3" parent="GameManager/Coins" instance=ExtResource("12_phtsk")]
 position = Vector2(263, -2)
 
+[node name="Coin4" parent="GameManager/Coins" instance=ExtResource("12_phtsk")]
+position = Vector2(263, -2)
+
+[node name="Coin5" parent="GameManager/Coins" instance=ExtResource("12_phtsk")]
+position = Vector2(44, 1)
+
+[node name="Coin6" parent="GameManager/Coins" instance=ExtResource("12_phtsk")]
+position = Vector2(309, 1)
+
+[node name="Coin7" parent="GameManager/Coins" instance=ExtResource("12_phtsk")]
+position = Vector2(493, 2)
+
+[node name="Coin8" parent="GameManager/Coins" instance=ExtResource("12_phtsk")]
+position = Vector2(564, 0)
+
+[node name="Coin9" parent="GameManager/Coins" instance=ExtResource("12_phtsk")]
+position = Vector2(732, -1)
+
+[node name="Coin10" parent="GameManager/Coins" instance=ExtResource("12_phtsk")]
+position = Vector2(816, 1)
+
+[node name="Coin11" parent="GameManager/Coins" instance=ExtResource("12_phtsk")]
+position = Vector2(878, 2)
+
+[node name="Coin12" parent="GameManager/Coins" instance=ExtResource("12_phtsk")]
+position = Vector2(955, 1)
+
+[node name="Coin13" parent="GameManager/Coins" instance=ExtResource("12_phtsk")]
+position = Vector2(1023, 0)
+
+[node name="Coin14" parent="GameManager/Coins" instance=ExtResource("12_phtsk")]
+position = Vector2(1078, 1)
+
+[node name="Coin15" parent="GameManager/Coins" instance=ExtResource("12_phtsk")]
+position = Vector2(1138, -1)
+
 [node name="CanvasLayer" type="CanvasLayer" parent="GameManager"]
 
 [node name="CoinLabel" type="Label" parent="GameManager/CanvasLayer"]
