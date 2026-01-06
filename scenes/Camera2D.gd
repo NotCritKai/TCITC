@@ -11,9 +11,10 @@ func _unhandled_input(event):
 		zoom_out()
 
 func zoom_in():
-	zoom -= Vector2(zoom_speed, zoom_speed)
-	zoom = zoom.clamp(min_zoom, max_zoom) # Keep within limits
+	zoom += Vector2(zoom_speed, zoom_speed)
+	zoom = zoom.clamp(min_zoom, max_zoom)  # Keep within limits
 
 func zoom_out():
-	zoom += Vector2(zoom_speed, zoom_speed)
-	zoom = zoom.clamp(min_zoom, max_zoom) # Keep within limits
+	zoom -= Vector2(zoom_speed, zoom_speed)
+	zoom = zoom.clamp(min_zoom, max_zoom)
+	# Keep within limits
