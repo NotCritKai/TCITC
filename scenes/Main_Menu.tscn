@@ -1,70 +1,44 @@
-[gd_scene load_steps=13 format=3 uid="uid://bkjdjq0pbt8ys"]
+[gd_scene load_steps=21 format=3 uid="uid://bkjdjq0pbt8ys"]
 
-[ext_resource type="Texture2D" uid="uid://cgiyua7iji2qf" path="res://assets/Screenshot 2025-11-20 110308.png" id="1_dg3nq"]
 [ext_resource type="Script" path="res://scripts/Main_Menu.gd" id="1_mf5wf"]
+[ext_resource type="Texture2D" uid="uid://6uiv4rt67u0q" path="res://assets/Add a heading.png" id="2_i1vmr"]
 [ext_resource type="AudioStream" uid="uid://cgweudng7qyhg" path="res://assets/Sounds/TCITC Main Menu.wav" id="3_ps2ol"]
+[ext_resource type="Texture2D" uid="uid://c5ala6l5p1nnq" path="res://assets/4.png" id="4_4300n"]
+[ext_resource type="Texture2D" uid="uid://b0nrofci32lny" path="res://assets/8.png" id="5_460y3"]
+[ext_resource type="Texture2D" uid="uid://c8y1tq151b463" path="res://assets/7.png" id="5_d0x0f"]
+[ext_resource type="Texture2D" uid="uid://culqylehiwsy4" path="res://assets/3.png" id="6_h5kqk"]
+[ext_resource type="Texture2D" uid="uid://c8pc3hynmltaa" path="res://assets/5.png" id="7_1btxg"]
+[ext_resource type="Texture2D" uid="uid://ddxhu36wn6jld" path="res://assets/6.png" id="8_4ai23"]
+[ext_resource type="Texture2D" uid="uid://dwbo5srjv25ej" path="res://assets/Enemies/Corrupted Slime.png" id="8_b30gk"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yul0p"]
-texture = ExtResource("1_dg3nq")
+texture = ExtResource("2_i1vmr")
 modulate_color = Color(0.529066, 0.529067, 0.529067, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ivp22"]
-bg_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 15
-corner_radius_top_right = 15
-corner_radius_bottom_right = 15
-corner_radius_bottom_left = 15
-shadow_size = 3
-shadow_offset = Vector2(0, 1.2)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eqpse"]
+texture = ExtResource("4_4300n")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f2qmn"]
-bg_color = Color(0.505882, 0.505882, 0.505882, 1)
-corner_radius_top_left = 15
-corner_radius_top_right = 15
-corner_radius_bottom_right = 15
-corner_radius_bottom_left = 15
-shadow_size = 3
-shadow_offset = Vector2(0, 1.2)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ujdvu"]
+texture = ExtResource("5_460y3")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6nmnj"]
-bg_color = Color(0.34902, 0.34902, 0.34902, 1)
-corner_radius_top_left = 15
-corner_radius_top_right = 15
-corner_radius_bottom_right = 15
-corner_radius_bottom_left = 15
-shadow_size = 3
-shadow_offset = Vector2(0, 1.2)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xel5p"]
+texture = ExtResource("5_d0x0f")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_25u8g"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1sgxt"]
-bg_color = Color(0.996078, 0.996078, 0.996078, 1)
-corner_radius_top_left = 15
-corner_radius_top_right = 15
-corner_radius_bottom_right = 15
-corner_radius_bottom_left = 15
-shadow_size = 3
-shadow_offset = Vector2(0, 1.2)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tvw63"]
+texture = ExtResource("6_h5kqk")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uo1hf"]
-bg_color = Color(0.505882, 0.505882, 0.505882, 1)
-corner_radius_top_left = 15
-corner_radius_top_right = 15
-corner_radius_bottom_right = 15
-corner_radius_bottom_left = 15
-shadow_size = 3
-shadow_offset = Vector2(0, 1.2)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f31hn"]
+texture = ExtResource("8_4ai23")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ixbhl"]
-bg_color = Color(0.34902, 0.34902, 0.34902, 1)
-corner_radius_top_left = 15
-corner_radius_top_right = 15
-corner_radius_bottom_right = 15
-corner_radius_bottom_left = 15
-shadow_size = 3
-shadow_offset = Vector2(0, 1.2)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p0cp3"]
+texture = ExtResource("7_1btxg")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r6w42"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p502m"]
+texture = ExtResource("8_b30gk")
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -77,11 +51,23 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_mf5wf")
 
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -7.0
+offset_top = -9.0
+offset_right = 1158.0
+offset_bottom = 650.0
+color = Color(0.45098, 0, 0.690196, 1)
+
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = 1.0
+offset_right = -4.0
+offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_yul0p")
@@ -101,65 +87,71 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 5
 
-[node name="Button" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_colors/font_color = Color(0.00392157, 0.00392157, 0.00392157, 1)
-theme_override_font_sizes/font_size = 27
-theme_override_styles/normal = SubResource("StyleBoxFlat_ivp22")
-theme_override_styles/hover = SubResource("StyleBoxFlat_f2qmn")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_6nmnj")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_25u8g")
-text = "Start Game"
-
-[node name="Button2" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 27
-theme_override_styles/normal = SubResource("StyleBoxFlat_1sgxt")
-theme_override_styles/hover = SubResource("StyleBoxFlat_uo1hf")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_ixbhl")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_r6w42")
-text = "Quit"
-
-[node name="Label" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -345.0
-offset_top = -185.0
-offset_right = 79.0
-offset_bottom = -110.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 50
-text = "The Crusade into "
-
-[node name="Label2" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 83.0
-offset_top = -185.0
-offset_right = 353.0
-offset_bottom = -109.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0.654902, 0, 0.654902, 1)
-theme_override_font_sizes/font_size = 50
-text = "Corruption"
-
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_ps2ol")
 autoplay = true
 
-[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_quit_pressed"]
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 76.0
+offset_top = -142.0
+offset_right = 330.0
+grow_vertical = 0
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.00392157, 0.00392157, 0.00392157, 1)
+theme_override_font_sizes/font_size = 27
+theme_override_styles/normal = SubResource("StyleBoxTexture_eqpse")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ujdvu")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_xel5p")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_25u8g")
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -306.0
+offset_top = -124.0
+offset_right = -52.0
+offset_bottom = -1.0
+grow_horizontal = 0
+grow_vertical = 0
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 27
+theme_override_styles/normal = SubResource("StyleBoxTexture_tvw63")
+theme_override_styles/hover = SubResource("StyleBoxTexture_f31hn")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_p0cp3")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_r6w42")
+
+[node name="Panel2" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 252.0
+offset_top = 84.0
+offset_right = 335.0
+offset_bottom = 158.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_p502m")
+
+[node name="Panel2" type="Panel" parent="Panel2"]
+layout_mode = 0
+offset_left = 570.0
+offset_top = 215.0
+offset_right = 653.0
+offset_bottom = 289.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_p502m")
+
+[node name="Panel2" type="Panel" parent="Panel2/Panel2"]
+layout_mode = 0
+offset_left = -829.0
+offset_top = -1.0
+offset_right = -746.0
+offset_bottom = 73.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_p502m")
+
+[connection signal="pressed" from="Button" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_quit_pressed"]
