@@ -4,50 +4,47 @@ const SPEED = 200.0
 const JUMP_VELOCITY = -250.0
 var coins = 0
 
-# Health
+
 @export var maxHealth: int = 100
 var currentHealth: int
 
-# Damage cooldown
+
 @export var damageCooldown: float = 1.0
 var canTakeDamage: bool = true
 
-# Gravity
+
 var gravity: float = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 @onready var sprite: Sprite2D = $Sprite2D
 
-# Health bar reference (ProgressBar)
+
 @onready var health_bar: ProgressBar = $CanvasLayer/ProgressBar
 
 func _ready() -> void:
 	currentHealth = maxHealth
 
-	# Initialize the health bar
+
 	health_bar.max_value = maxHealth
 	health_bar.value = currentHealth
 
 	print("Player ready with health:", currentHealth)
 
 func _physics_process(delta: float) -> void:
-	# Gravity
 	if not is_on_floor():
 		velocity.y += gravity * delta
 
-	# Jump
+
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 
-	# Movement
 	var direction := Input.get_axis("move_left", "move_right")
 
-	# Flip sprite
 	if direction > 0:
 		sprite.flip_h = false
 	elif direction < 0:
 		sprite.flip_h = true
 
-	# Apply movement
+
 	if direction != 0:
 		velocity.x = direction * SPEED
 	else:
@@ -55,9 +52,9 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 
-# -------------------------
-# Damage System
-# -------------------------
+
+#damage system
+
 
 func take_damage(amount: int) -> void:
 	if canTakeDamage:
