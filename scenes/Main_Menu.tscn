@@ -65,6 +65,7 @@ grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_yul0p")
 
 [node name="Button" type="Button" parent="."]
+layout_mode = 0
 offset_left = 79.0
 offset_top = 521.0
 offset_right = 333.0
@@ -78,6 +79,7 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_4bpyi")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_25u8g")
 
 [node name="Button2" type="Button" parent="."]
+layout_mode = 0
 offset_left = 834.0
 offset_top = 525.0
 offset_right = 1060.0
