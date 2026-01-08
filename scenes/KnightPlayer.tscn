@@ -38,10 +38,10 @@ layer = 0
 [node name="ProgressBar" type="ProgressBar" parent="CanvasLayer"]
 light_mask = 1023
 visibility_layer = 1023
-offset_left = 15.0
-offset_top = 18.0
-offset_right = 81.0
-offset_bottom = 45.0
+offset_left = 11.0
+offset_top = 15.0
+offset_right = 77.0
+offset_bottom = 42.0
 scale = Vector2(2.09933, 2.48802)
 pivot_offset = Vector2(10, 10)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
