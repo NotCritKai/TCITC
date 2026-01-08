@@ -61,16 +61,14 @@ func take_damage(amount: int) -> void:
 		currentHealth -= amount
 		print("Player took", amount, "damage. Current health:", currentHealth)
 
-		# Update the health bar
+		#update the health bar
 		health_bar.value = currentHealth
-
+		#DEATH SCREEN 
+		#----------------
+#if players health is under zero, changes to death screen 
 		if currentHealth <= 0:
-			die()
-
-		# Start cooldown
-		canTakeDamage = false
-		var timer := get_tree().create_timer(damageCooldown)
-		timer.timeout.connect(func(): canTakeDamage = true)
+			get_tree().change_scene_to_file("res://scenes/death_menu.tscn")
+			
 
 func die() -> void:
 	print("Player has died!")

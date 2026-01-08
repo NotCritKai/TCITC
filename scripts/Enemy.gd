@@ -8,7 +8,7 @@ extends CharacterBody2D
 @export var detection_range: float = 250.0  # How close the player must be before enemy chases
 @export var follow_always: bool = true      # If true, enemy always chases player
 @export var gravity: float = 980.0          # Gravity force applied to enemy
-@export var damage: int = 10                # Damage dealt to player on collision
+@export var damage: int = 25                # Damage dealt to player on collision
 
 # -------------------------
 # Internal variables
@@ -76,14 +76,14 @@ func is_player_in_range() -> bool:
 	# Returns true if player is within detection range
 	return player_node and global_position.distance_to(player_node.global_position) <= detection_range
 
-# -------------------------
+
 # Damage System
-# -------------------------
+
 
 func _on_area_2d_body_entered(body):
-		# Debug print to confirm collision
+
 	print("Enemy collided with:", body.name)
 
-	# Only damage if the body has a take_damage() function (Player does)
+
 	if body.has_method("take_damage"):
 		body.take_damage(damage)

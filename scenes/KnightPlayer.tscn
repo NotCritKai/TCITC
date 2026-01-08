@@ -1,7 +1,27 @@
-[gd_scene load_steps=6 format=3 uid="uid://t25invibtx27"]
+[gd_scene load_steps=8 format=3 uid="uid://t25invibtx27"]
 
 [ext_resource type="Texture2D" uid="uid://cubxiovs5kdu" path="res://assets/Knight with No Weapon.png" id="1_ajwlp"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_uyc6u"]
+
+[sub_resource type="Animation" id="Animation_vvoqe"]
+resource_name = "Idle"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 1,
+"values": []
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ha2nu"]
+_data = {
+"Idle": SubResource("Animation_vvoqe")
+}
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lohmf"]
 radius = 5.11611
@@ -24,6 +44,11 @@ position = Vector2(9.5, 11.4211)
 scale = Vector2(0.925, 1.07105)
 texture = ExtResource("1_ajwlp")
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
+libraries = {
+"": SubResource("AnimationLibrary_ha2nu")
+}
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(7, 10)
 scale = Vector2(-1.56369, -2.19302)
@@ -36,12 +61,13 @@ wait_time = 3.5
 layer = 0
 
 [node name="ProgressBar" type="ProgressBar" parent="CanvasLayer"]
+visible = false
 light_mask = 1023
 visibility_layer = 1023
-offset_left = 17.0
-offset_top = 19.0
-offset_right = 83.0
-offset_bottom = 46.0
+offset_left = -4.1621
+offset_top = -11.8176
+offset_right = 61.8379
+offset_bottom = 15.1824
 scale = Vector2(2.09933, 2.48802)
 pivot_offset = Vector2(10, 10)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
