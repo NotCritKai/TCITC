@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=3 uid="uid://yraoo1bj3kcx"]
+[gd_scene load_steps=46 format=3 uid="uid://yraoo1bj3kcx"]
 
 [ext_resource type="PackedScene" uid="uid://t25invibtx27" path="res://scenes/KnightPlayer.tscn" id="1_pchtj"]
 [ext_resource type="Script" path="res://scripts/gamemanager.gd" id="1_smjvn"]
@@ -25,7 +25,6 @@
 [ext_resource type="PackedScene" uid="uid://chtln2rqxng86" path="res://scenes/kill_zone.tscn" id="14_0kutp"]
 [ext_resource type="Texture2D" uid="uid://cab3n067lfqcn" path="res://assets/Sprites/TileMaps/Flowers.png" id="15_2ussl"]
 [ext_resource type="PackedScene" uid="uid://c406akgi71htn" path="res://scenes/Enemy Scenes/enemy.tscn" id="17_y0fbc"]
-[ext_resource type="Texture2D" uid="uid://c2aqabyf1226v" path="res://assets/Knight_Tilesets.png" id="26_a8olw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4jjo7"]
 texture = ExtResource("6_fpj81")
@@ -22147,92 +22146,6 @@ tile_proxies/coords_level = [[20, Vector2i(16, 18)], [22, Vector2i(16, 18)], [21
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ngb14"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_74jch"]
-atlas = ExtResource("26_a8olw")
-region = Rect2(0, 0, 45, 47)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7vyr2"]
-atlas = ExtResource("26_a8olw")
-region = Rect2(45, 0, 45, 47)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_gq3nh"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_74jch")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7vyr2")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_rucwd"]
-atlas = ExtResource("26_a8olw")
-region = Rect2(90, 0, 45, 47)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ema56"]
-atlas = ExtResource("26_a8olw")
-region = Rect2(0, 47, 45, 47)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4fxfw"]
-atlas = ExtResource("26_a8olw")
-region = Rect2(45, 47, 45, 47)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3cjl1"]
-atlas = ExtResource("26_a8olw")
-region = Rect2(90, 47, 45, 47)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_pdxx7"]
-atlas = ExtResource("26_a8olw")
-region = Rect2(0, 94, 45, 47)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_d7e8l"]
-atlas = ExtResource("26_a8olw")
-region = Rect2(45, 94, 45, 47)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_cv5yr"]
-atlas = ExtResource("26_a8olw")
-region = Rect2(90, 94, 45, 47)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_lj6bv"]
-atlas = ExtResource("26_a8olw")
-region = Rect2(0, 141, 45, 47)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_jg8gl"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_rucwd")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ema56")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_4fxfw")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_3cjl1")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_pdxx7")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_d7e8l")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_cv5yr")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_lj6bv")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
 [node name="Game" type="Node2D"]
 
 [node name="GameManager" type="Node" parent="."]
@@ -22297,9 +22210,10 @@ theme_override_font_sizes/font_size = 60
 horizontal_alignment = 2
 
 [node name="Player" parent="." instance=ExtResource("1_pchtj")]
-position = Vector2(7, -22)
+position = Vector2(7, -24)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(0, 2)
 zoom = Vector2(2, 2)
 limit_bottom = 120
 limit_smoothed = true
@@ -22335,15 +22249,3 @@ shape = SubResource("WorldBoundaryShape2D_ngb14")
 
 [node name="Enemy" parent="." instance=ExtResource("17_y0fbc")]
 position = Vector2(214, -7)
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(96, -116)
-sprite_frames = SubResource("SpriteFrames_gq3nh")
-autoplay = "default"
-frame_progress = 0.152558
-
-[node name="AnimatedSprite2D_Walk" type="AnimatedSprite2D" parent="."]
-position = Vector2(132, -71)
-sprite_frames = SubResource("SpriteFrames_jg8gl")
-autoplay = "default"
-frame_progress = 0.546551
