@@ -16,7 +16,7 @@ var canTakeDamage: bool = true
 var gravity: float = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 @onready var sprite: Sprite2D = $Sprite2D
-
+@onready var death_screen: PackedScene = preload("res://scenes/death_menu.tscn")
 
 @onready var health_bar: ProgressBar = $CanvasLayer/ProgressBar
 
@@ -66,8 +66,11 @@ func take_damage(amount: int) -> void:
 		#DEATH SCREEN 
 		#----------------
 #if players health is under zero, changes to death screen 
-		if currentHealth <= 0:
-			get_tree().change_scene_to_file("res://scenes/death_menu.tscn")
+		#if currentHealth <= 0:
+			#var scene = death_screen.instantiate()
+			#get_parent().add_child(scene)
+			#scene.position = Vector2(-380, -240)
+			#scene.scale = Vector2(0.5, 0.5)
 			
 
 func die() -> void:
