@@ -1,4 +1,5 @@
 extends CharacterBody2D
+@onready var animated_sprite_2d = %AnimatedSprite2D
 
 const SPEED = 200.0
 const JUMP_VELOCITY = -250.0
@@ -18,6 +19,9 @@ var gravity: float = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var sprite: Sprite2D = $Sprite2D
 @onready var death_screen: PackedScene = preload("res://scenes/death_menu.tscn")
 
+@onready var animsprite: AnimatedSprite2D = $AnimatedSprite2D
+
+
 @onready var health_bar: ProgressBar = $CanvasLayer/ProgressBar
 
 func _ready() -> void:
@@ -36,13 +40,21 @@ func _physics_process(delta: float) -> void:
 
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
-
+		
 	var direction := Input.get_axis("move_left", "move_right")
-
+	
+	
+	#when things are pressed it will play the animation for the player
+	if direction == 0:
+		animated_sprite_2d.play("Idle")
+	else:
+		animated_sprite_2d.play("Walking")
+	#----------------------------------------------------------------------
+#direction
 	if direction > 0:
-		sprite.flip_h = false
+		animsprite.flip_h = false
 	elif direction < 0:
-		sprite.flip_h = true
+		animsprite.flip_h = true
 
 
 	if direction != 0:
@@ -53,6 +65,7 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 
+#--------------------------------------------------------------
 #damage system
 
 
@@ -75,3 +88,4 @@ func take_damage(amount: int) -> void:
 
 func die() -> void:
 	print("Player has died!")
+
