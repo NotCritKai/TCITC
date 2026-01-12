@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cw5m2v4ih7012"
-path="res://.godot/imported/Villiage_House_Chimney (1).png-81099e68bdfe3b6bb84a5747cfb482ee.ctex"
+uid="uid://bphewnrpijk5c"
+path="res://.godot/imported/4.png-c8d90363031cfe4f3761626520fc50b1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sounds/Villiage_House_Chimney (1).png"
-dest_files=["res://.godot/imported/Villiage_House_Chimney (1).png-81099e68bdfe3b6bb84a5747cfb482ee.ctex"]
+source_file="res://assets/Main_Menu_Assets/4.png"
+dest_files=["res://.godot/imported/4.png-c8d90363031cfe4f3761626520fc50b1.ctex"]
 
 [params]
 

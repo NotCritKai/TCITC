@@ -9,7 +9,7 @@ size = Vector2(16.1668, 15.2467)
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8y4tv"]
 height = 41.4822
 
-[node name="Enemy" type="CharacterBody2D"]
+[node name="Purple_Slime_Enemy" type="CharacterBody2D"]
 script = ExtResource("1_fke3w")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

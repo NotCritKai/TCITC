@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dsi6ny5bx0p7u"
-path="res://.godot/imported/Village House (1).png-2044c06ccbd39cfd757a623812c9b7af.ctex"
+uid="uid://cw5m2v4ih7012"
+path="res://.godot/imported/Villiage_House_Chimney (1).png-6c4798563f802f54302eecb1a21d6053.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Village House (1).png"
-dest_files=["res://.godot/imported/Village House (1).png-2044c06ccbd39cfd757a623812c9b7af.ctex"]
+source_file="res://assets/Sprites/TileMaps/Houses/Villiage_House_Chimney (1).png"
+dest_files=["res://.godot/imported/Villiage_House_Chimney (1).png-6c4798563f802f54302eecb1a21d6053.ctex"]
 
 [params]
 

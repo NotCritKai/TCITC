@@ -42,9 +42,12 @@ func _physics_process(delta: float) -> void:
 	
 	
 	#when things are pressed it will play the animation for the player
-	if direction == 0:
+	if direction == 0: 
 		animated_sprite_2d.play("Idle")
-	else:
+	elif Input.is_action_just_pressed("jump"):
+		animated_sprite_2d.play("Jumping")
+		animated_sprite_2d.play("Walking")
+	else: 
 		animated_sprite_2d.play("Walking")
 	#----------------------------------------------------------------------
 #direction

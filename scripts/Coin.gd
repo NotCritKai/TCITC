@@ -7,4 +7,3 @@ extends Area2D
 func _on_body_entered(_body):
 	game_manager.add_point()
 	pickup_coins_animation.play("pickup")
-

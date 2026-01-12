@@ -1,0 +1,52 @@
+[gd_scene load_steps=2 format=3 uid="uid://d4mvyywr31kx6"]
+
+[ext_resource type="Script" path="res://scenes/death_menu.gd" id="1_cqwt3"]
+
+[node name="Shop_Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cqwt3")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 1160.0
+offset_bottom = 654.0
+color = Color(0.764706, 0.545098, 0.976471, 1)
+
+[node name="Shop_L" type="Label" parent="."]
+layout_mode = 0
+offset_left = -2.0
+offset_top = -40.0
+offset_right = 42.0
+offset_bottom = -17.0
+scale = Vector2(7.37749, 6.56059)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "SHOP"
+
+[node name="Coins_L" type="Label" parent="."]
+layout_mode = 0
+offset_left = 446.0
+offset_top = -38.0
+offset_right = 490.0
+offset_bottom = -15.0
+scale = Vector2(7.37749, 6.56059)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "Coins"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="CoinLabel" type="Label" parent="CanvasLayer"]
+offset_left = 780.0
+offset_top = -5.0
+offset_right = 922.0
+offset_bottom = 78.0
+scale = Vector2(1.10594, 1.34295)
+theme_override_font_sizes/font_size = 60
+horizontal_alignment = 2
+metadata/_edit_use_anchors_ = true

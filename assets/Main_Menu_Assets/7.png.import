@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bmx7pi1w8n3ge"
-path="res://.godot/imported/VilliageChimneyHousesNEW.png-d76cd12c064cf4ec9813e2580fe4ae50.ctex"
+uid="uid://c40n8nugovgw2"
+path="res://.godot/imported/7.png-3982aba47f8c4da4d1a783c7d98196d9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://VilliageChimneyHousesNEW.png"
-dest_files=["res://.godot/imported/VilliageChimneyHousesNEW.png-d76cd12c064cf4ec9813e2580fe4ae50.ctex"]
+source_file="res://assets/Main_Menu_Assets/7.png"
+dest_files=["res://.godot/imported/7.png-3982aba47f8c4da4d1a783c7d98196d9.ctex"]
 
 [params]
 

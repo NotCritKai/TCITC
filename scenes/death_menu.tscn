@@ -1,13 +1,13 @@
 [gd_scene load_steps=16 format=3 uid="uid://c1ftujv5o5u0l"]
 
 [ext_resource type="Script" path="res://scenes/death_menu.gd" id="1_jj7tr"]
-[ext_resource type="Texture2D" uid="uid://debfxhk6oic4a" path="res://assets/10.png" id="1_q7uam"]
-[ext_resource type="Texture2D" uid="uid://8qm6s3lhc23w" path="res://assets/11.png" id="2_kxlob"]
-[ext_resource type="Texture2D" uid="uid://cxk8p5xjg3gin" path="res://assets/12.png" id="3_maxyj"]
-[ext_resource type="Texture2D" uid="uid://c1qyc4yg66rlw" path="res://assets/13.png" id="4_us8qc"]
-[ext_resource type="Texture2D" uid="uid://bf6juqt0m73wk" path="res://assets/3.png" id="5_u6vb5"]
-[ext_resource type="Texture2D" uid="uid://ctx62isclk0xb" path="res://assets/2.png" id="6_b260s"]
-[ext_resource type="Texture2D" uid="uid://dfn2r6ghmwou7" path="res://assets/5.png" id="7_0u506"]
+[ext_resource type="Texture2D" uid="uid://debfxhk6oic4a" path="res://assets/Main_Menu_Assets/10.png" id="1_q7uam"]
+[ext_resource type="Texture2D" uid="uid://8qm6s3lhc23w" path="res://assets/Main_Menu_Assets/11.png" id="2_kxlob"]
+[ext_resource type="Texture2D" uid="uid://cxk8p5xjg3gin" path="res://assets/Main_Menu_Assets/12.png" id="3_maxyj"]
+[ext_resource type="Texture2D" uid="uid://c1qyc4yg66rlw" path="res://assets/Main_Menu_Assets/13.png" id="4_us8qc"]
+[ext_resource type="Texture2D" uid="uid://bf6juqt0m73wk" path="res://assets/Main_Menu_Assets/3.png" id="5_u6vb5"]
+[ext_resource type="Texture2D" uid="uid://ctx62isclk0xb" path="res://assets/Main_Menu_Assets/2.png" id="6_b260s"]
+[ext_resource type="Texture2D" uid="uid://dfn2r6ghmwou7" path="res://assets/Main_Menu_Assets/5.png" id="7_0u506"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cvw4h"]
 texture = ExtResource("1_q7uam")

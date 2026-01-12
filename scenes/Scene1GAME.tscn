@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://yraoo1bj3kcx"]
+[gd_scene load_steps=47 format=3 uid="uid://yraoo1bj3kcx"]
 
 [ext_resource type="PackedScene" uid="uid://t25invibtx27" path="res://scenes/KnightPlayer.tscn" id="1_pchtj"]
 [ext_resource type="Script" path="res://scripts/gamemanager.gd" id="1_smjvn"]
@@ -25,6 +25,7 @@
 [ext_resource type="PackedScene" uid="uid://chtln2rqxng86" path="res://scenes/kill_zone.tscn" id="14_0kutp"]
 [ext_resource type="Texture2D" uid="uid://cab3n067lfqcn" path="res://assets/Sprites/TileMaps/Flowers.png" id="15_2ussl"]
 [ext_resource type="PackedScene" uid="uid://c406akgi71htn" path="res://scenes/Enemy Scenes/enemy.tscn" id="17_y0fbc"]
+[ext_resource type="PackedScene" uid="uid://bpo5defbogl8w" path="res://scenes/Enemy Scenes/enemy_2.tscn" id="26_3gxin"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4jjo7"]
 texture = ExtResource("6_fpj81")
@@ -22249,3 +22250,6 @@ shape = SubResource("WorldBoundaryShape2D_ngb14")
 
 [node name="Enemy" parent="." instance=ExtResource("17_y0fbc")]
 position = Vector2(214, -7)
+
+[node name="Red_Slime_Enemy" parent="." instance=ExtResource("26_3gxin")]
+position = Vector2(348, -6)
