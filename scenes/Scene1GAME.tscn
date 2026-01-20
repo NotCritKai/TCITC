@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://yraoo1bj3kcx"]
+[gd_scene load_steps=49 format=3 uid="uid://yraoo1bj3kcx"]
 
 [ext_resource type="PackedScene" uid="uid://t25invibtx27" path="res://scenes/KnightPlayer.tscn" id="1_pchtj"]
 [ext_resource type="Script" path="res://scripts/gamemanager.gd" id="1_smjvn"]
@@ -24,6 +24,7 @@
 [ext_resource type="PackedScene" uid="uid://dd265nbuupss1" path="res://scenes/coin.tscn" id="12_phtsk"]
 [ext_resource type="PackedScene" uid="uid://chtln2rqxng86" path="res://scenes/kill_zone.tscn" id="14_0kutp"]
 [ext_resource type="Texture2D" uid="uid://cab3n067lfqcn" path="res://assets/Sprites/TileMaps/Flowers.png" id="15_2ussl"]
+[ext_resource type="Texture2D" uid="uid://tmc3ont8gjkh" path="res://assets/Sprites/Weapons/Corrupt_Sword  (1).png" id="16_gr5ft"]
 [ext_resource type="PackedScene" uid="uid://c406akgi71htn" path="res://scenes/Enemy Scenes/enemy.tscn" id="17_y0fbc"]
 [ext_resource type="PackedScene" uid="uid://bpo5defbogl8w" path="res://scenes/Enemy Scenes/enemy_2.tscn" id="26_3gxin"]
 
@@ -9954,6 +9955,25 @@ texture_region_size = Vector2i(15, 14)
 3:8/0 = 0
 3:8/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 3:8/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5o0be"]
+texture = ExtResource("16_gr5ft")
+texture_region_size = Vector2i(15, 14)
+0:2/0 = 0
+0:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:2/0/physics_layer_0/angular_velocity = 0.0
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+1:1/0 = 0
+1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_0/angular_velocity = 0.0
+1:2/0 = 0
+1:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:2/0/physics_layer_0/angular_velocity = 0.0
+2:2/0 = 0
+2:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:2/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0t2mb"]
 texture = ExtResource("3_f87g4")
@@ -22143,6 +22163,7 @@ sources/14 = SubResource("TileSetAtlasSource_jheof")
 sources/11 = SubResource("TileSetAtlasSource_y0qnl")
 sources/12 = SubResource("TileSetAtlasSource_wynxa")
 sources/17 = SubResource("TileSetAtlasSource_swnht")
+sources/19 = SubResource("TileSetAtlasSource_5o0be")
 tile_proxies/coords_level = [[20, Vector2i(16, 18)], [22, Vector2i(16, 18)], [21, Vector2i(16, 17)], [22, Vector2i(16, 56)]]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ngb14"]
@@ -22227,7 +22248,7 @@ motion_scale = Vector2(0.2, 0.2)
 motion_mirroring = Vector2(1691, 2.08165e-12)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2(4777, 2403)
+position = Vector2(4776, 2445)
 scale = Vector2(7.44375, 6.37853)
 texture = ExtResource("2_nq4oj")
 
@@ -22253,3 +22274,10 @@ position = Vector2(214, -7)
 
 [node name="Red_Slime_Enemy" parent="." instance=ExtResource("26_3gxin")]
 position = Vector2(348, -6)
+
+[node name="Button" type="Button" parent="."]
+offset_left = 25.0
+offset_top = -114.0
+offset_right = 81.0
+offset_bottom = -83.0
+text = "SHOP"

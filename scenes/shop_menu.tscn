@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://d4mvyywr31kx6"]
+[gd_scene load_steps=3 format=3 uid="uid://d4mvyywr31kx6"]
 
 [ext_resource type="Script" path="res://scenes/death_menu.gd" id="1_cqwt3"]
+
+[sub_resource type="Theme" id="Theme_v23u6"]
 
 [node name="Shop_Menu" type="Control"]
 layout_mode = 3
@@ -21,32 +23,46 @@ color = Color(0.764706, 0.545098, 0.976471, 1)
 
 [node name="Shop_L" type="Label" parent="."]
 layout_mode = 0
-offset_left = -2.0
-offset_top = -40.0
-offset_right = 42.0
-offset_bottom = -17.0
+offset_left = 5.0
+offset_top = -11.0
+offset_right = 49.0
+offset_bottom = 12.0
 scale = Vector2(7.37749, 6.56059)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 text = "SHOP"
 
 [node name="Coins_L" type="Label" parent="."]
 layout_mode = 0
-offset_left = 446.0
-offset_top = -38.0
-offset_right = 490.0
-offset_bottom = -15.0
+offset_left = 413.0
+offset_top = -12.0
+offset_right = 457.0
+offset_bottom = 11.0
 scale = Vector2(7.37749, 6.56059)
+theme_override_colors/font_color = Color(1, 0.917647, 0.431373, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 text = "Coins"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="CoinLabel" type="Label" parent="CanvasLayer"]
-offset_left = 780.0
-offset_top = -5.0
-offset_right = 922.0
-offset_bottom = 78.0
+offset_left = 862.0
+offset_top = -4.0
+offset_right = 1004.0
+offset_bottom = 79.0
 scale = Vector2(1.10594, 1.34295)
 theme_override_font_sizes/font_size = 60
 horizontal_alignment = 2
 metadata/_edit_use_anchors_ = true
+
+[node name="Return_Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 976.0
+offset_top = -11.0
+offset_right = 1160.0
+offset_bottom = 102.0
+theme = SubResource("Theme_v23u6")
+theme_override_colors/font_color = Color(1, 0.196078, 0.145098, 1)
+text = "Return 
+(ESC)"
+
+[connection signal="pressed" from="Return_Button" to="." method="_on_return_button_pressed"]
