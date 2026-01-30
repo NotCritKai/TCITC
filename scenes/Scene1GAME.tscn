@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=3 uid="uid://yraoo1bj3kcx"]
+[gd_scene load_steps=57 format=3 uid="uid://yraoo1bj3kcx"]
 
 [ext_resource type="PackedScene" uid="uid://t25invibtx27" path="res://scenes/KnightPlayer.tscn" id="1_pchtj"]
 [ext_resource type="Script" path="res://scripts/gamemanager.gd" id="1_smjvn"]
@@ -28,7 +28,10 @@
 [ext_resource type="PackedScene" uid="uid://c406akgi71htn" path="res://scenes/Enemy Scenes/enemy.tscn" id="17_y0fbc"]
 [ext_resource type="PackedScene" uid="uid://bpo5defbogl8w" path="res://scenes/Enemy Scenes/enemy_2.tscn" id="26_3gxin"]
 [ext_resource type="Script" path="res://scripts/Go_To_Shop_Button.gd" id="28_k485e"]
+[ext_resource type="Texture2D" uid="uid://c7m4axsbsuqph" path="res://assets/Shop_Assets/20.png" id="28_objp7"]
 [ext_resource type="PackedScene" uid="uid://d4mvyywr31kx6" path="res://scenes/shop_menu.tscn" id="29_f0s3o"]
+[ext_resource type="Texture2D" uid="uid://cibxyul0qtijo" path="res://assets/Shop_Assets/21.png" id="29_qrc2y"]
+[ext_resource type="Texture2D" uid="uid://cg6ibyy7u3anc" path="res://assets/Shop_Assets/22.png" id="30_j1vjx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4jjo7"]
 texture = ExtResource("6_fpj81")
@@ -22177,6 +22180,15 @@ tile_proxies/coords_level = [[20, Vector2i(16, 18)], [22, Vector2i(16, 18)], [21
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ngb14"]
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dwrr2"]
+texture = ExtResource("30_j1vjx")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_87wlo"]
+texture = ExtResource("29_qrc2y")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_83dhw"]
+texture = ExtResource("28_objp7")
+
 [node name="Game" type="Node2D"]
 
 [node name="GameManager" type="Node" parent="."]
@@ -22287,11 +22299,13 @@ position = Vector2(214, -7)
 position = Vector2(348, -6)
 
 [node name="Go_To_Shop_Button" type="Button" parent="."]
-offset_left = -360.0
-offset_top = -50.0
-offset_right = -304.0
-offset_bottom = -19.0
-text = "SHOP"
+offset_left = -405.0
+offset_top = -75.0
+offset_right = -251.0
+offset_bottom = 10.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_dwrr2")
+theme_override_styles/hover = SubResource("StyleBoxTexture_87wlo")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_83dhw")
 script = ExtResource("28_k485e")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
