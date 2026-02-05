@@ -22252,6 +22252,19 @@ offset_bottom = 156.0
 theme_override_font_sizes/font_size = 60
 horizontal_alignment = 2
 
+[node name="CanvasLayer2" type="CanvasLayer" parent="GameManager"]
+process_mode = 1
+
+[node name="Shop_Menu" parent="GameManager/CanvasLayer2" instance=ExtResource("29_f0s3o")]
+visible = false
+light_mask = 3
+visibility_layer = 3
+offset_left = 3.0
+offset_top = -5.0
+offset_right = 3.0
+offset_bottom = -5.0
+scale = Vector2(1.00425, 1.08156)
+
 [node name="Player" parent="." instance=ExtResource("1_pchtj")]
 position = Vector2(7, -24)
 
@@ -22307,23 +22320,5 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_dwrr2")
 theme_override_styles/hover = SubResource("StyleBoxTexture_87wlo")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_83dhw")
 script = ExtResource("28_k485e")
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-process_mode = 1
-visible = false
-
-[node name="Shop_Menu" parent="CanvasLayer" instance=ExtResource("29_f0s3o")]
-light_mask = 3
-visibility_layer = 3
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = 3.0
-offset_top = -5.0
-offset_right = 3.0
-offset_bottom = -5.0
-grow_horizontal = 1
-grow_vertical = 1
-scale = Vector2(1.00425, 1.08156)
 
 [connection signal="pressed" from="Go_To_Shop_Button" to="GameManager" method="_on_go_to_shop_button_pressed"]
