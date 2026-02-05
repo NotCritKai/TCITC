@@ -38,6 +38,14 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.639216, 0.133333, 1, 1)
 
+[node name="CoinLabel" type="Label" parent="."]
+visibility_layer = 1023
+offset_left = 7.0
+offset_top = 134.0
+offset_right = 350.0
+offset_bottom = 290.0
+theme_override_font_sizes/font_size = 100
+
 [node name="Shop_L" type="Label" parent="."]
 layout_mode = 0
 offset_left = 5.0
@@ -47,35 +55,6 @@ offset_bottom = 3.0
 scale = Vector2(8.05617, 7.16412)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 text = "SHOP"
-
-[node name="Coins_L" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 13.0
-offset_top = 110.0
-offset_right = 56.0
-offset_bottom = 133.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(7.83554, 6.52867)
-theme_override_colors/font_color = Color(1, 0.917647, 0.431373, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-text = "Coins"
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-follow_viewport_enabled = true
-
-[node name="CoinLabel" type="Label" parent="CanvasLayer"]
-offset_left = 862.0
-offset_top = -4.0
-offset_right = 1004.0
-offset_bottom = 79.0
-scale = Vector2(1.10594, 1.34295)
-theme_override_font_sizes/font_size = 60
-horizontal_alignment = 2
-metadata/_edit_use_anchors_ = true
 
 [node name="Return_Button" type="Button" parent="."]
 process_mode = 3
