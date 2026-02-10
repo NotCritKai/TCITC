@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=3 uid="uid://yraoo1bj3kcx"]
+[gd_scene load_steps=57 format=3 uid="uid://c6yjxdavceaw4"]
 
 [ext_resource type="PackedScene" uid="uid://t25invibtx27" path="res://scenes/KnightPlayer.tscn" id="1_pchtj"]
 [ext_resource type="Script" path="res://scripts/gamemanager.gd" id="1_smjvn"]
@@ -22242,18 +22242,16 @@ position = Vector2(1078, 1)
 [node name="Coin15" parent="GameManager/Coins" instance=ExtResource("12_phtsk")]
 position = Vector2(1138, -1)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="GameManager"]
+[node name="CanvasLayer2" type="CanvasLayer" parent="GameManager"]
+process_mode = 1
 
-[node name="CoinLabel" type="Label" parent="GameManager/CanvasLayer"]
+[node name="CoinLabel" type="Label" parent="GameManager/CanvasLayer2"]
 offset_left = 3.0
 offset_top = 73.0
 offset_right = 145.0
 offset_bottom = 156.0
 theme_override_font_sizes/font_size = 60
 horizontal_alignment = 2
-
-[node name="CanvasLayer2" type="CanvasLayer" parent="GameManager"]
-process_mode = 1
 
 [node name="Shop_Menu" parent="GameManager/CanvasLayer2" instance=ExtResource("29_f0s3o")]
 visible = false
