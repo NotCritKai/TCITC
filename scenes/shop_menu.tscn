@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://d4mvyywr31kx6"]
+[gd_scene load_steps=13 format=3 uid="uid://d4mvyywr31kx6"]
 
 [ext_resource type="Script" path="res://scripts/death_menu.gd" id="1_cqwt3"]
 [ext_resource type="Texture2D" uid="uid://yetwtrwai35x" path="res://assets/Shop_Assets/The Crusade Into The Corruption.png" id="2_j4br7"]
 [ext_resource type="Texture2D" uid="uid://d3nib1nw22t3m" path="res://assets/Shop_Assets/14.png" id="2_vvlvd"]
 [ext_resource type="Texture2D" uid="uid://fxydl6erandl" path="res://assets/Shop_Assets/15.png" id="3_asbvt"]
 [ext_resource type="Texture2D" uid="uid://loh0i4cct3w8" path="res://assets/Shop_Assets/16.png" id="4_61xuw"]
+[ext_resource type="Texture2D" uid="uid://tmc3ont8gjkh" path="res://assets/Sprites/Weapons/Corrupt_Sword  (1).png" id="6_bukvb"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_heu0m"]
 texture = ExtResource("2_j4br7")
@@ -20,6 +21,9 @@ texture = ExtResource("3_asbvt")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b453b"]
 texture = ExtResource("4_61xuw")
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hs515"]
+texture = ExtResource("6_bukvb")
+
 [node name="Shop_Menu" type="Control"]
 process_mode = 3
 layout_mode = 3
@@ -34,9 +38,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_top = 1.0
-offset_right = 1381.0
-offset_bottom = 737.0
+offset_left = -1341.0
+offset_top = -1252.0
+offset_right = 2787.0
+offset_bottom = 1655.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.639216, 0.133333, 1, 1)
@@ -56,7 +61,7 @@ offset_left = -24.0
 offset_top = -90.0
 offset_right = 48.0
 offset_bottom = -52.0
-scale = Vector2(8.05617, 7.16412)
+scale = Vector2(8.05617, 8.27631)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_styles/normal = SubResource("StyleBoxTexture_heu0m")
 
@@ -69,11 +74,43 @@ offset_right = 1360.0
 offset_bottom = 807.0
 scale = Vector2(0.766237, 0.841148)
 theme = SubResource("Theme_v23u6")
-theme_override_colors/font_color = Color(0.87451, 0.329412, 0.584314, 1)
-theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 39
 theme_override_styles/normal = SubResource("StyleBoxTexture_mfksy")
 theme_override_styles/hover = SubResource("StyleBoxTexture_3myte")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_b453b")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 81.0
+offset_top = 104.0
+offset_right = 340.0
+offset_bottom = 333.0
+scale = Vector2(1, 1.16682)
+theme_override_styles/normal = SubResource("StyleBoxTexture_hs515")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 363.0
+offset_right = 189.0
+offset_bottom = 386.0
+scale = Vector2(2.34432, 3.83469)
+theme_override_colors/font_color = Color(0.368627, 0, 0.592157, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 16
+text = "CORRUPTION SWORD "
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 566.0
+offset_top = 7.0
+offset_right = 1131.0
+offset_bottom = 120.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 82
+text = "CLICK TO BUY!"
+uppercase = true
 
 [connection signal="pressed" from="Return_Button" to="." method="_on_return_button_pressed"]

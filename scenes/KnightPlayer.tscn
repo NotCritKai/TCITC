@@ -192,10 +192,10 @@ layer = 0
 [node name="ProgressBar" type="ProgressBar" parent="CanvasLayer"]
 light_mask = 1023
 visibility_layer = 1023
-offset_left = 6.0
-offset_top = 9.0
-offset_right = 72.0
-offset_bottom = 36.0
+offset_left = 21.0
+offset_top = 23.0
+offset_right = 118.0
+offset_bottom = 63.0
 scale = Vector2(2.09933, 2.48802)
 pivot_offset = Vector2(10, 10)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -210,3 +210,13 @@ visible = false
 position = Vector2(9.5, 9.4211)
 scale = Vector2(0.925, 1.07105)
 texture = ExtResource("1_ajwlp")
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 218.0
+offset_top = 33.0
+offset_right = 280.0
+offset_bottom = 56.0
+scale = Vector2(1.67228, 1.67228)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.796078, 0, 0, 1)
+text = "HEALTH"
