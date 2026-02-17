@@ -1,34 +1,34 @@
 [gd_scene load_steps=16 format=3 uid="uid://c1ftujv5o5u0l"]
 
 [ext_resource type="Script" path="res://scripts/death_menu.gd" id="1_mr7k3"]
-[ext_resource type="Texture2D" uid="uid://debfxhk6oic4a" path="res://assets/Main_Menu_Assets/10.png" id="1_q7uam"]
-[ext_resource type="Texture2D" uid="uid://8qm6s3lhc23w" path="res://assets/Main_Menu_Assets/11.png" id="2_kxlob"]
-[ext_resource type="Texture2D" uid="uid://cxk8p5xjg3gin" path="res://assets/Main_Menu_Assets/12.png" id="3_maxyj"]
-[ext_resource type="Texture2D" uid="uid://c1qyc4yg66rlw" path="res://assets/Main_Menu_Assets/13.png" id="4_us8qc"]
-[ext_resource type="Texture2D" uid="uid://bf6juqt0m73wk" path="res://assets/Main_Menu_Assets/3.png" id="5_u6vb5"]
-[ext_resource type="Texture2D" uid="uid://ctx62isclk0xb" path="res://assets/Main_Menu_Assets/2.png" id="6_b260s"]
-[ext_resource type="Texture2D" uid="uid://dfn2r6ghmwou7" path="res://assets/Main_Menu_Assets/5.png" id="7_0u506"]
+[ext_resource type="Texture2D" uid="uid://debfxhk6oic4a" path="res://assets/Main_Menu_Assets/10.png" id="2_jxxqc"]
+[ext_resource type="Texture2D" uid="uid://8qm6s3lhc23w" path="res://assets/Main_Menu_Assets/11.png" id="3_ue4n2"]
+[ext_resource type="Texture2D" uid="uid://cxk8p5xjg3gin" path="res://assets/Main_Menu_Assets/12.png" id="4_5bs00"]
+[ext_resource type="Texture2D" uid="uid://c1qyc4yg66rlw" path="res://assets/Main_Menu_Assets/13.png" id="5_vkawr"]
+[ext_resource type="Texture2D" uid="uid://bf6juqt0m73wk" path="res://assets/Main_Menu_Assets/3.png" id="6_o6a1m"]
+[ext_resource type="Texture2D" uid="uid://ctx62isclk0xb" path="res://assets/Main_Menu_Assets/2.png" id="7_h252v"]
+[ext_resource type="Texture2D" uid="uid://dfn2r6ghmwou7" path="res://assets/Main_Menu_Assets/5.png" id="8_pch3m"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cvw4h"]
-texture = ExtResource("1_q7uam")
+texture = ExtResource("2_jxxqc")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i63c6"]
-texture = ExtResource("2_kxlob")
+texture = ExtResource("3_ue4n2")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_svk63"]
-texture = ExtResource("3_maxyj")
+texture = ExtResource("4_5bs00")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gbayw"]
-texture = ExtResource("4_us8qc")
+texture = ExtResource("5_vkawr")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4r8m1"]
-texture = ExtResource("5_u6vb5")
+texture = ExtResource("6_o6a1m")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bwfgx"]
-texture = ExtResource("6_b260s")
+texture = ExtResource("7_h252v")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i1uaw"]
-texture = ExtResource("7_0u506")
+texture = ExtResource("8_pch3m")
 
 [node name="DeathMenu" type="Control"]
 layout_mode = 3

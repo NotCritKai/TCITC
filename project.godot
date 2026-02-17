@@ -21,6 +21,22 @@ window/size/mode=2
 window/stretch/mode="canvas_items"
 window/stretch/aspect="keep_width"
 
+[file_customization]
+
+folder_colors={
+"res://Backgrounds/": "gray",
+"res://assets/": "pink",
+"res://assets/Enemies/": "purple",
+"res://assets/Inventory Assets/": "blue",
+"res://assets/Inventory Assets/Inventory Items/": "blue",
+"res://assets/Main_Menu_Assets/": "blue",
+"res://assets/Shop_Assets/": "blue",
+"res://assets/Sounds/": "green",
+"res://assets/Sprites/": "yellow",
+"res://scenes/": "red",
+"res://scripts/": "orange"
+}
+
 [input]
 
 move_left={

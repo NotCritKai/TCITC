@@ -1,8 +1,8 @@
 [gd_scene load_steps=27 format=3 uid="uid://t25invibtx27"]
 
-[ext_resource type="Texture2D" uid="uid://cubxiovs5kdu" path="res://assets/Knight with No Weapon.png" id="1_ajwlp"]
+[ext_resource type="Texture2D" uid="uid://cubxiovs5kdu" path="res://assets/Sprites/Characters/Knight with No Weapon.png" id="1_ajwlp"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_uyc6u"]
-[ext_resource type="Texture2D" uid="uid://c2aqabyf1226v" path="res://assets/Knight_Tilesets.png" id="2_anv8h"]
+[ext_resource type="Texture2D" uid="uid://c2aqabyf1226v" path="res://assets/Sprites/Characters/Knight_Tilesets.png" id="2_anv8h"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8jvod"]
 atlas = ExtResource("2_anv8h")

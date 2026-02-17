@@ -1,34 +1,27 @@
-[gd_scene load_steps=4 format=3 uid="uid://d2ove3ugi2g72"]
-
-[ext_resource type="Texture2D" uid="uid://cj4h2pkfbk17t" path="res://Backgrounds/Brown_INV_BG.jpg" id="1_vw8bh"]
-[ext_resource type="Texture2D" uid="uid://dfdcr28v18nrw" path="res://assets/Inventory Assets/SLOT.png" id="2_quqkw"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jyiib"]
-texture = ExtResource("2_quqkw")
+[gd_scene format=3 uid="uid://d2ove3ugi2g72"]
 
 [node name="Inventory" type="Node2D"]
 
-[node name="TextureRect" type="TextureRect" parent="."]
-offset_left = -23.0
-offset_top = -32.0
-offset_right = 6623.0
-offset_bottom = 4399.0
-scale = Vector2(0.180739, 0.180739)
-texture = ExtResource("1_vw8bh")
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
-[node name="Panel 1" type="Panel" parent="."]
-offset_left = -1303.0
-offset_top = -58.0
-offset_right = -1303.0
-offset_bottom = -58.0
+[node name="GridContainer" type="GridContainer" parent="Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
-[node name="Slots" type="GridContainer" parent="."]
-offset_left = 94.0
-offset_top = 154.0
-offset_right = 5967.0
-offset_bottom = 3076.0
-scale = Vector2(0.164, 0.148097)
-
-[node name="Panel 1" type="Panel" parent="Slots"]
+[node name="Panel" type="Panel" parent="Control/GridContainer"]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_jyiib")
+
+[node name="TextureRect" type="TextureRect" parent="Control/GridContainer/Panel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Control/GridContainer/Panel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
