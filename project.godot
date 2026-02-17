@@ -15,6 +15,10 @@ run/main_scene="res://scenes/Main_Menu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Gamemanager="*res://scripts/gamemanager.gd"
+
 [display]
 
 window/size/mode=2

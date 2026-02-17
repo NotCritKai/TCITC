@@ -21,3 +21,4 @@ func _on_go_to_shop_button_pressed():
 #BUTTON CODE
 
 
+var playerWeaponEquip: bool
