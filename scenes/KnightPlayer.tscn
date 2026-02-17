@@ -1,8 +1,9 @@
-[gd_scene load_steps=27 format=3 uid="uid://t25invibtx27"]
+[gd_scene load_steps=34 format=3 uid="uid://t25invibtx27"]
 
-[ext_resource type="Texture2D" uid="uid://cubxiovs5kdu" path="res://assets/Sprites/Characters/Knight with No Weapon.png" id="1_ajwlp"]
+[ext_resource type="Texture2D" uid="uid://cubxiovs5kdu" path="res://assets/Sprites/Knight with No Weapon.png" id="1_ajwlp"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_uyc6u"]
 [ext_resource type="Texture2D" uid="uid://c2aqabyf1226v" path="res://assets/Sprites/Characters/Knight_Tilesets.png" id="2_anv8h"]
+[ext_resource type="Texture2D" uid="uid://by02hs70fdw5" path="res://assets/Sprites/Characters/Knight Holding Sword (1).png" id="3_n3r23"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8jvod"]
 atlas = ExtResource("2_anv8h")
@@ -80,6 +81,30 @@ region = Rect2(94, 98, 47, 49)
 atlas = ExtResource("2_anv8h")
 region = Rect2(141, 98, 47, 49)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_ix3fb"]
+atlas = ExtResource("3_n3r23")
+region = Rect2(0, 0, 40, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s7wg5"]
+atlas = ExtResource("3_n3r23")
+region = Rect2(40, 0, 40, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1p8vl"]
+atlas = ExtResource("3_n3r23")
+region = Rect2(0, 40, 40, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hh2w3"]
+atlas = ExtResource("3_n3r23")
+region = Rect2(40, 40, 40, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i4pp4"]
+atlas = ExtResource("3_n3r23")
+region = Rect2(0, 80, 40, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g3vch"]
+atlas = ExtResource("3_n3r23")
+region = Rect2(40, 80, 40, 40)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_jd7dr"]
 animations = [{
 "frames": [{
@@ -153,6 +178,29 @@ animations = [{
 "loop": true,
 "name": &"Walking",
 "speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ix3fb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s7wg5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1p8vl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hh2w3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i4pp4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g3vch")
+}],
+"loop": true,
+"name": &"Weapon_idle",
+"speed": 5.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lohmf"]
@@ -175,8 +223,7 @@ script = ExtResource("1_uyc6u")
 unique_name_in_owner = true
 position = Vector2(7, 12)
 sprite_frames = SubResource("SpriteFrames_jd7dr")
-animation = &"Idle"
-frame_progress = 0.933556
+animation = &"Weapon_idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(7, 10)
