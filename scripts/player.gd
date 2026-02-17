@@ -69,7 +69,7 @@ func _physics_process(delta: float) -> void:
 
 
 #--------------------------------------------------------------
-#damage system
+#damage system BELOW
 
 
 func take_damage(amount: int) -> void:
@@ -91,4 +91,4 @@ func take_damage(amount: int) -> void:
 
 func die() -> void:
 	print("Player has died!")
-
+#--------------------------------------------------------------
