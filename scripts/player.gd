@@ -4,7 +4,7 @@ extends CharacterBody2D
 const SPEED = 200.0
 const JUMP_VELOCITY = -250.0
 var coins = 0
-
+var weapon_equip: bool
 
 @export var maxHealth: int = 100
 var currentHealth: int
@@ -26,7 +26,8 @@ var gravity: float = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 func _ready() -> void:
 	currentHealth = maxHealth
-
+	weapon_equip = true
+	
 
 	health_bar.max_value = maxHealth
 	health_bar.value = currentHealth
@@ -44,14 +45,7 @@ func _physics_process(delta: float) -> void:
 	var direction := Input.get_axis("move_left", "move_right")
 	
 	
-	#when things are pressed it will play the animation for the player
-	if direction == 0: 
-		animated_sprite_2d.play("Idle")
-	elif Input.is_action_just_pressed("jump"):
-		animated_sprite_2d.play("Jumping")
-		animated_sprite_2d.play("Walking")
-	else: 
-		animated_sprite_2d.play("Walking")
+	
 	#----------------------------------------------------------------------
 #direction
 	if direction > 0:
@@ -91,4 +85,23 @@ func take_damage(amount: int) -> void:
 
 func die() -> void:
 	print("Player has died!")
+
 #--------------------------------------------------------------
+
+
+#--------------------------------------------------------------
+#Weapon Equiping
+
+func weapon_equiping():
+	if weapon_equip:
+		if !velocity:
+			animsprite.play("weapon_idle")
+		if velocity: animsprite.play("Weapon_walking")
+	if !weapon_equip:
+		if !velocity: 
+			animated_sprite_2d.play("Idle")
+	elif Input.is_action_just_pressed("jump"):
+		animated_sprite_2d.play("Jumping")
+		animated_sprite_2d.play("Walking")
+	else: 
+		animated_sprite_2d.play("Walking")
