@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://c4hxly14y75e3"]
+[gd_scene load_steps=4 format=3 uid="uid://c4hxly14y75e3"]
 
 [ext_resource type="Script" path="res://scenes/Character_Selction.gd" id="1_3tag6"]
 [ext_resource type="Texture2D" uid="uid://cubxiovs5kdu" path="res://assets/Sprites/Knight with No Weapon.png" id="2_2m2qi"]
+[ext_resource type="Texture2D" uid="uid://d3v5a5vdxow08" path="res://assets/Sprites/Characters/Knight with Hand but no weapon (female).png" id="3_7uabu"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -17,25 +18,29 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(29.0571, 16.6018)
-color = Color(0.533333, 0.533333, 0.533333, 1)
+color = Color(0.584314, 0.498039, 0.603922, 1)
 
 [node name="Button" type="Button" parent="."]
+texture_filter = 1
 layout_mode = 0
-offset_left = 133.0
-offset_top = 186.0
-offset_right = 181.0
-offset_bottom = 234.0
-scale = Vector2(6.34373, 6.34373)
+offset_left = 167.0
+offset_top = 184.0
+offset_right = 215.0
+offset_bottom = 232.0
+scale = Vector2(7.49905, 7.49905)
 icon = ExtResource("2_2m2qi")
 flat = true
 
 [node name="Button2" type="Button" parent="."]
+texture_filter = 1
 layout_mode = 0
-offset_left = 621.0
-offset_top = 223.0
-offset_right = 629.0
+offset_left = 565.0
+offset_top = 183.0
+offset_right = 613.0
 offset_bottom = 231.0
-scale = Vector2(31.0605, 31.0605)
+scale = Vector2(7.67422, 7.67422)
+icon = ExtResource("3_7uabu")
+flat = true
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
@@ -48,5 +53,28 @@ theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 86
 text = "CHOOSE A CHARACTER!
 "
+
+[node name="PROGRESS" type="Label" parent="."]
+layout_mode = 0
+offset_left = 653.0
+offset_top = 403.0
+offset_right = 891.0
+offset_bottom = 454.0
+rotation = -0.655734
+theme_override_colors/font_color = Color(1, 0.988235, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 37
+text = "IN PROGRESS"
+
+[node name="PROGRESS2" type="Label" parent="."]
+offset_left = 680.0
+offset_top = 271.0
+offset_right = 918.0
+offset_bottom = 322.0
+rotation = 0.584984
+theme_override_colors/font_color = Color(1, 0.988235, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 37
+text = "IN PROGRESS"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
