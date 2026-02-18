@@ -10,9 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://ctx62isclk0xb" path="res://assets/Main_Menu_Assets/2.png" id="7_wrfhq"]
 [ext_resource type="Texture2D" uid="uid://dfn2r6ghmwou7" path="res://assets/Main_Menu_Assets/5.png" id="8_facpk"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yul0p"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oramu"]
 texture = ExtResource("2_ymvil")
-modulate_color = Color(0.529066, 0.529067, 0.529067, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_85ej1"]
 texture = ExtResource("3_fhuar")
@@ -62,7 +61,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_yul0p")
+theme_override_styles/panel = SubResource("StyleBoxTexture_oramu")
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
