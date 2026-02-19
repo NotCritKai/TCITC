@@ -82,8 +82,12 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_mfksy")
 theme_override_styles/hover = SubResource("StyleBoxTexture_3myte")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_b453b")
 
+<<<<<<< HEAD
 [node name="Button" type="Button" parent="."]
 texture_filter = 1
+=======
+[node name="Corruption Sword Button" type="Button" parent="."]
+>>>>>>> a504ee3df1a036ea17b67ac7a4d68105f8a0b9ad
 layout_mode = 0
 offset_left = 81.0
 offset_top = 104.0
@@ -93,7 +97,7 @@ scale = Vector2(1, 1.16682)
 theme_override_styles/normal = SubResource("StyleBoxTexture_hs515")
 theme_override_styles/hover = SubResource("StyleBoxTexture_mtred")
 
-[node name="Label" type="Label" parent="."]
+[node name="Corruption Sword Text" type="Label" parent="."]
 layout_mode = 0
 offset_left = 18.0
 offset_top = 363.0
@@ -106,7 +110,7 @@ theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 16
 text = "CORRUPTION SWORD "
 
-[node name="Label2" type="Label" parent="."]
+[node name="Click To Buy Text" type="Label" parent="."]
 layout_mode = 0
 offset_left = 566.0
 offset_top = 7.0
@@ -119,3 +123,4 @@ text = "CLICK TO BUY!"
 uppercase = true
 
 [connection signal="pressed" from="Return_Button" to="." method="_on_return_button_pressed"]
+[connection signal="pressed" from="Corruption Sword Button" to="." method="_on_corruption_sword_button_pressed"]
