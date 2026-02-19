@@ -1,7 +1,7 @@
 extends CharacterBody2D
 @onready var animated_sprite_2d = %AnimatedSprite2D
 
-const SPEED = 200.0
+var SPEED = 200.0
 const JUMP_VELOCITY = -250.0
 var coins = 0
 var weapon_equip: bool
@@ -44,7 +44,12 @@ func _physics_process(delta: float) -> void:
 		
 	var direction := Input.get_axis("move_left", "move_right")
 	
-	
+	#If holding shift, multiply speed by 1.5
+	if Input.is_action_just_pressed("sprint"):
+		SPEED = SPEED * 1.5
+	#If not holding shift, set speed back to normal
+	if Input.is_action_just_released("sprint"):
+		SPEED = SPEED / 1.5
 	
 	#----------------------------------------------------------------------
 #direction
@@ -105,3 +110,4 @@ func weapon_equiping():
 		animated_sprite_2d.play("Walking")
 	else: 
 		animated_sprite_2d.play("Walking")
+
