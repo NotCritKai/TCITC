@@ -34,6 +34,7 @@ folder_colors={
 "res://assets/Inventory Assets/": "blue",
 "res://assets/Inventory Assets/Inventory Items/": "blue",
 "res://assets/Main_Menu_Assets/": "blue",
+"res://assets/Pause_Menu_Assets/": "blue",
 "res://assets/Shop_Assets/": "blue",
 "res://assets/Sounds/": "green",
 "res://assets/Sprites/": "yellow",
