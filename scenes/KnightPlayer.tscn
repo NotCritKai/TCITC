@@ -290,6 +290,7 @@ scale = Vector2(0.925, 1.07105)
 texture = ExtResource("1_ajwlp")
 
 [node name="Label" type="Label" parent="CanvasLayer"]
+texture_filter = 1
 offset_left = -86.0
 offset_top = 7.0
 offset_right = -12.0
