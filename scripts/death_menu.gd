@@ -1,7 +1,5 @@
 extends Control
 
-@onready var corruption_sword_button = $"Corruption Sword Button"
-@onready var corruption_sword_text = $"Corruption Sword Text"
 
 #BUTTON CODES
 func _on_return_button_pressed():
@@ -16,11 +14,3 @@ func _on_try_again_pressed():
 
 func _on_quit_pressed():
 	get_tree().quit()
-
-
-
-func _on_corruption_sword_button_pressed():
-	#Format for removing items from shop temporarily
-
-	remove_child(corruption_sword_button)
-	remove_child(corruption_sword_text)
