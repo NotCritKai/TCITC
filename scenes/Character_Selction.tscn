@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://c4hxly14y75e3"]
 
-[ext_resource type="Script" path="res://scenes/Character_Selction.gd" id="1_3tag6"]
+[ext_resource type="Script" path="res://scripts/Character_Selction.gd" id="1_3tag6"]
 [ext_resource type="Texture2D" uid="uid://cubxiovs5kdu" path="res://assets/Sprites/Knight with No Weapon.png" id="2_2m2qi"]
 [ext_resource type="Texture2D" uid="uid://d3v5a5vdxow08" path="res://assets/Sprites/Characters/Knight with Hand but no weapon (female).png" id="3_7uabu"]
 
@@ -28,6 +28,7 @@ offset_top = 184.0
 offset_right = 215.0
 offset_bottom = 232.0
 scale = Vector2(7.49905, 7.49905)
+action_mode = 0
 icon = ExtResource("2_2m2qi")
 flat = true
 
@@ -39,6 +40,7 @@ offset_top = 183.0
 offset_right = 613.0
 offset_bottom = 231.0
 scale = Vector2(7.67422, 7.67422)
+action_mode = 0
 icon = ExtResource("3_7uabu")
 flat = true
 

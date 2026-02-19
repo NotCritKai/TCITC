@@ -1,0 +1,60 @@
+[gd_scene load_steps=2 format=3 uid="uid://b73bmeoc5ywmp"]
+
+[ext_resource type="Script" path="res://scripts/credits.gd" id="1_0sh30"]
+
+[node name="Credits" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_0sh30")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -360.0
+offset_top = -166.0
+offset_right = -320.0
+offset_bottom = -126.0
+scale = Vector2(48.72, 27.1901)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 7.0
+offset_top = 16.0
+offset_right = 315.0
+offset_bottom = 85.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 75
+text = "CREATED BY:"
+
+[node name="Names" type="Label" parent="."]
+offset_left = 28.0
+offset_top = 138.0
+offset_right = 882.0
+offset_bottom = 555.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 100
+text = "Lance Berwanger 
+Braylon Ringo 
+Charlie Brawders "
+
+[node name="Gratitudes" type="Label" parent="."]
+offset_left = 805.0
+offset_top = 286.0
+offset_right = 1091.0
+offset_bottom = 427.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "Thank YOU
+ for Playing!"
+
+[node name="Exit" type="Button" parent="."]
+process_mode = 3
+offset_left = 1041.0
+offset_top = 1.0
+offset_right = 1151.0
+offset_bottom = 78.0
+theme_override_colors/font_color = Color(0.454902, 0.0156863, 0.0862745, 1)
+theme_override_font_sizes/font_size = 50
+text = "EXIT"
+flat = true
+
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]

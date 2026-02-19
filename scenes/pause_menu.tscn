@@ -1,0 +1,88 @@
+[gd_scene load_steps=3 format=3 uid="uid://byhgtsfxrejn"]
+
+[ext_resource type="Script" path="res://Pause_Menu.gd" id="1_xqtst"]
+[ext_resource type="PackedScene" uid="uid://b73bmeoc5ywmp" path="res://scenes/credits.tscn" id="2_6i4xt"]
+
+[node name="Pause_Menu" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xqtst")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -1532.0
+offset_top = -673.0
+offset_right = -374.0
+offset_bottom = -29.0
+scale = Vector2(2.18851, 3.46559)
+color = Color(0, 0, 0, 1)
+
+[node name="Paused_LBL" type="Label" parent="."]
+process_mode = 3
+texture_filter = 1
+layout_mode = 0
+offset_left = -801.0
+offset_top = 189.0
+offset_right = -29.0
+offset_bottom = 462.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 200
+text = "PAUSED"
+horizontal_alignment = 1
+
+[node name="Unpause_BTN" type="Button" parent="."]
+layout_mode = 0
+offset_left = -998.0
+offset_top = 1.0
+offset_right = -758.0
+offset_bottom = 78.0
+scale = Vector2(1.16641, 1.26668)
+theme_override_colors/font_color = Color(0.654902, 0, 0.694118, 1)
+theme_override_colors/font_hover_color = Color(0.443137, 0, 0.470588, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.972549, 0.509804, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 75
+text = "UNPAUSE"
+flat = true
+alignment = 0
+
+[node name="Quit_Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = -590.0
+offset_top = 406.0
+offset_right = -296.0
+offset_bottom = 551.0
+theme_override_colors/font_color = Color(0.462745, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.780392, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.52549, 0.00784314, 0.00784314, 1)
+theme_override_font_sizes/font_size = 100
+text = "QUIT?"
+flat = true
+
+[node name="Credits_Button" type="Button" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = -524.0
+offset_top = 566.0
+offset_right = -370.0
+offset_bottom = 629.0
+theme_override_font_sizes/font_size = 40
+text = "Credits "
+flat = true
+
+[node name="Credits" parent="." instance=ExtResource("2_6i4xt")]
+visible = false
+offset_left = -918.0
+offset_top = 110.0
+offset_right = -918.0
+offset_bottom = 110.0
+
+[connection signal="pressed" from="Unpause_BTN" to="." method="_on_unpause_btn_pressed"]
+[connection signal="pressed" from="Quit_Button" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="Credits_Button" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="Credits_Button" to="." method="_on_credits_button_pressed"]

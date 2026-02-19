@@ -1,10 +1,12 @@
-[gd_scene load_steps=63 format=3 uid="uid://yraoo1bj3kcx"]
+[gd_scene load_steps=65 format=3 uid="uid://yraoo1bj3kcx"]
 
 [ext_resource type="PackedScene" uid="uid://t25invibtx27" path="res://scenes/KnightPlayer.tscn" id="1_pchtj"]
 [ext_resource type="Script" path="res://scripts/gamemanager.gd" id="1_smjvn"]
 [ext_resource type="Texture2D" uid="uid://cwfojucnvsas2" path="res://assets/Sprites/TileMaps/CartoonyBlocks.png" id="3_0p4na"]
 [ext_resource type="Texture2D" uid="uid://b1vhdxh668vwl" path="res://assets/Sprites/TileMaps/BasicFillerBlocks.png" id="3_f87g4"]
 [ext_resource type="Script" path="res://scripts/Camera2D.gd" id="4_qn3uc"]
+[ext_resource type="PackedScene" uid="uid://b73bmeoc5ywmp" path="res://scenes/credits.tscn" id="4_toa41"]
+[ext_resource type="PackedScene" uid="uid://byhgtsfxrejn" path="res://scenes/pause_menu.tscn" id="4_utlx0"]
 [ext_resource type="Texture2D" uid="uid://df0k7jwx22p8q" path="res://assets/Sprites/TileMaps/CartoonyContinued.png" id="5_nqwq8"]
 [ext_resource type="Texture2D" uid="uid://bm3mmupfvm1vh" path="res://assets/Sprites/TileMaps/Scenery/Lamp Post 1.png" id="6_fpj81"]
 [ext_resource type="Texture2D" uid="uid://07hxb1voxbfd" path="res://Backgrounds/Sky_Background.jpg" id="6_qgkpy"]
@@ -22605,6 +22607,9 @@ theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 60
 horizontal_alignment = 2
 
+[node name="Pause_Menu" parent="GameManager/CanvasLayer2" instance=ExtResource("4_utlx0")]
+visible = false
+
 [node name="Shop_Menu" parent="GameManager/CanvasLayer2" instance=ExtResource("29_f0s3o")]
 visible = false
 light_mask = 3
@@ -22614,6 +22619,18 @@ offset_top = -5.0
 offset_right = 3.0
 offset_bottom = -5.0
 scale = Vector2(1.00425, 1.08156)
+
+[node name="Credits" parent="GameManager/CanvasLayer2" instance=ExtResource("4_toa41")]
+visible = false
+
+[node name="Pause Button" type="Button" parent="GameManager/CanvasLayer2"]
+texture_filter = 1
+offset_left = 1009.0
+offset_top = 1.0
+offset_right = 1151.0
+offset_bottom = 67.0
+theme_override_font_sizes/font_size = 20
+text = "PAUSE"
 
 [node name="Player" parent="." instance=ExtResource("1_pchtj")]
 position = Vector2(7, -24)
@@ -22634,7 +22651,7 @@ motion_scale = Vector2(0.2, 0.2)
 motion_mirroring = Vector2(1536, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2(4776, 4380.62)
+position = Vector2(4716, 4336)
 scale = Vector2(7.44375, 7.60633)
 texture = ExtResource("6_qgkpy")
 
@@ -22671,4 +22688,5 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_87wlo")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_83dhw")
 script = ExtResource("28_k485e")
 
+[connection signal="pressed" from="GameManager/CanvasLayer2/Pause Button" to="GameManager" method="_on_pause_button_pressed"]
 [connection signal="pressed" from="Go_To_Shop_Button" to="GameManager" method="_on_go_to_shop_button_pressed"]
