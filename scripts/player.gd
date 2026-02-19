@@ -31,6 +31,7 @@ func _ready() -> void:
 
 	health_bar.max_value = maxHealth
 	health_bar.value = currentHealth
+	
 
 	print("Player ready with health:", currentHealth)
 
@@ -57,13 +58,15 @@ func _physics_process(delta: float) -> void:
 		animsprite.flip_h = false
 	elif direction < 0:
 		animsprite.flip_h = true
-
+	
 
 	if direction != 0:
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-
+	if currentHealth == 0:
+		get_tree().change_scene_to_file("res://scenes/death_menu.tscn")
+		
 	move_and_slide()
 
 
@@ -99,4 +102,3 @@ func die() -> void:
 		animated_sprite_2d.play("Walking")
 	else: 
 		animated_sprite_2d.play("Walking")
-
