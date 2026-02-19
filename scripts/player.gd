@@ -92,18 +92,7 @@ func die() -> void:
 	print("Player has died!")
 
 #--------------------------------------------------------------
-
-
-#--------------------------------------------------------------
-#Weapon Equiping
-
-func weapon_equiping():
-	if weapon_equip:
-		if !velocity:
-			animsprite.play("weapon_idle")
-		if velocity: animsprite.play("Weapon_walking")
-	if !weapon_equip:
-		if !velocity: 
+	if !velocity: 
 			animated_sprite_2d.play("Idle")
 	elif Input.is_action_just_pressed("jump"):
 		animated_sprite_2d.play("Jumping")
