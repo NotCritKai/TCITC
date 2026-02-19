@@ -67,6 +67,7 @@ theme_override_font_sizes/font_size = 37
 text = "IN PROGRESS"
 
 [node name="PROGRESS2" type="Label" parent="."]
+layout_mode = 0
 offset_left = 680.0
 offset_top = 271.0
 offset_right = 918.0

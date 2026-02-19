@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://d4mvyywr31kx6"]
+[gd_scene load_steps=14 format=3 uid="uid://d4mvyywr31kx6"]
 
 [ext_resource type="Script" path="res://scripts/death_menu.gd" id="1_cqwt3"]
 [ext_resource type="Texture2D" uid="uid://yetwtrwai35x" path="res://assets/Shop_Assets/The Crusade Into The Corruption.png" id="2_j4br7"]
@@ -22,6 +22,9 @@ texture = ExtResource("3_asbvt")
 texture = ExtResource("4_61xuw")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hs515"]
+texture = ExtResource("6_bukvb")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mtred"]
 texture = ExtResource("6_bukvb")
 
 [node name="Shop_Menu" type="Control"]
@@ -80,6 +83,7 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_3myte")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_b453b")
 
 [node name="Button" type="Button" parent="."]
+texture_filter = 1
 layout_mode = 0
 offset_left = 81.0
 offset_top = 104.0
@@ -87,6 +91,7 @@ offset_right = 340.0
 offset_bottom = 333.0
 scale = Vector2(1, 1.16682)
 theme_override_styles/normal = SubResource("StyleBoxTexture_hs515")
+theme_override_styles/hover = SubResource("StyleBoxTexture_mtred")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
