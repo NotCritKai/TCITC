@@ -1,10 +1,11 @@
-[gd_scene load_steps=38 format=3 uid="uid://t25invibtx27"]
+[gd_scene load_steps=40 format=3 uid="uid://t25invibtx27"]
 
 [ext_resource type="Texture2D" uid="uid://cubxiovs5kdu" path="res://assets/Sprites/Knight with No Weapon.png" id="1_ajwlp"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_uyc6u"]
 [ext_resource type="Texture2D" uid="uid://c2aqabyf1226v" path="res://assets/Sprites/Characters/Knight_Tilesets.png" id="2_anv8h"]
 [ext_resource type="Texture2D" uid="uid://by02hs70fdw5" path="res://assets/Sprites/Characters/Knight Holding Sword (1).png" id="3_n3r23"]
 [ext_resource type="Texture2D" uid="uid://dvxlpxla6pgdk" path="res://assets/Sprites/Characters/Walking with Weapon.png" id="4_kheiu"]
+[ext_resource type="Texture2D" uid="uid://c01r1jqd6ljra" path="res://assets/Sprites/Piskel HeartIcon.png" id="6_50oy4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8jvod"]
 atlas = ExtResource("2_anv8h")
@@ -240,6 +241,9 @@ bg_color = Color(0.792157, 0.156863, 0, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4afuj"]
 bg_color = Color(0, 0.721569, 0.313726, 1)
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c8y7g"]
+texture = ExtResource("6_50oy4")
+
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 z_index = 10
 position = Vector2(0, -2)
@@ -286,11 +290,12 @@ scale = Vector2(0.925, 1.07105)
 texture = ExtResource("1_ajwlp")
 
 [node name="Label" type="Label" parent="CanvasLayer"]
-offset_left = 218.0
-offset_top = 33.0
-offset_right = 280.0
-offset_bottom = 56.0
+texture_filter = 1
+offset_left = -86.0
+offset_top = 7.0
+offset_right = -12.0
+offset_bottom = 67.0
 scale = Vector2(1.67228, 1.67228)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0.796078, 0, 0, 1)
-text = "HEALTH"
+theme_override_styles/normal = SubResource("StyleBoxTexture_c8y7g")

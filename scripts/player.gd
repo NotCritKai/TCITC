@@ -1,7 +1,7 @@
 extends CharacterBody2D
 @onready var animated_sprite_2d = %AnimatedSprite2D
 
-const SPEED = 200.0
+var SPEED = 200.0
 const JUMP_VELOCITY = -250.0
 var coins = 0
 var weapon_equip: bool
@@ -31,6 +31,7 @@ func _ready() -> void:
 
 	health_bar.max_value = maxHealth
 	health_bar.value = currentHealth
+	
 
 	print("Player ready with health:", currentHealth)
 
@@ -44,7 +45,12 @@ func _physics_process(delta: float) -> void:
 		
 	var direction := Input.get_axis("move_left", "move_right")
 	
-	
+	#If holding shift, multiply speed by 1.5
+	if Input.is_action_just_pressed("sprint"):
+		SPEED = SPEED * 1.5
+	#If not holding shift, set speed back to normal
+	if Input.is_action_just_released("sprint"):
+		SPEED = SPEED / 1.5
 	
 	#----------------------------------------------------------------------
 #direction
@@ -52,13 +58,15 @@ func _physics_process(delta: float) -> void:
 		animsprite.flip_h = false
 	elif direction < 0:
 		animsprite.flip_h = true
-
+	
 
 	if direction != 0:
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-
+	if currentHealth == 0:
+		get_tree().change_scene_to_file("res://scenes/death_menu.tscn")
+		
 	move_and_slide()
 
 
@@ -87,18 +95,7 @@ func die() -> void:
 	print("Player has died!")
 
 #--------------------------------------------------------------
-
-
-#--------------------------------------------------------------
-#Weapon Equiping
-
-func weapon_equiping():
-	if weapon_equip:
-		if !velocity:
-			animsprite.play("weapon_idle")
-		if velocity: animsprite.play("Weapon_walking")
-	if !weapon_equip:
-		if !velocity: 
+	if !velocity: 
 			animated_sprite_2d.play("Idle")
 	elif Input.is_action_just_pressed("jump"):
 		animated_sprite_2d.play("Jumping")
