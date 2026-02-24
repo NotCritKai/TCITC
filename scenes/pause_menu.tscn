@@ -76,6 +76,7 @@ text = "Credits "
 flat = true
 
 [node name="Credits" parent="." instance=ExtResource("2_6i4xt")]
+visible = false
 offset_left = -976.0
 offset_top = 1.0
 offset_right = -976.0
@@ -83,5 +84,5 @@ offset_bottom = 1.0
 
 [connection signal="pressed" from="Unpause_BTN" to="." method="_on_unpause_btn_pressed"]
 [connection signal="pressed" from="Quit_Button" to="." method="_on_quit_button_pressed"]
-[connection signal="pressed" from="Credits_Button" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="Credits_Button" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="Credits_Button" to="." method="_on_credits_pressed"]

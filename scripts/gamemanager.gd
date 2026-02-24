@@ -11,7 +11,6 @@ func add_point():
 	coin_label.text =str(score) + " Coins"
 	shop_menu.coin_label.text =str(score) + " Coins"
 
-
 #BUTTON CODES
 func _on_go_to_shop_button_pressed():
 	var shop_scene = load("res://scenes/shop_menu.tscn")#loads thw shop  

@@ -84,21 +84,12 @@ func take_damage(amount: int) -> void:
 		#DEATH SCREEN 
 		#----------------
 #if players health is under zero, changes to death screen 
-		#if currentHealth <= 0:
-			#var scene = death_screen.instantiate()
-			#get_parent().add_child(scene)
-			#scene.position = Vector2(-380, -240)
-			#scene.scale = Vector2(0.5, 0.5)
-			
-
-func die() -> void:
-	print("Player has died!")
 
 #--------------------------------------------------------------
-	if !velocity: 
-			animated_sprite_2d.play("Idle")
-	elif Input.is_action_just_pressed("jump"):
+	while !velocity:
+		animated_sprite_2d.play("Idle")
+	if Input.is_action_just_pressed("jump"):
 		animated_sprite_2d.play("Jumping")
 		animated_sprite_2d.play("Walking")
-	else: 
+	else:
 		animated_sprite_2d.play("Walking")

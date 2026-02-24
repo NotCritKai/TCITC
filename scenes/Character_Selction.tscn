@@ -15,9 +15,11 @@ script = ExtResource("1_3tag6")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-scale = Vector2(29.0571, 16.6018)
+offset_left = -787.0
+offset_top = -489.0
+offset_right = -747.0
+offset_bottom = -449.0
+scale = Vector2(75.2123, 42.9726)
 color = Color(0.584314, 0.498039, 0.603922, 1)
 
 [node name="Button" type="Button" parent="."]
