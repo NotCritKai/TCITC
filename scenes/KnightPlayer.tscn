@@ -91,7 +91,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_it7ej")
 }],
 "loop": true,
-"name": &"Idle",
+"name": &"idle",
 "speed": 4.0
 }, {
 "frames": [{
@@ -120,7 +120,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_i063b")
 }],
 "loop": true,
-"name": &"Jumping",
+"name": &"jump",
 "speed": 10.0
 }, {
 "frames": [{
@@ -152,7 +152,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_dcbvq")
 }],
 "loop": true,
-"name": &"Walking",
+"name": &"walk",
 "speed": 12.0
 }]
 
@@ -180,8 +180,8 @@ unique_name_in_owner = true
 texture_filter = 1
 position = Vector2(7, 12)
 sprite_frames = SubResource("SpriteFrames_jd7dr")
-animation = &"Idle"
-frame_progress = 0.785474
+animation = &"idle"
+frame_progress = 0.539278
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(7, 10)

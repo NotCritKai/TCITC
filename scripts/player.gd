@@ -86,10 +86,10 @@ func take_damage(amount: int) -> void:
 #if players health is under zero, changes to death screen 
 
 #--------------------------------------------------------------
-	while !velocity:
-		animated_sprite_2d.play("Idle")
-	if Input.is_action_just_pressed("jump"):
-		animated_sprite_2d.play("Jumping")
-		animated_sprite_2d.play("Walking")
-	else:
-		animated_sprite_2d.play("Walking")
+	if !velocity:
+		animated_sprite_2d.play("idle")
+	elif Input.is_action_just_pressed("jump"):
+		animated_sprite_2d.play("jump")
+		animated_sprite_2d.play("walk")
+	elif velocity:
+		animated_sprite_2d.play("walk")
