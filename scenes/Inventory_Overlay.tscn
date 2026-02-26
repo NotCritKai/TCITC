@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://bd0yvub8niqne"]
+
+[node name="InventoryOverlay" type="Node2D"]
