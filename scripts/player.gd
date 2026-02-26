@@ -52,7 +52,7 @@ func _physics_process(delta: float) -> void:
 	#If not holding shift, set speed back to normal
 	if Input.is_action_just_released("sprint"):
 		SPEED = SPEED / 2
-	#----------------------------------------------------------------------
+#----------------------------------------------------------------------
 	#Player Animations
 	if !velocity:
 		animated_sprite_2d.play("idle")
@@ -62,7 +62,7 @@ func _physics_process(delta: float) -> void:
 	elif velocity:
 		animated_sprite_2d.play("walk")
 	#Player Animations
-	#----------------------------------------------------------------------
+#----------------------------------------------------------------------
 #direction
 	if direction > 0:
 		animsprite.flip_h = false
@@ -96,3 +96,5 @@ func take_damage(amount: int) -> void:
 #if players health is under zero, changes to death screen 
 
 #--------------------------------------------------------------
+func _on_corruption_sword_pressed():
+	animated_sprite_2d.play("corruption_sword")

@@ -19,3 +19,10 @@ func _on_try_again_pressed():
 
 
 
+
+
+signal corruption_sword_pressed
+
+
+func _on_corruption_sword_pressed():
+	emit_signal("corruption_sword_pressed")

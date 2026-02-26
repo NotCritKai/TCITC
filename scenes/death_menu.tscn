@@ -55,10 +55,10 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_cvw4h")
 
 [node name="TryAgain" type="Button" parent="."]
 layout_mode = 0
-offset_left = 375.0
-offset_top = 281.0
-offset_right = 719.0
-offset_bottom = 485.0
+offset_left = 384.0
+offset_top = 305.0
+offset_right = 728.0
+offset_bottom = 509.0
 theme_override_styles/normal = SubResource("StyleBoxTexture_i63c6")
 theme_override_styles/hover = SubResource("StyleBoxTexture_svk63")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_gbayw")
@@ -66,9 +66,9 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_gbayw")
 [node name="Quit" type="Button" parent="."]
 layout_mode = 0
 offset_left = 432.0
-offset_top = 494.0
+offset_top = 510.0
 offset_right = 663.0
-offset_bottom = 603.0
+offset_bottom = 619.0
 theme_override_styles/normal = SubResource("StyleBoxTexture_4r8m1")
 theme_override_styles/hover = SubResource("StyleBoxTexture_bwfgx")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_i1uaw")

@@ -1,5 +1,6 @@
 extends Node
-
+func _ready():
+	$shop_menu.connect("corruption_sword_pressed", $Player._on_corruption_sword_pressed)
 var score = 1
 
 @onready var coin_label = $CanvasLayer2/CoinLabel
@@ -23,10 +24,13 @@ func _on_go_to_shop_button_pressed():
 func _on_pause_button_pressed():
 	var pause_scene = load("res://scenes/pause_menu.tscn")#loads the menu  
 	var pause = pause_scene.instantiate()#initiates menu 
-	get_tree().current_scene.get_node("GameManager/CanvasLayer2/Pause_zButton").add_child(pause)
+	get_tree().current_scene.get_node("GameManager/CanvasLayer2/Pause_Button").add_child(pause)
 	get_tree().paused = true #pauses
 #PAUSE MENU CODE
 
 var playerWeaponEquip: bool
+
+
+
 
 
