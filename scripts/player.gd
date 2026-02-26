@@ -24,6 +24,7 @@ var gravity: float = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 @onready var health_bar: ProgressBar = $CanvasLayer/ProgressBar
 
+
 func _ready() -> void:
 	currentHealth = maxHealth
 	weapon_equip = true
@@ -47,11 +48,11 @@ func _physics_process(delta: float) -> void:
 	
 	#If holding shift, multiply speed by 1.5
 	if Input.is_action_just_pressed("sprint"):
-		SPEED = SPEED * 1.5
+		SPEED = SPEED * 2
 	#If not holding shift, set speed back to normal
 	if Input.is_action_just_released("sprint"):
-		SPEED = SPEED / 1.5
-	
+		SPEED = SPEED / 2
+
 	#----------------------------------------------------------------------
 #direction
 	if direction > 0:
