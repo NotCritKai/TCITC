@@ -1,4 +1,4 @@
-[gd_scene load_steps=66 format=3 uid="uid://yraoo1bj3kcx"]
+[gd_scene load_steps=65 format=3 uid="uid://yraoo1bj3kcx"]
 
 [ext_resource type="PackedScene" uid="uid://t25invibtx27" path="res://scenes/KnightPlayer.tscn" id="1_pchtj"]
 [ext_resource type="Script" path="res://scripts/gamemanager.gd" id="1_smjvn"]
@@ -9,7 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://byhgtsfxrejn" path="res://scenes/pause_menu.tscn" id="4_utlx0"]
 [ext_resource type="Texture2D" uid="uid://df0k7jwx22p8q" path="res://assets/Sprites/TileMaps/CartoonyContinued.png" id="5_nqwq8"]
 [ext_resource type="Texture2D" uid="uid://bm3mmupfvm1vh" path="res://assets/Sprites/TileMaps/Scenery/Lamp Post 1.png" id="6_fpj81"]
-[ext_resource type="PackedScene" uid="uid://dok2qnveyk8r3" path="res://scenes/Inventory_Overlay.tscn" id="6_j5kx0"]
 [ext_resource type="Texture2D" uid="uid://07hxb1voxbfd" path="res://Backgrounds/Sky_Background.jpg" id="6_qgkpy"]
 [ext_resource type="Texture2D" uid="uid://bnhrhapd4i27j" path="res://assets/Sprites/TileMaps/Scenery/TreeMEDIUM.png" id="7_lxys3"]
 [ext_resource type="Texture2D" uid="uid://dpx30k8tyem2x" path="res://assets/Sprites/TileMaps/Scenery/Mushroom.png" id="8_qbdcv"]
@@ -22622,9 +22621,6 @@ offset_bottom = -5.0
 scale = Vector2(1.00425, 1.08156)
 
 [node name="Credits" parent="GameManager/CanvasLayer2" instance=ExtResource("4_toa41")]
-visible = false
-
-[node name="Inventory" parent="GameManager/CanvasLayer2" instance=ExtResource("6_j5kx0")]
 visible = false
 
 [node name="Pause_Button" type="Button" parent="GameManager/CanvasLayer2"]
