@@ -96,5 +96,5 @@ func take_damage(amount: int) -> void:
 #if players health is under zero, changes to death screen 
 
 #--------------------------------------------------------------
-func _on_corruption_sword_pressed():
-	animated_sprite_2d.play("corruption_sword")
+
+#100 LINES!

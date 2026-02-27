@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://byhgtsfxrejn"]
+[gd_scene load_steps=4 format=3 uid="uid://byhgtsfxrejn"]
 
 [ext_resource type="Script" path="res://scripts/Pause_Menu.gd" id="1_xqtst"]
 [ext_resource type="PackedScene" uid="uid://b73bmeoc5ywmp" path="res://scenes/credits.tscn" id="2_6i4xt"]
+[ext_resource type="PackedScene" uid="uid://ch0p5dpj6gd18" path="res://scenes/control_menu.tscn" id="3_vpx5s"]
 
 [node name="Pause_Menu" type="Control"]
 process_mode = 3
@@ -51,6 +52,19 @@ text = "UNPAUSE"
 flat = true
 alignment = 0
 
+[node name="Controls_button" type="Button" parent="."]
+process_mode = 3
+texture_filter = 1
+layout_mode = 0
+offset_left = -458.0
+offset_top = 18.0
+offset_right = -53.0
+offset_bottom = 129.0
+theme_override_colors/font_color = Color(0, 0.560784, 0, 1)
+theme_override_font_sizes/font_size = 75
+text = "CONTROLS"
+flat = true
+
 [node name="Quit_Button" type="Button" parent="."]
 layout_mode = 0
 offset_left = -590.0
@@ -82,7 +96,11 @@ offset_top = 1.0
 offset_right = -976.0
 offset_bottom = 1.0
 
+[node name="ControlMenu" parent="." instance=ExtResource("3_vpx5s")]
+visible = false
+
 [connection signal="pressed" from="Unpause_BTN" to="." method="_on_unpause_btn_pressed"]
+[connection signal="pressed" from="Controls_button" to="." method="_on_controls_button_pressed"]
 [connection signal="pressed" from="Quit_Button" to="." method="_on_quit_button_pressed"]
 [connection signal="pressed" from="Credits_Button" to="." method="_on_credits_button_pressed"]
 [connection signal="pressed" from="Credits_Button" to="." method="_on_credits_pressed"]

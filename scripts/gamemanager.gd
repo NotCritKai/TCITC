@@ -1,6 +1,6 @@
 extends Node
-func _ready():
-	$shop_menu.connect("corruption_sword_pressed", $Player._on_corruption_sword_pressed)
+
+
 var score = 1
 
 @onready var coin_label = $CanvasLayer2/CoinLabel

@@ -9,6 +9,7 @@ func _on_quit_button_pressed():
 func _on_credits_button_pressed():
 	$Credits.visible = true
 	
+	
 
 func _on_unpause_btn_pressed():
 	$Credits.visible = false
@@ -16,3 +17,6 @@ func _on_unpause_btn_pressed():
 	queue_free()
 
 
+
+func _on_controls_button_pressed():
+	$ControlMenu.visible = true

@@ -123,5 +123,5 @@ text = "CLICK TO BUY!"
 uppercase = true
 
 [connection signal="pressed" from="Return_Button" to="." method="_on_return_button_pressed"]
-[connection signal="pressed" from="CorruptionSword" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="CorruptionSword" to="." method="_on_corruption_sword_pressed"]
+[connection signal="pressed" from="CorruptionSword" to="." method="_on_button_pressed"]

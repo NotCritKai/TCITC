@@ -201,7 +201,7 @@ texture_filter = 1
 position = Vector2(7, 12)
 sprite_frames = SubResource("SpriteFrames_jd7dr")
 animation = &"sword_idle"
-frame_progress = 0.0953226
+frame_progress = 0.929418
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(7, 10)
