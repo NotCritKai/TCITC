@@ -1,89 +1,80 @@
 extends CharacterBody2D
 
-# -------------------------
-# Exported variables (editable in Inspector)
-# -------------------------
-@export var speed: float = 155.0            # Movement speed
-@export var patrol_distance: float = 200.0  # How far the enemy walks before turning around
-@export var detection_range: float = 250.0  # How close the player must be before enemy chases
-@export var follow_always: bool = true      # If true, enemy always chases player
-@export var gravity: float = 980.0          # Gravity force applied to enemy
-@export var damage: int = 25                # Damage dealt to player on collision
+@export var speed: float = 155.0
+@export var patrol_distance: float = 200.0
+@export var detection_range: float = 250.0
+@export var follow_always: bool = true
+@export var gravity: float = 980.0
+@export var damage: int = 25
 
 # -------------------------
-# Internal variables
+#enemy_health
+@export var max_health: int = 50
+var current_health: int = 50
 # -------------------------
-var start_position: Vector2                 # Starting position (used for patrol distance)
-var direction: int = 1                      # Patrol direction (1 = right, -1 = left)
-var player_node: Node2D                     # Reference to the player node
 
-# -------------------------
-# Setup
-# -------------------------
+var start_position: Vector2
+var direction: int = 1
+var player_node: Node2D
+
+
 func _ready() -> void:
-	# Save the starting position for patrol logic
 	start_position = global_position
-
-	# Find the player dynamically using the "player" group
-	# (Make sure your Player node is added to the "player" group in the editor)
 	player_node = get_tree().get_first_node_in_group("player")
 
-	# Safety check: warn if no player was found
 	if player_node == null:
 		push_warning("Enemy: No player found in group 'player'")
 
-# -------------------------
-# Main physics loop
-# -------------------------
+	current_health = max_health
+
+
 func _physics_process(delta: float) -> void:
-	# Apply gravity every frame
 	velocity.y += gravity * delta
 
-	# Decide whether to chase or patrol
 	if player_node and (follow_always or is_player_in_range()):
 		chase_player()
 	else:
 		patrol()
 
-	# Move using CharacterBody2D's built-in velocity system
 	move_and_slide()
 
-# -------------------------
-# Patrol behavior
-# -------------------------
+#direction_code
 func patrol() -> void:
-	# Move left or right depending on direction
 	velocity.x = speed * direction
 
-	# If enemy has walked too far from start OR hit a wall, flip direction
 	if abs(global_position.x - start_position.x) > patrol_distance or is_on_wall():
 		direction *= -1
 
-# -------------------------
-# Chase behavior
-# -------------------------
-func chase_player() -> void:
-	# Calculate direction vector toward player
-	var direction_to_player := (player_node.global_position - global_position).normalized()
 
-	# Move horizontally toward player
+func chase_player() -> void:
+	var direction_to_player := (player_node.global_position - global_position).normalized()
 	velocity.x = direction_to_player.x * speed
 
-# -------------------------
-# Detection check
-# -------------------------
+
 func is_player_in_range() -> bool:
-	# Returns true if player is within detection range
 	return player_node and global_position.distance_to(player_node.global_position) <= detection_range
 
 
-# Damage System
-
+# --------------------------------------------------------------
+#enemy_damages_player_on_collision
 
 func _on_area_2d_body_entered(body):
-
 	print("Enemy collided with:", body.name)
-
 
 	if body.has_method("take_damage"):
 		body.take_damage(damage)
+# --------------------------------------------------------------
+#enemy_takes_damage_from_player
+
+func take_damage(amount: int) -> void:
+	current_health -= amount
+	print("Enemy took", amount, "damage. Health:", current_health)
+
+	if current_health <= 0:
+		die()
+
+func die():
+	print("Enemy died")
+	queue_free()
+	visible = false 
+

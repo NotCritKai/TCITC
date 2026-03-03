@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://t25invibtx27"]
+[gd_scene load_steps=33 format=3 uid="uid://t25invibtx27"]
 
 [ext_resource type="Texture2D" uid="uid://cubxiovs5kdu" path="res://assets/Sprites/Knight with No Weapon.png" id="1_ajwlp"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_uyc6u"]
@@ -189,6 +189,9 @@ bg_color = Color(0, 0.721569, 0.313726, 1)
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c8y7g"]
 texture = ExtResource("6_50oy4")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7bb87"]
+size = Vector2(19.25, 23)
+
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 z_index = 10
 position = Vector2(0, -2)
@@ -247,3 +250,17 @@ scale = Vector2(1.67228, 1.67228)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0.796078, 0, 0, 1)
 theme_override_styles/normal = SubResource("StyleBoxTexture_c8y7g")
+
+[node name="AttackArea" type="Area2D" parent="."]
+light_mask = 1023
+visibility_layer = 1023
+collision_layer = 255
+collision_mask = 255
+monitoring = false
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
+position = Vector2(27.375, 14.5)
+shape = SubResource("RectangleShape2D_7bb87")
+
+[connection signal="body_entered" from="AttackArea" to="." method="_on_attack_area_body_entered"]
