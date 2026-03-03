@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://c406akgi71htn"]
 
-[ext_resource type="Script" path="res://scripts/Enemy.gd" id="1_fke3w"]
+[ext_resource type="Script" path="res://scripts/Enemy_PS.gd" id="1_fke3w"]
 [ext_resource type="Texture2D" uid="uid://dwbo5srjv25ej" path="res://assets/Enemies/Corrupted Slime.png" id="2_na1vi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qlhh0"]

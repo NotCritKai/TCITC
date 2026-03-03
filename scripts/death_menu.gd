@@ -22,3 +22,10 @@ func _on_try_again_pressed():
 
 
 
+
+
+
+
+
+func _on_corruption_sword_pressed():
+	pass # Replace with function body.

@@ -66,8 +66,10 @@ func _physics_process(delta: float) -> void:
 	# Flip sprite
 	if direction > 0:
 		animsprite.flip_h = false
+		$AttackArea.position.x = abs($AttackArea.position.x)
 	elif direction < 0:
 		animsprite.flip_h = true
+		$AttackArea.position.x = -abs($AttackArea.position.x)
 
 	# Movement
 	if direction != 0:
