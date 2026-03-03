@@ -84,37 +84,34 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 	# -----------------------------
-	# NEW: Attack input
-	# -----------------------------
 	if Input.is_action_just_pressed("attack") and not attack_cooldown:
-		attack()
+		attack()#attack input
 	# -----------------------------
 
 
 # --------------------------------------------------------------
-# DAMAGE SYSTEM (Player takes damage)
-# --------------------------------------------------------------
+#damage_system (Player takes damage)
+
 func take_damage(amount: int) -> void:
 	if canTakeDamage:
 		currentHealth -= amount
 		print("Player took", amount, "damage. Current health:", currentHealth)
 
 		health_bar.value = currentHealth
-
+# --------------------------------------------------------------
 
 #player_attacking
 func attack():
 	attack_cooldown = true
 
-	# Turn on hitbox
+	#hitbox stuff
 	$AttackArea.monitoring = true
 	$AttackArea.monitorable = true
 	print("Hitbox ON")
 
-	# Hitbox active for 0.2 seconds
+	#Hitbox active for 0.2 seconds
 	await get_tree().create_timer(0.2).timeout
 
-	# Turn off hitbox
 	$AttackArea.monitoring = false
 	$AttackArea.monitorable = false
 	print("Hitbox OFF")
@@ -124,8 +121,13 @@ func attack():
 
 
 # --------------------------------------------------------------
-# NEW: Attack Hitbox Signal
-# --------------------------------------------------------------
+#attack Hitbox Signal
 func _on_attack_area_body_entered(body):
 	if body.has_method("take_damage"):
 		body.take_damage(attack_damage)
+# --------------------------------------------------------------
+
+var animation_locked = false
+func _on_sword_bought():
+	animation_locked = true 
+	$AnimatedSprite2D.play("sword_idle")
