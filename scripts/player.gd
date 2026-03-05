@@ -36,7 +36,7 @@ func _ready() -> void:
 	health_bar.max_value = maxHealth
 	health_bar.value = currentHealth
 
-	print("Player ready with health:", currentHealth)
+	print("Player ready with health:", currentHealth)#DEBUG
 
 
 func _physics_process(delta: float) -> void:
@@ -48,13 +48,13 @@ func _physics_process(delta: float) -> void:
 
 	var direction := Input.get_axis("move_left", "move_right")
 
-	# Sprint
+	#If you press shift the player sprints
 	if Input.is_action_just_pressed("sprint"):
 		SPEED = SPEED * 2
 	if Input.is_action_just_released("sprint"):
 		SPEED = SPEED / 2
 
-	# Animations
+	#Player Anims 
 	if !velocity:
 		animated_sprite_2d.play("idle")
 	elif Input.is_action_just_pressed("jump"):
@@ -63,7 +63,7 @@ func _physics_process(delta: float) -> void:
 	elif velocity:
 		animated_sprite_2d.play("walk")
 
-	# Flip sprite
+	#Flips the sprite + Hitbox when facing diff directions (L and R)
 	if direction > 0:
 		animsprite.flip_h = false
 		$AttackArea.position.x = abs($AttackArea.position.x)
@@ -71,25 +71,25 @@ func _physics_process(delta: float) -> void:
 		animsprite.flip_h = true
 		$AttackArea.position.x = -abs($AttackArea.position.x)
 
-	# Movement
+	#Direction/Movement Code
 	if direction != 0:
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
-	# Death
-	if currentHealth == 0:
+	
+	if currentHealth == 0:#If players health reaches 0 it changes to Death Scene
 		get_tree().change_scene_to_file("res://scenes/death_menu.tscn")
 
 	move_and_slide()
 
-	# -----------------------------
+	#-----------------------------
 	if Input.is_action_just_pressed("attack") and not attack_cooldown:
 		attack()#attack input
 	# -----------------------------
 
 
-# --------------------------------------------------------------
+	#--------------------------------------------------------------
 #damage_system (Player takes damage)
 
 func take_damage(amount: int) -> void:
@@ -98,36 +98,38 @@ func take_damage(amount: int) -> void:
 		print("Player took", amount, "damage. Current health:", currentHealth)
 
 		health_bar.value = currentHealth
-# --------------------------------------------------------------
+	#--------------------------------------------------------------
 
 #player_attacking
 func attack():
 	attack_cooldown = true
 
-	#hitbox stuff
+	#hitbox stuff 
 	$AttackArea.monitoring = true
 	$AttackArea.monitorable = true
 	print("Hitbox ON")
 
-	#Hitbox active for 0.2 seconds
+	#Another Hitbox thinggggggggggg......
 	await get_tree().create_timer(0.2).timeout
 
 	$AttackArea.monitoring = false
 	$AttackArea.monitorable = false
 	print("Hitbox OFF")
-	# Small cooldown to prevent spam
+	#Cooldown prevents it from starting too fast
 	await get_tree().create_timer(0.3).timeout
 	attack_cooldown = false
-
-
-# --------------------------------------------------------------
-#attack Hitbox Signal
+	# --------------------------------------------------------------
+#attack hitbox thing
 func _on_attack_area_body_entered(body):
 	if body.has_method("take_damage"):
 		body.take_damage(attack_damage)
-# --------------------------------------------------------------
-
-var animation_locked = false
-func _on_sword_bought():
+	# --------------------------------------------------------------
+	
+	
+	
+#FIX FIX FIX #FIX FIX FIX #FIX FIX FIX #FIX FIX FIX #FIX FIX FIX #FIX FIX#FIX FIX FIX 
+var animation_locked = false#After buying sword it locks players animation 
+func _on_sword_bought():	#to the sword one with the ability to attack
 	animation_locked = true 
 	$AnimatedSprite2D.play("sword_idle")
+#FIX FIX FIX #FIX FIX FIX #FIX FIX FIX #FIX FIX FIX #FIX FIX FIX #FIX FIX FIX 

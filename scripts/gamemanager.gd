@@ -8,7 +8,7 @@ var score = 1
 @onready var shop_menu = $"."
 
 func add_point():	
-	score += 1
+	score += 1#Adds coins to the counter when they are collected 
 	coin_label.text =str(score) + " Coins"
 	shop_menu.coin_label.text =str(score) + " Coins"
 
