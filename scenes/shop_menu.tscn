@@ -95,7 +95,7 @@ scale = Vector2(1, 1.16682)
 theme_override_styles/normal = SubResource("StyleBoxTexture_hs515")
 theme_override_styles/hover = SubResource("StyleBoxTexture_mtred")
 
-[node name="Label" type="Label" parent="."]
+[node name="CSLABEL" type="Label" parent="."]
 texture_filter = 1
 layout_mode = 0
 offset_left = 18.0
@@ -125,3 +125,4 @@ uppercase = true
 [connection signal="pressed" from="Return_Button" to="." method="_on_return_button_pressed"]
 [connection signal="pressed" from="CorruptionSword" to="." method="_on_corruption_sword_pressed"]
 [connection signal="pressed" from="CorruptionSword" to="." method="_on_button_pressed"]
+[connection signal="visibility_changed" from="CorruptionSword" to="." method="_on_corruption_sword_visibility_changed"]

@@ -55,7 +55,9 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_released("sprint"):
 		SPEED = SPEED / 2
 
-	#Player Anims 
+
+
+	#Player Anims #ADD THE OTHER ANIMATIONS
 	if velocity == Vector2.ZERO:
 		if has_sword:
 			animated_sprite_2d.play("sword_idle")
@@ -73,7 +75,8 @@ func _physics_process(delta: float) -> void:
 			animated_sprite_2d.play("walk_sword")
 		else:
 			animated_sprite_2d.play("walk")
-	#Player Anims 
+	#Player Anims #ADD THE OTHER ANIMATIONS
+	
 	
 	
 	
@@ -103,6 +106,8 @@ func _physics_process(delta: float) -> void:
 	# -----------------------------
 
 
+
+
 	#--------------------------------------------------------------
 #damage_system (Player takes damage)
 
@@ -113,6 +118,10 @@ func take_damage(amount: int) -> void:
 
 		health_bar.value = currentHealth
 	#--------------------------------------------------------------
+
+
+
+
 
 #player_attacking
 func attack():

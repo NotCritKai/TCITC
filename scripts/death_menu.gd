@@ -22,5 +22,5 @@ func _on_try_again_pressed():#Restarts Scene 1
 func _on_corruption_sword_pressed():	
 	var player = get_tree().root.get_node("Game/Player")
 	player.has_sword = true
-
-
+	$CorruptionSword.visible = false 
+	$CSLABEL.visible = false
