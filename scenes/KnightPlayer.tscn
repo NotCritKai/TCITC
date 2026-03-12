@@ -133,7 +133,7 @@ animations = [{
 "speed": 10.0
 }, {
 "frames": [{
-"duration": 1.0,
+"duration": 0.5,
 "texture": SubResource("AtlasTexture_1vk4w")
 }, {
 "duration": 0.6,
@@ -204,7 +204,7 @@ texture_filter = 1
 position = Vector2(7, 12)
 sprite_frames = SubResource("SpriteFrames_jd7dr")
 animation = &"sword_idle"
-frame_progress = 0.929418
+frame_progress = 0.318303
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(6, 10)
