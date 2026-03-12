@@ -1,4 +1,5 @@
 extends CharacterBody2D
+var has_sword: bool = false
 @onready var animated_sprite_2d = %AnimatedSprite2D
 
 var SPEED = 200.0
@@ -55,14 +56,27 @@ func _physics_process(delta: float) -> void:
 		SPEED = SPEED / 2
 
 	#Player Anims 
-	if !velocity:
-		animated_sprite_2d.play("idle")
-	elif Input.is_action_just_pressed("jump"):
-		animated_sprite_2d.play("jump")
-		animated_sprite_2d.play("walk")
-	elif velocity:
-		animated_sprite_2d.play("walk")
+	if velocity == Vector2.ZERO:
+		if has_sword:
+			animated_sprite_2d.play("sword_idle")
+		else:
+			animated_sprite_2d.play("idle")
 
+	elif Input.is_action_just_pressed("jump"):
+		if has_sword:
+			animated_sprite_2d.play("jump_sword")
+		else:
+			animated_sprite_2d.play("jump")
+
+	elif velocity != Vector2.ZERO:
+		if has_sword:
+			animated_sprite_2d.play("walk_sword")
+		else:
+			animated_sprite_2d.play("walk")
+	#Player Anims 
+	
+	
+	
 	#Flips the sprite + Hitbox when facing diff directions (L and R)
 	if direction > 0:
 		animsprite.flip_h = false
@@ -124,12 +138,4 @@ func _on_attack_area_body_entered(body):
 	if body.has_method("take_damage"):
 		body.take_damage(attack_damage)
 	# --------------------------------------------------------------
-	
-	
-	
-#FIX FIX FIX #FIX FIX FIX #FIX FIX FIX #FIX FIX FIX #FIX FIX FIX #FIX FIX#FIX FIX FIX 
-var animation_locked = false#After buying sword it locks players animation 
-func _on_sword_bought():	#to the sword one with the ability to attack
-	animation_locked = true 
-	$AnimatedSprite2D.play("sword_idle")
-#FIX FIX FIX #FIX FIX FIX #FIX FIX FIX #FIX FIX FIX #FIX FIX FIX #FIX FIX FIX 
+
