@@ -1,8 +1,179 @@
-[gd_scene load_steps=4 format=3 uid="uid://c4hxly14y75e3"]
+[gd_scene load_steps=27 format=3 uid="uid://c4hxly14y75e3"]
 
 [ext_resource type="Script" path="res://scripts/Character_Selction.gd" id="1_3tag6"]
-[ext_resource type="Texture2D" uid="uid://cubxiovs5kdu" path="res://assets/Sprites/Knight with No Weapon.png" id="2_2m2qi"]
+[ext_resource type="Texture2D" uid="uid://c2aqabyf1226v" path="res://assets/Sprites/Characters/Knight_Tilesets.png" id="2_a2bko"]
+[ext_resource type="Texture2D" uid="uid://by02hs70fdw5" path="res://assets/Sprites/Characters/Knight Holding Sword (1).png" id="3_0sej2"]
 [ext_resource type="Texture2D" uid="uid://d3v5a5vdxow08" path="res://assets/Sprites/Characters/Knight with Hand but no weapon (female).png" id="3_7uabu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8jvod"]
+atlas = ExtResource("2_a2bko")
+region = Rect2(47, 0, 47, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_it7ej"]
+atlas = ExtResource("2_a2bko")
+region = Rect2(94, 0, 47, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5xkra"]
+atlas = ExtResource("2_a2bko")
+region = Rect2(141, 98, 47, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0op66"]
+atlas = ExtResource("2_a2bko")
+region = Rect2(0, 147, 47, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yds4h"]
+atlas = ExtResource("2_a2bko")
+region = Rect2(47, 147, 47, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bli6h"]
+atlas = ExtResource("2_a2bko")
+region = Rect2(94, 147, 47, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_figco"]
+atlas = ExtResource("2_a2bko")
+region = Rect2(141, 147, 47, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xc07a"]
+atlas = ExtResource("2_a2bko")
+region = Rect2(0, 196, 47, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wwh2x"]
+atlas = ExtResource("2_a2bko")
+region = Rect2(47, 196, 47, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i063b"]
+atlas = ExtResource("2_a2bko")
+region = Rect2(94, 196, 47, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1vk4w"]
+atlas = ExtResource("3_0sej2")
+region = Rect2(0, 0, 39, 39)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hak5j"]
+atlas = ExtResource("3_0sej2")
+region = Rect2(39, 0, 39, 39)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5s8ft"]
+atlas = ExtResource("2_a2bko")
+region = Rect2(141, 0, 47, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fc5fq"]
+atlas = ExtResource("2_a2bko")
+region = Rect2(0, 49, 47, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l6eri"]
+atlas = ExtResource("2_a2bko")
+region = Rect2(47, 49, 47, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_etn3j"]
+atlas = ExtResource("2_a2bko")
+region = Rect2(94, 49, 47, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y40xr"]
+atlas = ExtResource("2_a2bko")
+region = Rect2(141, 49, 47, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u186j"]
+atlas = ExtResource("2_a2bko")
+region = Rect2(0, 98, 47, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ps3ja"]
+atlas = ExtResource("2_a2bko")
+region = Rect2(47, 98, 47, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lo1wf"]
+atlas = ExtResource("2_a2bko")
+region = Rect2(94, 98, 47, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dcbvq"]
+atlas = ExtResource("2_a2bko")
+region = Rect2(141, 98, 47, 49)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rmn3u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8jvod")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_it7ej")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5xkra")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0op66")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yds4h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bli6h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_figco")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xc07a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wwh2x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i063b")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_1vk4w")
+}, {
+"duration": 0.6,
+"texture": SubResource("AtlasTexture_hak5j")
+}],
+"loop": true,
+"name": &"sword_idle",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5s8ft")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fc5fq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l6eri")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_etn3j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y40xr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u186j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ps3ja")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lo1wf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dcbvq")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 12.0
+}]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -22,6 +193,22 @@ offset_bottom = -449.0
 scale = Vector2(75.2123, 42.9726)
 color = Color(0.584314, 0.498039, 0.603922, 1)
 
+[node name="ButtonRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 167.0
+offset_top = 184.0
+offset_right = 481.0
+offset_bottom = 498.0
+color = Color(0.662745, 0.662745, 0.662745, 1)
+
+[node name="Button2Rect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 565.0
+offset_top = 183.0
+offset_right = 879.0
+offset_bottom = 497.0
+color = Color(0.662745, 0.662745, 0.662745, 1)
+
 [node name="Button" type="Button" parent="."]
 texture_filter = 1
 layout_mode = 0
@@ -31,8 +218,15 @@ offset_right = 215.0
 offset_bottom = 232.0
 scale = Vector2(7.49905, 7.49905)
 action_mode = 0
-icon = ExtResource("2_2m2qi")
 flat = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Button"]
+unique_name_in_owner = true
+texture_filter = 1
+position = Vector2(22.4028, 23.4696)
+sprite_frames = SubResource("SpriteFrames_rmn3u")
+animation = &"sword_idle"
+autoplay = "sword_idle"
 
 [node name="Button2" type="Button" parent="."]
 texture_filter = 1
