@@ -193,6 +193,22 @@ offset_bottom = -449.0
 scale = Vector2(75.2123, 42.9726)
 color = Color(0.584314, 0.498039, 0.603922, 1)
 
+[node name="ButtonRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 167.0
+offset_top = 184.0
+offset_right = 481.0
+offset_bottom = 498.0
+color = Color(0.662745, 0.662745, 0.662745, 1)
+
+[node name="Button2Rect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 565.0
+offset_top = 183.0
+offset_right = 879.0
+offset_bottom = 497.0
+color = Color(0.662745, 0.662745, 0.662745, 1)
+
 [node name="Button" type="Button" parent="."]
 texture_filter = 1
 layout_mode = 0
