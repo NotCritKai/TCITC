@@ -18,8 +18,9 @@ func _on_try_again_pressed():#Restarts Scene 1
 	get_tree().change_scene_to_file("res://scenes/Scene1GAME.tscn")
 #--------------------------------DEATH MENU??
 
-#FIXXXXXXXXXXXXXXXXXXXXXX#FIXXXXXXXXXXXXXX
-func _on_corruption_sword_pressed():	##
-	var player = get_node("Game/Player")##
-	player.has_sword = true				##
-#FIXXXXXXXXXXXXXXXXXXXXXX#FIXXXXXXXXXXXXXX
+
+func _on_corruption_sword_pressed():	
+	var player = get_tree().root.get_node("Game/Player")
+	player.has_sword = true
+
+
