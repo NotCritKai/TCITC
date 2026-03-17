@@ -105,7 +105,7 @@ metadata/_edit_use_anchors_ = true
 offset_left = 15.0
 offset_top = 220.0
 offset_right = 577.0
-offset_bottom = 365.0
+offset_bottom = 508.0
 scale = Vector2(0.567108, 0.302326)
 theme_override_font_sizes/font_size = 100
 item_count = 3
@@ -119,10 +119,11 @@ popup/item_2/id = 2
 [node name="Border" type="Label" parent="."]
 process_mode = 3
 texture_filter = 1
-offset_left = 16.0
-offset_top = 195.0
-offset_right = 118.0
-offset_bottom = 218.0
+offset_left = 36.0
+offset_top = 170.0
+offset_right = 287.0
+offset_bottom = 225.0
+theme_override_font_sizes/font_size = 40
 text = "Border Mode"
 
 [connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
