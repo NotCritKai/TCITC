@@ -24,3 +24,7 @@ func _on_corruption_sword_pressed():
 	player.has_sword = true
 	$CorruptionSword.visible = false 
 	$CSLABEL.visible = false
+	$Instructions.visible = true 
+	
+
+	

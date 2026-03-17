@@ -122,6 +122,17 @@ theme_override_font_sizes/font_size = 82
 text = "CLICK TO BUY!"
 uppercase = true
 
+[node name="Instructions" type="Label" parent="."]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 93.0
+offset_top = 239.0
+offset_right = 1051.0
+offset_bottom = 376.0
+theme_override_font_sizes/font_size = 100
+text = "PRESS F TO ATTACK !"
+
 [connection signal="pressed" from="Return_Button" to="." method="_on_return_button_pressed"]
 [connection signal="pressed" from="CorruptionSword" to="." method="_on_corruption_sword_pressed"]
 [connection signal="pressed" from="CorruptionSword" to="." method="_on_button_pressed"]
