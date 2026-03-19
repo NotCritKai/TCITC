@@ -1,10 +1,11 @@
-[gd_scene load_steps=61 format=3 uid="uid://t25invibtx27"]
+[gd_scene load_steps=62 format=3 uid="uid://t25invibtx27"]
 
 [ext_resource type="Texture2D" uid="uid://cubxiovs5kdu" path="res://assets/Sprites/Knight with No Weapon.png" id="1_ajwlp"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_uyc6u"]
 [ext_resource type="Texture2D" uid="uid://c2aqabyf1226v" path="res://assets/Sprites/Characters/Knight_Tilesets.png" id="2_anv8h"]
 [ext_resource type="Texture2D" uid="uid://dsy4ba5a4l6en" path="res://assets/Sprites/Characters/Knight_Sword_TILESET.png" id="3_83ba4"]
 [ext_resource type="Texture2D" uid="uid://c01r1jqd6ljra" path="res://assets/Sprites/Piskel HeartIcon.png" id="6_50oy4"]
+[ext_resource type="AudioStream" uid="uid://dp34ux2m7rcc3" path="res://assets/Sounds/sword sound.mp3" id="6_rckeg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8jvod"]
 atlas = ExtResource("2_anv8h")
@@ -419,7 +420,11 @@ unique_name_in_owner = true
 texture_filter = 1
 position = Vector2(7, 12)
 sprite_frames = SubResource("SpriteFrames_jd7dr")
+<<<<<<< Updated upstream
 animation = &"sword_walk"
+=======
+animation = &"sword_attack"
+>>>>>>> Stashed changes
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(6, 10)
@@ -478,5 +483,8 @@ scale = Vector2(1.67228, 1.67228)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0.796078, 0, 0, 1)
 theme_override_styles/normal = SubResource("StyleBoxTexture_c8y7g")
+
+[node name="Sword Sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_rckeg")
 
 [connection signal="body_entered" from="AttackArea" to="." method="_on_attack_area_body_entered"]
