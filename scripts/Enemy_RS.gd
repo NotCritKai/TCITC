@@ -9,8 +9,8 @@ extends CharacterBody2D
 
 # -------------------------
 #enemy_health
-@export var max_health: int = 100
-var current_health: int = 100
+@export var max_health: int = 50
+var current_health: int = 50
 # -------------------------
 
 var start_position: Vector2

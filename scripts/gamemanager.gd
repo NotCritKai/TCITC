@@ -31,11 +31,3 @@ func _on_pause_button_pressed():
 #PAUSE MENU CODE
 
 var playerWeaponEquip: bool
-
-
-
-
-
-
-
-

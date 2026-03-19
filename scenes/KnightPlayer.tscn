@@ -1,9 +1,10 @@
-[gd_scene load_steps=62 format=3 uid="uid://t25invibtx27"]
+[gd_scene load_steps=72 format=3 uid="uid://t25invibtx27"]
 
 [ext_resource type="Texture2D" uid="uid://cubxiovs5kdu" path="res://assets/Sprites/Knight with No Weapon.png" id="1_ajwlp"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_uyc6u"]
 [ext_resource type="Texture2D" uid="uid://c2aqabyf1226v" path="res://assets/Sprites/Characters/Knight_Tilesets.png" id="2_anv8h"]
 [ext_resource type="Texture2D" uid="uid://dsy4ba5a4l6en" path="res://assets/Sprites/Characters/Knight_Sword_TILESET.png" id="3_83ba4"]
+[ext_resource type="Texture2D" uid="uid://cclvc2o7ehxjb" path="res://assets/Sprites/Characters/Knight_Sword_WALKING.png" id="4_al1wt"]
 [ext_resource type="Texture2D" uid="uid://c01r1jqd6ljra" path="res://assets/Sprites/Piskel HeartIcon.png" id="6_50oy4"]
 [ext_resource type="AudioStream" uid="uid://dp34ux2m7rcc3" path="res://assets/Sounds/sword sound.mp3" id="6_rckeg"]
 
@@ -62,6 +63,42 @@ region = Rect2(200, 0, 100, 90)
 [sub_resource type="AtlasTexture" id="AtlasTexture_vo0cf"]
 atlas = ExtResource("3_83ba4")
 region = Rect2(300, 0, 100, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6h6q5"]
+atlas = ExtResource("4_al1wt")
+region = Rect2(0, 0, 100, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j3se0"]
+atlas = ExtResource("4_al1wt")
+region = Rect2(100, 0, 100, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7efae"]
+atlas = ExtResource("4_al1wt")
+region = Rect2(200, 0, 100, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ce8mq"]
+atlas = ExtResource("4_al1wt")
+region = Rect2(0, 90, 100, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ox0m3"]
+atlas = ExtResource("4_al1wt")
+region = Rect2(100, 90, 100, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ry73h"]
+atlas = ExtResource("4_al1wt")
+region = Rect2(200, 90, 100, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aeupp"]
+atlas = ExtResource("4_al1wt")
+region = Rect2(0, 180, 100, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_662fu"]
+atlas = ExtResource("4_al1wt")
+region = Rect2(100, 180, 100, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ci3c"]
+atlas = ExtResource("4_al1wt")
+region = Rect2(200, 180, 100, 90)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vf1y6"]
 atlas = ExtResource("3_83ba4")
@@ -263,6 +300,38 @@ animations = [{
 "speed": 10.0
 }, {
 "frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6h6q5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j3se0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7efae")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ce8mq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ox0m3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ry73h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aeupp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_662fu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ci3c")
+}],
+"loop": false,
+"name": &"sword_attack_walking",
+"speed": 5.0
+}, {
+"frames": [{
 "duration": 0.01,
 "texture": SubResource("AtlasTexture_vf1y6")
 }, {
@@ -420,7 +489,9 @@ unique_name_in_owner = true
 texture_filter = 1
 position = Vector2(7, 12)
 sprite_frames = SubResource("SpriteFrames_jd7dr")
-animation = &"sword_walk"
+animation = &"sword_attack_walking"
+frame = 8
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(6, 10)

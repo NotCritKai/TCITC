@@ -61,8 +61,7 @@ func _physics_process(delta: float) -> void:
 	#Player Anims #ADD THE OTHER ANIMATIONS
 	if velocity == Vector2.ZERO: #If not moving it will play idle 
 		if has_sword and Input.is_action_just_pressed("attack"):
-			animated_sprite_2d.play("sword_attack")
-			
+			animated_sprite_2d.play("sword_attack")		
 		elif !has_sword:
 			animated_sprite_2d.play("idle")
 	elif Input.is_action_just_pressed("jump"): #If space is pressed play jump anim 
@@ -71,12 +70,14 @@ func _physics_process(delta: float) -> void:
 		elif !has_sword:
 			animated_sprite_2d.play("jump")
 
-	elif velocity != Vector2.ZERO:
-		if has_sword:
-			animated_sprite_2d.play("sword_walk")
+	elif velocity != Vector2.ZERO: #Youre moving
+		if has_sword:#If you have the sword
+			animated_sprite_2d.play("sword_walk")#Play the walk animation 
+			if (Input.is_action_just_pressed("attack") and Input.is_action_just_pressed("attack")):#If attack is pressed and you have sword play sword attack
+				animated_sprite_2d.play("sword_attack_walking")
 		elif !has_sword:
 			animated_sprite_2d.play("walk")
-			
+
 			
 		
 	#Player Anims #ADD THE OTHER ANIMATIONS
