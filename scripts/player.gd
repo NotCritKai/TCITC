@@ -58,23 +58,26 @@ func _physics_process(delta: float) -> void:
 
 
 	#Player Anims #ADD THE OTHER ANIMATIONS
-	if velocity == Vector2.ZERO:
+	if velocity == Vector2.ZERO: #If not moving it will play idle 
 		if has_sword:
 			animated_sprite_2d.play("sword_idle")
 		else:
 			animated_sprite_2d.play("idle")
 
-	elif Input.is_action_just_pressed("jump"):
+	elif Input.is_action_just_pressed("jump"): #If space is pressed play jump anim 
 		if has_sword:
-			animated_sprite_2d.play("jump_sword")
+			animated_sprite_2d.play("sword_jump")
 		else:
 			animated_sprite_2d.play("jump")
 
 	elif velocity != Vector2.ZERO:
 		if has_sword:
-			animated_sprite_2d.play("walk_sword")
+			animated_sprite_2d.play("sword_walk")
 		else:
 			animated_sprite_2d.play("walk")
+			
+	if has_sword and Input.is_action_just_pressed("attack"):#Sword Attack 
+		animated_sprite_2d.play("sword_attack")
 	#Player Anims #ADD THE OTHER ANIMATIONS
 	
 	
@@ -83,12 +86,12 @@ func _physics_process(delta: float) -> void:
 	#Flips the sprite + Hitbox when facing diff directions (L and R)
 	if direction > 0:
 		animsprite.flip_h = false
-	if has_sword:
-		$AttackArea.position.x = abs($AttackArea.position.x)
+	#if has_sword:
+		#$AttackArea.position.x = abs($AttackArea.position.x)
 	elif direction < 0:
 		animsprite.flip_h = true
-		if has_sword:
-			$AttackArea.position.x = -abs($AttackArea.position.x)
+		#if has_sword:
+			#$AttackArea.position.x = -abs($AttackArea.position.x)
 
 	#Direction/Movement Code
 	if direction != 0:
