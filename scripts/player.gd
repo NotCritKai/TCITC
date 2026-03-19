@@ -1,8 +1,6 @@
 extends CharacterBody2D
 var has_sword: bool = false
 @onready var animated_sprite_2d = %AnimatedSprite2D
-@onready var sword_sound = $"Sword Sound"
-
 
 var SPEED = 200.0
 const JUMP_VELOCITY = -250.0
@@ -108,13 +106,7 @@ func _physics_process(delta: float) -> void:
 
 	#-----------------------------
 	if Input.is_action_just_pressed("attack") and not attack_cooldown:
-<<<<<<< Updated upstream
 		attack()#When you press f it attacks
-=======
-		attack()#attack input
-		sword_sound.play()
-		
->>>>>>> Stashed changes
 	# -----------------------------
 
 
