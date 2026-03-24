@@ -22679,8 +22679,7 @@ shape = SubResource("WorldBoundaryShape2D_ngb14")
 position = Vector2(48, -8)
 
 [node name="Red_Slime_Enemy" parent="." instance=ExtResource("26_3gxin")]
-visible = false
-position = Vector2(348, -6)
+position = Vector2(312, 240)
 
 [node name="Go_To_Shop_Button" type="Button" parent="."]
 offset_left = -405.0
