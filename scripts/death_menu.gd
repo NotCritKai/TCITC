@@ -35,7 +35,6 @@ func _on_corruption_sword_pressed():
 		queue_free()
 		$CSLABEL.visible = false
 		$Instructions.visible = true 
-			
 	else:
 		player.has_sword = false
 		print("Not enough coins")
