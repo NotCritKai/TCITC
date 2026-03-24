@@ -22703,7 +22703,8 @@ offset_top = -48.0
 offset_right = -613.0
 offset_bottom = 98.0
 scale = Vector2(0.184981, 0.333824)
-theme_override_colors/font_color = Color(0, 0.545098, 0.933333, 1)
+theme_override_colors/font_color = Color(0, 0.556863, 0.94902, 1)
+theme_override_colors/font_hover_color = Color(0, 0.556863, 0.94902, 1)
 theme_override_font_sizes/font_size = 50
 text = "PRESS TO 
 WIN"
@@ -22773,3 +22774,4 @@ text = "🪦☠️DONT FALL☠️🪦"
 
 [connection signal="pressed" from="GameManager/CanvasLayer2/Pause_Button" to="GameManager" method="_on_pause_button_pressed"]
 [connection signal="pressed" from="Go_To_Shop_Button" to="GameManager" method="_on_go_to_shop_button_pressed"]
+[connection signal="pressed" from="Win_Button" to="GameManager" method="_on_win_button_pressed"]

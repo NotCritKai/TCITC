@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://b68ns53vnimu3"]
+[gd_scene load_steps=3 format=3 uid="uid://b68ns53vnimu3"]
 
 [sub_resource type="GDScript" id="GDScript_3qpxn"]
 script/source = "extends Control
@@ -8,37 +8,42 @@ func _on_restarts_button_pressed():
 	get_tree().change_scene_to_file(\"res://scenes/Character_Selction.tscn\")
 "
 
+[sub_resource type="Theme" id="Theme_uew8n"]
+
 [node name="Win_Screen" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 script = SubResource("GDScript_3qpxn")
 
 [node name="ColorRect" type="ColorRect" parent="."]
+texture_filter = 1
 layout_mode = 0
 offset_left = -2256.0
 offset_top = -888.0
-offset_right = -2127.0
-offset_bottom = -775.0
+offset_right = -2106.0
+offset_bottom = -759.0
 scale = Vector2(38.4646, 23.0782)
+theme = SubResource("Theme_uew8n")
+color = Color(0.47451, 0, 0.113725, 1)
 
-[node name="Label" type="Label" parent="."]
+[node name="Celebration" type="Label" parent="."]
 texture_filter = 1
 layout_mode = 0
 offset_left = 256.0
-offset_top = 248.0
+offset_top = 184.0
 offset_right = 866.0
-offset_bottom = 385.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+offset_bottom = 321.0
+theme_override_colors/font_color = Color(0.454902, 0.921569, 0.596078, 1)
 theme_override_font_sizes/font_size = 100
-text = "YOU WIN!!!!!!"
+text = "  YOU WIN!"
 
 [node name="restarts_button" type="Button" parent="."]
 layout_mode = 0
 offset_left = 280.0
-offset_top = 392.0
+offset_top = 328.0
 offset_right = 832.0
-offset_bottom = 537.0
-theme_override_colors/font_color = Color(0, 0, 0.580392, 1)
+offset_bottom = 473.0
+theme_override_colors/font_color = Color(0.521569, 0.301961, 1, 1)
 theme_override_font_sizes/font_size = 100
 text = "Play Again?
 "

@@ -20,10 +20,17 @@ func _on_try_again_pressed():#restarts main scene 1
 #-------------------------------------------------------------------------------
 #when the button is pressed in the shop 
 #it enables the player and the sword and the button dissapears
-func _on_corruption_sword_pressed():	
+func _on_corruption_sword_pressed():
+	var gm = get_tree().current_scene.get_node("GameManager")
+	if gm.score >= 15:
+		gm.subtract_point()
+		visible = false
+		queue_free()
+	else:
+		print("Not enough coins")
+
 	var player = get_tree().root.get_node("Game/Player")
 	player.has_sword = true
-	$CorruptionSword.visible = false 
 	$CSLABEL.visible = false
 	$Instructions.visible = true 
 #-------------------------------------------------------------------------------
