@@ -2,6 +2,10 @@
 
 [sub_resource type="GDScript" id="GDScript_3qpxn"]
 script/source = "extends Control
+
+
+func _on_restarts_button_pressed():
+	get_tree().change_scene_to_file(\"res://scenes/Character_Selction.tscn\")
 "
 
 [node name="Win_Screen" type="Control"]
@@ -11,19 +15,33 @@ script = SubResource("GDScript_3qpxn")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
-offset_left = -736.0
-offset_top = -464.0
-offset_right = -696.0
-offset_bottom = -424.0
+offset_left = -2256.0
+offset_top = -888.0
+offset_right = -2127.0
+offset_bottom = -775.0
 scale = Vector2(38.4646, 23.0782)
 
 [node name="Label" type="Label" parent="."]
 texture_filter = 1
 layout_mode = 0
-offset_left = -224.0
-offset_top = -64.0
-offset_right = 244.0
-offset_bottom = 73.0
+offset_left = 256.0
+offset_top = 248.0
+offset_right = 866.0
+offset_bottom = 385.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 100
 text = "YOU WIN!!!!!!"
+
+[node name="restarts_button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 280.0
+offset_top = 392.0
+offset_right = 832.0
+offset_bottom = 537.0
+theme_override_colors/font_color = Color(0, 0, 0.580392, 1)
+theme_override_font_sizes/font_size = 100
+text = "Play Again?
+"
+flat = true
+
+[connection signal="pressed" from="restarts_button" to="." method="_on_restarts_button_pressed"]

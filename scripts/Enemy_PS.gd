@@ -4,7 +4,7 @@ extends CharacterBody2D
 @export var detection_range: float = 250.0
 @export var follow_always: bool = true
 @export var gravity: float = 980.0
-@export var damage: int = 25
+@export var damage: int = 10
 #main variables
 #-------------------------------------------------------------------------------
 #enemy health
@@ -76,12 +76,12 @@ func take_damage(amount: int) -> void:
 
 	if current_health <= 0:
 		die()#if the enemy has health below zero it calls die()
+		
 #-------------------------------------------------------------------------------
 	
 #-------------------------------------------------------------------------------
 func die():#When enenmy dies it prints it died and makes it disappear 
+	get_tree().change_scene_to_file("res://scenes/win_screen.tscn")#changes to win screen if enemy dies
 	print("Enemy died")
-	queue_free()
-	visible = false 
 #-------------------------------------------------------------------------------
 	
