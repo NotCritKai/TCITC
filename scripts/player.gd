@@ -2,63 +2,75 @@ extends CharacterBody2D
 var has_sword: bool = false
 @onready var animated_sprite_2d = %AnimatedSprite2D
 @onready var sword_sound = $"Sword Sound"
-
+#creates the sword sound variable to it can play
+#-------------------------------------------------------------------------------
 var SPEED = 200.0
 const JUMP_VELOCITY = -250.0
 var coins = 0
 var weapon_equip: bool
-
+#speed+gravity variables
+#-------------------------------------------------------------------------------
 @export var maxHealth: int = 100
 var currentHealth: int
 
 @export var damageCooldown: float = 1.0
 var canTakeDamage: bool = true
-
+#-------------------------------------------------------------------------------
 var gravity: float = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 @onready var sprite: Sprite2D = $Sprite2D
 @onready var death_screen: PackedScene = preload("res://scenes/death_menu.tscn")
-
+#preloads the death sceen for faster overlay
 @onready var animsprite: AnimatedSprite2D = $AnimatedSprite2D
 
 @onready var health_bar: ProgressBar = $CanvasLayer/ProgressBar
+#Other main variables 
+#-------------------------------------------------------------------------------
 
-# -----------------------------
-# NEW: Attack variables
-# -----------------------------
+#-------------------------------------------------------------------------------
+#Attack variables
 var attack_damage: int = 10
 var attack_cooldown := false
+#-------------------------------------------------------------------------------
 
 
 
+
+#-------------------------------------------------------------------------------
 func _ready() -> void:
 	currentHealth = maxHealth
 	weapon_equip = true
-
+	
 	health_bar.max_value = maxHealth
 	health_bar.value = currentHealth
+#player gets health to be damaged later 
+#-------------------------------------------------------------------------------
 
-	print("Player ready with health:", currentHealth)#DEBUG
 
 
+
+#-------------------------------------------------------------------------------
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity.y += gravity * delta
-
+		
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 
 	var direction := Input.get_axis("move_left", "move_right")
 
-	#If you press shift the player sprints
+	#If you press shift the player sprints/speed increases
 	if Input.is_action_just_pressed("sprint"):
 		SPEED = SPEED * 2
+	#If you release shift the player stops sprinting/speed decreases
 	if Input.is_action_just_released("sprint"):
 		SPEED = SPEED / 2
+#-------------------------------------------------------------------------------
 
 
 
-	#Player Anims #ADD THE OTHER ANIMATIONS
+#-----------------------------#-------------------------------------------------------------------------------	#Player Anims 
+#player animations
 	if velocity == Vector2.ZERO: #If not moving it will play idle 
 		if has_sword and Input.is_action_just_pressed("attack"):
 			animated_sprite_2d.play("sword_attack")		
@@ -76,16 +88,15 @@ func _physics_process(delta: float) -> void:
 			if (Input.is_action_just_pressed("attack") and Input.is_action_just_pressed("attack")):#If attack is pressed and you have sword play sword attack
 				animated_sprite_2d.play("sword_attack_walking")
 		elif !has_sword:
-			animated_sprite_2d.play("walk")
-
-			
-		
-	#Player Anims #ADD THE OTHER ANIMATIONS
+			animated_sprite_2d.play("walk") 
+#-------------------------------------------------------------------------------
 	
 	
 	
 	
-	#Flips the sprite + Hitbox when facing diff directions (L and R)
+	
+#-------------------------------------------------------------------------------
+	#Flips the player and hitbox when facing diff directions (L and R)
 	if direction > 0:
 		animsprite.flip_h = false
 	elif has_sword:
@@ -94,44 +105,49 @@ func _physics_process(delta: float) -> void:
 		animsprite.flip_h = true
 	elif has_sword:
 		$AttackArea.position.x = abs($AttackArea.position.x)
-
-	#Direction/Movement Code
+#-------------------------------------------------------------------------------
+		
+		
+		
+#-------------------------------------------------------------------------------
+	#direction/movement Code
 	if direction != 0:
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
-	
 	if currentHealth == 0:#If players health reaches 0 it changes to Death Scene
 		get_tree().change_scene_to_file("res://scenes/death_menu.tscn")
-
 	move_and_slide()
-
-	#-----------------------------
+#-------------------------------------------------------------------------------
+	
+	
+	
+	
+#-------------------------------------------------------------------------------
 	if Input.is_action_just_pressed("attack") and not attack_cooldown:
 		attack()#When you press f it attacks
 		sword_sound.play()
-	# -----------------------------
+#-------------------------------------------------------------------------------
 
 
 
 
-	#--------------------------------------------------------------
-#damage_system (Player takes damage)
-
+#-------------------------------------------------------------------------------
+#damage system enemy-player
 func take_damage(amount: int) -> void:
 	if canTakeDamage:
 		currentHealth -= amount
 		print("Player took", amount, "damage. Current health:", currentHealth)
-
+		#prints how much damage was taken 
 		health_bar.value = currentHealth
-	#--------------------------------------------------------------
-
-
-
-
-
-#player_attacking
+#-------------------------------------------------------------------------------
+	
+	
+	
+	
+#-------------------------------------------------------------------------------
+#player attack system 
 func attack():
 	attack_cooldown = true
 
@@ -149,10 +165,16 @@ func attack():
 	#Cooldown prevents it from starting too fast
 	await get_tree().create_timer(0.3).timeout
 	attack_cooldown = false
-	# --------------------------------------------------------------
-#attack hitbox thing
+#-------------------------------------------------------------------------------	
+	
+	
+	
+	
+	
+#-------------------------------------------------------------------------------
+#when the player enters the enemies hitbox theyre damaged.=
 func _on_attack_area_body_entered(body):
 	if body.has_method("take_damage"):
 		body.take_damage(attack_damage)
-	# --------------------------------------------------------------
+#-------------------------------------------------------------------------------
 

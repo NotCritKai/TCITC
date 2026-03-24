@@ -35,7 +35,6 @@
 [ext_resource type="Texture2D" uid="uid://cibxyul0qtijo" path="res://assets/Shop_Assets/21.png" id="29_qrc2y"]
 [ext_resource type="Texture2D" uid="uid://cg6ibyy7u3anc" path="res://assets/Shop_Assets/22.png" id="30_j1vjx"]
 [ext_resource type="AudioStream" uid="uid://c7nl60d83soxc" path="res://assets/Sounds/TCITC Scene 1.wav" id="35_xbobf"]
-[ext_resource type="Script" path="res://scripts/Win_Button.gd" id="36_arlb6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4jjo7"]
 texture = ExtResource("6_fpj81")
@@ -22543,6 +22542,8 @@ texture = ExtResource("29_qrc2y")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_83dhw"]
 texture = ExtResource("28_objp7")
 
+[sub_resource type="GDScript" id="GDScript_fd0gk"]
+
 [node name="Game" type="Node2D"]
 
 [node name="GameManager" type="Node" parent="."]
@@ -22706,7 +22707,7 @@ theme_override_font_sizes/font_size = 50
 text = "PRESS TO 
 WIN"
 flat = true
-script = ExtResource("36_arlb6")
+script = SubResource("GDScript_fd0gk")
 
 [connection signal="pressed" from="GameManager/CanvasLayer2/Pause_Button" to="GameManager" method="_on_pause_button_pressed"]
 [connection signal="pressed" from="Go_To_Shop_Button" to="GameManager" method="_on_go_to_shop_button_pressed"]

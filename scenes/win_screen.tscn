@@ -1,11 +1,13 @@
 [gd_scene load_steps=2 format=3 uid="uid://b68ns53vnimu3"]
 
-[ext_resource type="Script" path="res://scripts/win_screen.gd" id="1_4rgpv"]
+[sub_resource type="GDScript" id="GDScript_3qpxn"]
+script/source = "extends Control
+"
 
 [node name="Win_Screen" type="Control"]
 layout_mode = 3
 anchors_preset = 0
-script = ExtResource("1_4rgpv")
+script = SubResource("GDScript_3qpxn")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
