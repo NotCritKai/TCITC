@@ -22595,6 +22595,7 @@ position = Vector2(1078, 1)
 position = Vector2(1138, -1)
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="GameManager"]
+unique_name_in_owner = true
 process_mode = 1
 
 [node name="CoinLabel" type="Label" parent="GameManager/CanvasLayer2"]
