@@ -22558,9 +22558,6 @@ position = Vector2(96, -2)
 [node name="Coin2" parent="GameManager/Coins" instance=ExtResource("12_phtsk")]
 position = Vector2(184, -2)
 
-[node name="Coin3" parent="GameManager/Coins" instance=ExtResource("12_phtsk")]
-position = Vector2(263, -2)
-
 [node name="Coin4" parent="GameManager/Coins" instance=ExtResource("12_phtsk")]
 position = Vector2(263, -2)
 
