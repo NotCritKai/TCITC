@@ -22633,7 +22633,7 @@ theme_override_font_sizes/font_size = 20
 text = "PAUSE"
 
 [node name="Player" parent="." instance=ExtResource("1_pchtj")]
-position = Vector2(-1712, -24)
+position = Vector2(-1832, -24)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(0, 2)
@@ -22651,7 +22651,7 @@ motion_scale = Vector2(0.2, 0.2)
 motion_mirroring = Vector2(1536, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2(4716, 4336)
+position = Vector2(4576, 4320)
 scale = Vector2(7.44375, 7.60633)
 texture = ExtResource("6_qgkpy")
 
@@ -22730,21 +22730,22 @@ SPACEBAR "
 
 [node name="Tutorial" type="Label" parent="."]
 texture_filter = 1
-offset_left = -1664.0
-offset_top = -56.0
-offset_right = -1537.0
-offset_bottom = -7.0
+offset_left = -1728.0
+offset_top = -80.0
+offset_right = -1497.0
+offset_bottom = -31.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "PRESS  W, A, S, D 
-    TO MOVE!"
+    TO MOVE, SHIFT TO SPRINT!"
 
 [node name="Shop Tutorial" type="Label" parent="."]
 texture_filter = 1
-offset_left = -608.0
-offset_top = -120.0
-offset_right = -353.0
-offset_bottom = 7.0
+offset_left = -592.0
+offset_top = -88.0
+offset_right = -337.0
+offset_bottom = 39.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 13
 text = "Buy the sword 
 In the Shop ➡️
 AFTER you collect 15 coins 🪙

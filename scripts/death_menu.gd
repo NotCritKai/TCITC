@@ -34,7 +34,7 @@ func _on_corruption_sword_pressed():
 		$Instructions.visible = true 
 	else:
 		player.has_sword = false
-		print("Not enough coins")
+		print("Not enough coins!")
 #-------------------------------------------------------------------------------
 
 	

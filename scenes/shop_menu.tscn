@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://d4mvyywr31kx6"]
+[gd_scene load_steps=16 format=3 uid="uid://d4mvyywr31kx6"]
 
 [ext_resource type="Script" path="res://scripts/death_menu.gd" id="1_cqwt3"]
 [ext_resource type="Texture2D" uid="uid://yetwtrwai35x" path="res://assets/Shop_Assets/The Crusade Into The Corruption.png" id="2_j4br7"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://loh0i4cct3w8" path="res://assets/Shop_Assets/16.png" id="4_61xuw"]
 [ext_resource type="Texture2D" uid="uid://tmc3ont8gjkh" path="res://assets/Sprites/Weapons/Corrupt_Sword  (1).png" id="6_bukvb"]
 [ext_resource type="Script" path="res://scripts/CorruptionSword.gd" id="7_ug8sa"]
+[ext_resource type="Texture2D" uid="uid://biudlwhbtihp7" path="res://assets/Sprites/Characters/Gnome.png" id="8_yi4cx"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_heu0m"]
 texture = ExtResource("2_j4br7")
@@ -134,6 +135,33 @@ offset_right = 1051.0
 offset_bottom = 376.0
 theme_override_font_sizes/font_size = 100
 text = "PRESS F TO ATTACK !"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 592.0
+offset_top = -16.0
+offset_right = 784.0
+offset_bottom = 176.0
+scale = Vector2(4.30854, 3.69953)
+texture = ExtResource("8_yi4cx")
+
+[node name="Gnome_Dialouge" type="Label" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 616.0
+offset_top = 192.0
+offset_right = 1116.0
+offset_bottom = 397.0
+rotation = -0.323246
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.815686, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+text = "\"BUY THE SWORD 
+TO THE LEFT 
+ONCE YOU HAVE 
+15 COINS!\""
 
 [connection signal="pressed" from="Return_Button" to="." method="_on_return_button_pressed"]
 [connection signal="pressed" from="CorruptionSword" to="." method="_on_corruption_sword_pressed"]
