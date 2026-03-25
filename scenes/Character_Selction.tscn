@@ -1,8 +1,9 @@
-[gd_scene load_steps=64 format=3 uid="uid://c4hxly14y75e3"]
+[gd_scene load_steps=65 format=3 uid="uid://c4hxly14y75e3"]
 
 [ext_resource type="Script" path="res://scripts/Character_Selction.gd" id="1_3tag6"]
 [ext_resource type="Texture2D" uid="uid://c2aqabyf1226v" path="res://assets/Sprites/Characters/Knight_Tilesets.png" id="2_a2bko"]
 [ext_resource type="Texture2D" uid="uid://dsy4ba5a4l6en" path="res://assets/Sprites/Characters/Knight_Sword_TILESET.png" id="3_7ddmj"]
+[ext_resource type="Texture2D" uid="uid://d3v5a5vdxow08" path="res://assets/Sprites/Characters/Knight with Hand but no weapon (female).png" id="3_7uabu"]
 [ext_resource type="Texture2D" uid="uid://cclvc2o7ehxjb" path="res://assets/Sprites/Characters/Knight_Sword_WALKING.png" id="4_vc6iu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8jvod"]
@@ -512,6 +513,18 @@ sprite_frames = SubResource("SpriteFrames_5uaii")
 animation = &"sword_attack_walking"
 autoplay = "sword_attack_walking"
 
+[node name="Button2" type="Button" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 550.0
+offset_top = 175.0
+offset_right = 598.0
+offset_bottom = 223.0
+scale = Vector2(7.67422, 7.67422)
+action_mode = 0
+icon = ExtResource("3_7uabu")
+flat = true
+
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
 offset_left = 85.0
@@ -526,10 +539,10 @@ text = "CHOOSE A CHARACTER!
 
 [node name="PROGRESS" type="Label" parent="."]
 layout_mode = 0
-offset_left = 653.0
-offset_top = 403.0
-offset_right = 891.0
-offset_bottom = 454.0
+offset_left = 622.161
+offset_top = 397.118
+offset_right = 860.161
+offset_bottom = 448.118
 rotation = -0.655734
 theme_override_colors/font_color = Color(1, 0.988235, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
@@ -538,10 +551,10 @@ text = "IN PROGRESS"
 
 [node name="PROGRESS2" type="Label" parent="."]
 layout_mode = 0
-offset_left = 680.0
-offset_top = 271.0
-offset_right = 918.0
-offset_bottom = 322.0
+offset_left = 649.161
+offset_top = 265.118
+offset_right = 887.161
+offset_bottom = 316.118
 rotation = 0.584984
 theme_override_colors/font_color = Color(1, 0.988235, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
