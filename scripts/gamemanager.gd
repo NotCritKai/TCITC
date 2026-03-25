@@ -2,7 +2,7 @@ extends Node
 
 var score = 1
 
-@onready var coin_label = $CanvasLayer2/CoinLabel
+#@onready var coin_label = $GameManager/CanvasLayer2/CoinLabel
 @onready var shop_menu = $"."
 #main variables
 #-------------------------------------------------------------------------------
@@ -31,12 +31,12 @@ func _on_win_button_pressed():
 	
 func add_point():
 	score += 1
-	coin_label.text = str(score) + " Coin(s)"
+	$GameManager/CanvasLayer2/CoinLabel.text = str(score) + " Coin(s)"
 	shop_menu.coin_label.text = str(score) + " Coin(s)"
 
 func subtract_point():
 	score -= 15
-	coin_label.text = str(score) + " Coin(s)"
+	$GameManager/CanvasLayer2/CoinLabel.text = str(score) + " Coin(s)"
 	shop_menu.coin_label.text = str(score) + " Coin(s)"
 #-------------------------------------------------------------------------------
 #Subtract COINS test
