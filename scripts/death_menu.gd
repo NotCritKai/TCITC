@@ -1,5 +1,7 @@
 extends Control
 
+@onready var f_to_attack = $"../../../f_to_attack"
+
 #-------------------------------------------------------------------------------
 #Shop code
 func _on_return_button_pressed():#when pressed it returns to the main scene 1  
@@ -32,9 +34,13 @@ func _on_corruption_sword_pressed():
 		queue_free()
 		$CSLABEL.visible = false
 		$Instructions.visible = true 
+		f_to_attack.visible = true
+		
 	else:
 		player.has_sword = false
 		print("Not enough coins!")
+		print("Not enough coins")
+
 #-------------------------------------------------------------------------------
 
 	
