@@ -2,7 +2,6 @@ extends Node
 
 var score = 1
 
-#@onready var coin_label = $GameManager/CanvasLayer2/CoinLabel
 @onready var shop_menu = $"."
 #main variables
 #-------------------------------------------------------------------------------

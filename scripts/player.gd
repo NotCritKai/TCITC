@@ -18,7 +18,6 @@ var canTakeDamage: bool = true
 #-------------------------------------------------------------------------------
 var gravity: float = ProjectSettings.get_setting("physics/2d/default_gravity")
 
-@onready var sprite: Sprite2D = $Sprite2D
 @onready var death_screen: PackedScene = preload("res://scenes/death_menu.tscn")
 #preloads the death sceen for faster overlay
 @onready var animsprite: AnimatedSprite2D = $AnimatedSprite2D
