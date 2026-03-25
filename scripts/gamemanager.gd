@@ -3,7 +3,6 @@ extends Node
 var score = 1
 
 @onready var coin_label = $CanvasLayer2/CoinLabel
-@onready var coins_l = $Coins_L
 @onready var shop_menu = $"."
 #main variables
 #-------------------------------------------------------------------------------
