@@ -32,13 +32,13 @@ func _on_win_button_pressed():
 	
 func add_point():
 	score += 1
-	coin_label.text = str(score) + " Coins"
-	shop_menu.coin_label.text = str(score) + " Coins"
+	coin_label.text = str(score) + " Coin(s)"
+	shop_menu.coin_label.text = str(score) + " Coin(s)"
 
 func subtract_point():
 	score -= 15
-	coin_label.text = str(score) + " Coins"
-	shop_menu.coin_label.text = str(score) + " Coins"
+	coin_label.text = str(score) + " Coin(s)"
+	shop_menu.coin_label.text = str(score) + " Coin(s)"
 #-------------------------------------------------------------------------------
 #Subtract COINS test
 #signal score_changed(new_amount: int)

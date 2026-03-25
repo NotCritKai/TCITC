@@ -120,10 +120,8 @@ func _physics_process(delta: float) -> void:
 		get_tree().change_scene_to_file("res://scenes/death_menu.tscn")
 	move_and_slide()
 #-------------------------------------------------------------------------------
-	
-	
-	
-	
+
+
 #-------------------------------------------------------------------------------
 	if Input.is_action_just_pressed("attack") and not attack_cooldown:
 		attack()#When you press f it attacks

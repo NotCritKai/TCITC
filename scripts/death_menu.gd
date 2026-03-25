@@ -22,13 +22,10 @@ func _on_try_again_pressed():#restarts main scene 1
 #it enables the player and the sword and the button dissapears
 func _on_corruption_sword_pressed():
 	var player = get_tree().root.get_node("Game/Player")
-	player.has_sword = false
-	get_tree().paused = false
-	queue_free()
-	
 	var gm = get_tree().current_scene.get_node("GameManager")
 	
 	if gm.score >= 15:
+		player.has_sword = true 
 		gm.subtract_point()
 		get_tree().paused = false
 		visible = false
