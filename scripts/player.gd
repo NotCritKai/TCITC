@@ -30,9 +30,10 @@ var gravity: float = ProjectSettings.get_setting("physics/2d/default_gravity")
 #Attack variables
 var attack_damage: int = 10
 var attack_cooldown := false
-#-------------------------------------------------------------------------------
+#------------------------------------------------------------------------------
 
-
+var comment_test = 2 
+	
 
 
 #-------------------------------------------------------------------------------
