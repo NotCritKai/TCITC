@@ -5,7 +5,7 @@ var has_sword: bool = false
 #creates the sword sound variable to it can play
 #-------------------------------------------------------------------------------
 var SPEED = 200.0
-const JUMP_VELOCITY = -250.0
+var JUMP_VELOCITY = -250.0
 var coins = 0
 var weapon_equip: bool
 #speed+gravity variables
@@ -62,9 +62,11 @@ func _physics_process(delta: float) -> void:
 	#If you press shift the player sprints/speed increases
 	if Input.is_action_just_pressed("sprint"):
 		SPEED = SPEED * 2
+		JUMP_VELOCITY = JUMP_VELOCITY * 1.25
 	#If you release shift the player stops sprinting/speed decreases
 	if Input.is_action_just_released("sprint"):
 		SPEED = SPEED / 2
+		JUMP_VELOCITY = JUMP_VELOCITY / 1.25
 #-------------------------------------------------------------------------------
 
 
