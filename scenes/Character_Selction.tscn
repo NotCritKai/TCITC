@@ -475,7 +475,7 @@ offset_top = 2.0
 offset_right = 15.0
 offset_bottom = 17.0
 scale = Vector2(76.5945, 71.4368)
-color = Color(0.584314, 0.498039, 0.603922, 1)
+color = Color(0.639216, 0.639216, 0.639216, 1)
 
 [node name="ButtonRect" type="ColorRect" parent="."]
 layout_mode = 0
@@ -483,7 +483,7 @@ offset_left = 167.0
 offset_top = 184.0
 offset_right = 481.0
 offset_bottom = 498.0
-color = Color(0.662745, 0.662745, 0.662745, 1)
+color = Color(0.729412, 0.729412, 0.729412, 1)
 
 [node name="Button2Rect" type="ColorRect" parent="."]
 layout_mode = 0
@@ -491,7 +491,7 @@ offset_left = 565.0
 offset_top = 183.0
 offset_right = 879.0
 offset_bottom = 497.0
-color = Color(0.662745, 0.662745, 0.662745, 1)
+color = Color(0.729412, 0.729412, 0.729412, 1)
 
 [node name="Button" type="Button" parent="."]
 texture_filter = 1
@@ -532,12 +532,13 @@ offset_top = 35.0
 offset_right = 1057.0
 offset_bottom = 153.0
 theme_override_colors/font_color = Color(0.396078, 0.0862745, 0.541176, 1)
-theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.796078, 0.796078, 0.796078, 1)
 theme_override_font_sizes/font_size = 86
 text = "CHOOSE A CHARACTER!
 "
 
 [node name="PROGRESS" type="Label" parent="."]
+texture_filter = 1
 layout_mode = 0
 offset_left = 622.161
 offset_top = 397.118
@@ -550,15 +551,37 @@ theme_override_font_sizes/font_size = 37
 text = "IN PROGRESS"
 
 [node name="PROGRESS2" type="Label" parent="."]
+texture_filter = 1
 layout_mode = 0
-offset_left = 649.161
-offset_top = 265.118
-offset_right = 887.161
-offset_bottom = 316.118
+offset_left = 649.0
+offset_top = 265.0
+offset_right = 887.0
+offset_bottom = 316.0
 rotation = 0.584984
 theme_override_colors/font_color = Color(1, 0.988235, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 37
 text = "IN PROGRESS"
+
+[node name="Label2" type="Label" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 264.0
+offset_top = 500.0
+offset_right = 361.0
+offset_bottom = 523.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.996078, 0.203922, 0.215686, 1)
+text = "Male Knight "
+
+[node name="Label3" type="Label" parent="."]
+texture_filter = 1
+offset_left = 668.0
+offset_top = 501.0
+offset_right = 783.0
+offset_bottom = 524.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.290196, 0.843137, 1)
+text = "Female Knight "
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

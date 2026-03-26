@@ -118,14 +118,14 @@ func _physics_process(delta: float) -> void:
 
 	if currentHealth == 0:#If players health reaches 0 it changes to Death Scene
 		get_tree().change_scene_to_file("res://scenes/death_menu.tscn")
-	move_and_slide()
+	move_and_slide()#IF THE DIRECTION IS NOT 0 THE ENEMY MOVES FROM SIDE TO SIDE
 #-------------------------------------------------------------------------------
 
 
 #-------------------------------------------------------------------------------
 	if Input.is_action_just_pressed("attack") and not attack_cooldown:
 		attack()#When you press f it attacks
-		sword_sound.play()
+		sword_sound.play()#when you attack it plays the sound 
 #-------------------------------------------------------------------------------
 
 
@@ -138,7 +138,7 @@ func take_damage(amount: int) -> void:
 		currentHealth -= amount
 		print("Player took", amount, "damage. Current health:", currentHealth)
 		#prints how much damage was taken 
-		health_bar.value = currentHealth
+		health_bar.value = currentHealth #changes the value of health since it was damaged
 #-------------------------------------------------------------------------------
 	
 	
@@ -154,7 +154,7 @@ func attack():
 	$AttackArea.monitorable = true
 	print("Hitbox ON")
 
-	#Another Hitbox thinggggggggggg......
+	#Another Hitbox thing...
 	await get_tree().create_timer(0.2).timeout
 
 	$AttackArea.monitoring = false
@@ -172,7 +172,7 @@ func attack():
 #-------------------------------------------------------------------------------
 #when the player enters the enemies hitbox theyre damaged.=
 func _on_attack_area_body_entered(body):
-	if body.has_method("take_damage"):
+	if body.has_method("take_damage"):#if the player enters the enemy "body" they are damaged
 		body.take_damage(attack_damage)
 #-------------------------------------------------------------------------------
 

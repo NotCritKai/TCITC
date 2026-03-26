@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://b73bmeoc5ywmp"]
+[gd_scene load_steps=4 format=3 uid="uid://b73bmeoc5ywmp"]
 
 [ext_resource type="Script" path="res://scripts/credits.gd" id="1_0sh30"]
+[ext_resource type="Texture2D" uid="uid://k6elstv1h34" path="res://assets/Sprites/Characters/Knight Holding Sword.png" id="2_qw7cw"]
+[ext_resource type="Texture2D" uid="uid://dwbo5srjv25ej" path="res://assets/Enemies/Corrupted Slime.png" id="3_5udls"]
 
 [node name="Credits" type="Control"]
 process_mode = 3
@@ -17,16 +19,19 @@ offset_bottom = -126.0
 scale = Vector2(48.72, 27.1901)
 
 [node name="Label" type="Label" parent="."]
+texture_filter = 1
 layout_mode = 0
 offset_left = 7.0
 offset_top = 16.0
 offset_right = 315.0
 offset_bottom = 85.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 75
 text = "CREATED BY:"
 
 [node name="Names" type="Label" parent="."]
+texture_filter = 1
 layout_mode = 0
 offset_left = 28.0
 offset_top = 138.0
@@ -39,6 +44,7 @@ Braylon Ringo
 Charlie Brawders "
 
 [node name="Gratitudes" type="Label" parent="."]
+texture_filter = 1
 layout_mode = 0
 offset_left = 820.0
 offset_top = 286.0
@@ -52,6 +58,7 @@ text = "Thank YOU
 
 [node name="Exit" type="Button" parent="."]
 process_mode = 3
+texture_filter = 1
 layout_mode = 0
 offset_left = 972.0
 offset_top = 17.0
@@ -61,5 +68,26 @@ theme_override_colors/font_color = Color(0.454902, 0.0156863, 0.0862745, 1)
 theme_override_font_sizes/font_size = 50
 text = "EXIT"
 flat = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 792.0
+offset_top = 112.0
+offset_right = 1040.0
+offset_bottom = 376.0
+rotation = -0.403977
+scale = Vector2(0.903257, 0.794499)
+texture = ExtResource("2_qw7cw")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 904.0
+offset_top = 344.0
+offset_right = 1184.0
+offset_bottom = 624.0
+rotation = 0.109593
+texture = ExtResource("3_5udls")
 
 [connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]

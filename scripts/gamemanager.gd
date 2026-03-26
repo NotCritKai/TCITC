@@ -1,10 +1,12 @@
 extends Node
 
 #Main variables
-var score = 1
+var score = 1#Score only increases by 1, at a time. 
+@onready var control_menu = $"."
 
 @onready var coin_label = $CanvasLayer2/CoinLabel
 @onready var shop_menu = $"."
+@onready var audio_stream_player = $"../AudioStreamPlayer"
 
 #-------------------------------------------------------------------------------
 
@@ -26,27 +28,17 @@ func _on_pause_button_pressed():
 var playerWeaponEquip: bool
 #-------------------------------------------------------------------------------
 #secret win button 
-func _on_win_button_pressed():
+func _on_win_button_pressed():#When the secret button is pressed it changes to the win scene 
 	get_tree().change_scene_to_file("res://scenes/win_screen.tscn")
 #-------------------------------------------------------------------------------
 	
 func add_point():
-	score += 1
-	coin_label.text = str(score) + " Coin(s)"
+	score += 1#adds a point to the score when the coin is collected
+	coin_label.text = str(score) + " Coin(s)"#updates the label in scene 1 
 	shop_menu.coin_label.text = str(score) + " Coin(s)"
 
 func subtract_point():
-	score -= 15
-	coin_label.text = str(score) + " Coin(s)"
-	shop_menu.coin_label.text = str(score) + " Coin(s)"
+	score -= 15#subtracts a point to the score when the coin is collected
+	coin_label.text = str(score) + " Coin(s)"#updates the label in scene 1 
+	shop_menu.coin_label.text = str(score) + " Coin(s)"#updates the label in scene 1 
 #-------------------------------------------------------------------------------
-#Subtract COINS test
-#signal score_changed(new_amount: int)
-
-
-#func subtract_coins(amount: int) -> bool:
-	#if score>= amount:
-		#score -= amount
-		#score_changed.emit(score)
-		#return true 
-	#return false

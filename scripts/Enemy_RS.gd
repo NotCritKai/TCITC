@@ -53,6 +53,7 @@ func chase_player() -> void:
 	#chases player with speed 
 #-------------------------------------------------------------------------------
 
+
 #-------------------------------------------------------------------------------
 func is_player_in_range() -> bool:
 	return player_node and global_position.distance_to(player_node.global_position) <= detection_range
