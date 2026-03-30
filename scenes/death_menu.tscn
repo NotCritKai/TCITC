@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://c1ftujv5o5u0l"]
+[gd_scene load_steps=17 format=3 uid="uid://c1ftujv5o5u0l"]
 
 [ext_resource type="Script" path="res://scripts/death_menu.gd" id="1_mr7k3"]
 [ext_resource type="Texture2D" uid="uid://debfxhk6oic4a" path="res://assets/Main_Menu_Assets/10.png" id="2_jxxqc"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bf6juqt0m73wk" path="res://assets/Main_Menu_Assets/3.png" id="6_o6a1m"]
 [ext_resource type="Texture2D" uid="uid://ctx62isclk0xb" path="res://assets/Main_Menu_Assets/2.png" id="7_h252v"]
 [ext_resource type="Texture2D" uid="uid://dfn2r6ghmwou7" path="res://assets/Main_Menu_Assets/5.png" id="8_pch3m"]
+[ext_resource type="AudioStream" uid="uid://b40rles6ywja" path="res://assets/Sounds/TCITC Death Music.mp3" id="9_mqcaw"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cvw4h"]
 texture = ExtResource("2_jxxqc")
@@ -72,6 +73,10 @@ offset_bottom = 619.0
 theme_override_styles/normal = SubResource("StyleBoxTexture_4r8m1")
 theme_override_styles/hover = SubResource("StyleBoxTexture_bwfgx")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_i1uaw")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_mqcaw")
+autoplay = true
 
 [connection signal="pressed" from="TryAgain" to="." method="_on_try_again_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

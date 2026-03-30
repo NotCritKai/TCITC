@@ -1,5 +1,6 @@
 extends Control
-
+@onready var audio_stream_player = $"../AudioStreamPlayer"
+#allows the death sound/music to play 
 @onready var f_to_attack = $"../../../f_to_attack"
 #creates f to attack variable so it can be used for scene 1 
 

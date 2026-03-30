@@ -576,6 +576,7 @@ text = "Male Knight "
 
 [node name="Label3" type="Label" parent="."]
 texture_filter = 1
+layout_mode = 0
 offset_left = 668.0
 offset_top = 501.0
 offset_right = 783.0
