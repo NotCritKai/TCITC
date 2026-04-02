@@ -3,8 +3,8 @@
 [ext_resource type="Script" path="res://scripts/Character_Selction.gd" id="1_3tag6"]
 [ext_resource type="Texture2D" uid="uid://c2aqabyf1226v" path="res://assets/Sprites/Characters/Knight_Tilesets.png" id="2_a2bko"]
 [ext_resource type="Texture2D" uid="uid://dsy4ba5a4l6en" path="res://assets/Sprites/Characters/Knight_Sword_TILESET.png" id="3_7ddmj"]
-[ext_resource type="Texture2D" uid="uid://d3v5a5vdxow08" path="res://assets/Sprites/Characters/Knight with Hand but no weapon_TILESET (female).png" id="3_7uabu"]
 [ext_resource type="Texture2D" uid="uid://cclvc2o7ehxjb" path="res://assets/Sprites/Characters/Knight_Sword_WALKING.png" id="4_vc6iu"]
+[ext_resource type="SpriteFrames" uid="uid://peofch3q5i7w" path="res://assets/Sprites/Characters/KnightPlayer._Female.tres" id="5_i6n3k"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8jvod"]
 atlas = ExtResource("2_a2bko")
@@ -293,7 +293,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_vo0cf")
 }],
-"loop": false,
+"loop": true,
 "name": &"sword_attack",
 "speed": 10.0
 }, {
@@ -325,7 +325,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_7ci3c")
 }],
-"loop": true,
+"loop": false,
 "name": &"sword_attack_walking",
 "speed": 7.0
 }, {
@@ -371,7 +371,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_nydgp")
 }],
-"loop": false,
+"loop": true,
 "name": &"sword_jump",
 "speed": 10.0
 }, {
@@ -510,20 +510,27 @@ texture_filter = 1
 position = Vector2(21, 23)
 scale = Vector2(0.805683, 0.802252)
 sprite_frames = SubResource("SpriteFrames_5uaii")
-animation = &"sword_attack_walking"
-autoplay = "sword_attack_walking"
+animation = &"sword_jump"
+autoplay = "sword_jump"
 
 [node name="Button2" type="Button" parent="."]
 texture_filter = 1
 layout_mode = 0
-offset_left = 550.0
-offset_top = 175.0
-offset_right = 598.0
-offset_bottom = 223.0
-scale = Vector2(7.67422, 7.67422)
+offset_left = 565.0
+offset_top = 182.0
+offset_right = 613.0
+offset_bottom = 218.0
+scale = Vector2(6.55879, 8.64919)
 action_mode = 0
-icon = ExtResource("3_7uabu")
 flat = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Button2"]
+texture_filter = 1
+position = Vector2(25.1571, 20.58)
+scale = Vector2(0.864385, 0.74408)
+sprite_frames = ExtResource("5_i6n3k")
+animation = &"sword_jump"
+autoplay = "sword_jump"
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
@@ -536,32 +543,6 @@ theme_override_colors/font_shadow_color = Color(0.796078, 0.796078, 0.796078, 1)
 theme_override_font_sizes/font_size = 86
 text = "CHOOSE A CHARACTER!
 "
-
-[node name="PROGRESS" type="Label" parent="."]
-texture_filter = 1
-layout_mode = 0
-offset_left = 974.0
-offset_top = 278.0
-offset_right = 1212.0
-offset_bottom = 329.0
-rotation = -0.655734
-theme_override_colors/font_color = Color(1, 0.988235, 0, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 37
-text = "IN PROGRESS"
-
-[node name="PROGRESS2" type="Label" parent="."]
-texture_filter = 1
-layout_mode = 0
-offset_left = 943.0
-offset_top = 148.0
-offset_right = 1181.0
-offset_bottom = 199.0
-rotation = 0.584984
-theme_override_colors/font_color = Color(1, 0.988235, 0, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 37
-text = "IN PROGRESS"
 
 [node name="Label2" type="Label" parent="."]
 texture_filter = 1
