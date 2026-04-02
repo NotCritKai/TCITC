@@ -2,6 +2,17 @@ extends CharacterBody2D
 var has_sword: bool = false
 @onready var animated_sprite_2d = %AnimatedSprite2D
 @onready var sword_sound = $"Sword Sound"
+
+
+
+
+#preloads the character images to change between them quickly
+const KNIGHT_PLAYER__FEMALE = preload("res://assets/Sprites/Characters/KnightPlayer._Female.tres")
+const KNIGHT_PLAYER__MALE = preload("res://assets/Sprites/Characters/KnightPlayer._Male.tres")
+
+
+
+
 #creates the sword sound variable to it can play
 #-------------------------------------------------------------------------------
 var SPEED = 200.0
@@ -43,6 +54,11 @@ func _ready() -> void:
 	
 	health_bar.max_value = maxHealth
 	health_bar.value = currentHealth
+	#if the gamemanager is skin it chnages to female otherwise it is the male one when buttons are pressed. 
+	if Gamemanager.skin:
+		animated_sprite_2d.sprite_frames = KNIGHT_PLAYER__FEMALE
+	else:
+		animated_sprite_2d.sprite_frames = KNIGHT_PLAYER__MALE
 #player gets health to be damaged later 
 #-------------------------------------------------------------------------------
 

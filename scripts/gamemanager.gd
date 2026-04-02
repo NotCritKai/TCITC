@@ -1,12 +1,15 @@
 extends Node
 
 #Main variables
-var score = 1#Score only increases by 1, at a time. 
+var score = 1#Score only increases by 1 at a time. 
 @onready var control_menu = $"."
 
 @onready var coin_label = $CanvasLayer2/CoinLabel
 @onready var shop_menu = $"."
 @onready var audio_stream_player = $"../AudioStreamPlayer"
+
+@export var skin : bool = false #makes the skin variable false for the character selection 
+
 
 #-------------------------------------------------------------------------------
 
