@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d3v5a5vdxow08"
-path="res://.godot/imported/Knight with Hand but no weapon (female).png-319cecaf6f3c9dfaf335dd8e421efb13.ctex"
+uid="uid://ckb56b0b0qx5x"
+path="res://.godot/imported/Knight with weapon (female)_TILESET.png-5c3237bf06bb69e047cd62e91735d307.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprites/Characters/Knight with Hand but no weapon (female).png"
-dest_files=["res://.godot/imported/Knight with Hand but no weapon (female).png-319cecaf6f3c9dfaf335dd8e421efb13.ctex"]
+source_file="res://assets/Sprites/Characters/Knight with weapon (female)_TILESET.png"
+dest_files=["res://.godot/imported/Knight with weapon (female)_TILESET.png-5c3237bf06bb69e047cd62e91735d307.ctex"]
 
 [params]
 

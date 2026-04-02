@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/Character_Selction.gd" id="1_3tag6"]
 [ext_resource type="Texture2D" uid="uid://c2aqabyf1226v" path="res://assets/Sprites/Characters/Knight_Tilesets.png" id="2_a2bko"]
 [ext_resource type="Texture2D" uid="uid://dsy4ba5a4l6en" path="res://assets/Sprites/Characters/Knight_Sword_TILESET.png" id="3_7ddmj"]
-[ext_resource type="Texture2D" uid="uid://d3v5a5vdxow08" path="res://assets/Sprites/Characters/Knight with Hand but no weapon (female).png" id="3_7uabu"]
+[ext_resource type="Texture2D" uid="uid://d3v5a5vdxow08" path="res://assets/Sprites/Characters/Knight with Hand but no weapon_TILESET (female).png" id="3_7uabu"]
 [ext_resource type="Texture2D" uid="uid://cclvc2o7ehxjb" path="res://assets/Sprites/Characters/Knight_Sword_WALKING.png" id="4_vc6iu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8jvod"]
