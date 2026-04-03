@@ -7,8 +7,8 @@ var has_sword: bool = false#Says that the player does not have sword to begin wi
 
 
 #preloads the character images to change between them quickly
-const KNIGHT_PLAYER__FEMALE = preload("res://assets/Sprites/Characters/KnightPlayer._Female.tres")
-const KNIGHT_PLAYER__MALE = preload("res://assets/Sprites/Characters/KnightPlayer._Male.tres")
+const KNIGHT_PLAYER__FEMALE = preload("res://scenes/KnightPlayer._Female.tres")
+const KNIGHT_PLAYER__MALE = preload("res://scenes//KnightPlayer._Male.tres")
 
 
 

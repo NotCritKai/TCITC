@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cubxiovs5kdu" path="res://assets/Sprites/Knight with No Weapon.png" id="1_ajwlp"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_uyc6u"]
-[ext_resource type="SpriteFrames" uid="uid://biwrvew88jto3" path="res://scenes/KnightPlayer._Male.tres" id="2_3jxd4"]
+[ext_resource type="SpriteFrames" uid="uid://biwrvew88jto3" path="res://scenes/KnightPlayer._Male.tres" id="2_1i2wc"]
 [ext_resource type="Texture2D" uid="uid://c01r1jqd6ljra" path="res://assets/Sprites/Piskel HeartIcon.png" id="6_50oy4"]
 [ext_resource type="AudioStream" uid="uid://dp34ux2m7rcc3" path="res://assets/Sounds/sword sound.mp3" id="6_rckeg"]
 
@@ -32,7 +32,7 @@ script = ExtResource("1_uyc6u")
 unique_name_in_owner = true
 texture_filter = 1
 position = Vector2(7, 12)
-sprite_frames = ExtResource("2_3jxd4")
+sprite_frames = ExtResource("2_1i2wc")
 animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
