@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://d4mvyywr31kx6"]
+[gd_scene load_steps=15 format=3 uid="uid://d4mvyywr31kx6"]
 
 [ext_resource type="Script" path="res://scripts/death_menu.gd" id="1_cqwt3"]
 [ext_resource type="Texture2D" uid="uid://yetwtrwai35x" path="res://assets/Shop_Assets/The Crusade Into The Corruption.png" id="2_j4br7"]
@@ -12,22 +12,20 @@
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_heu0m"]
 texture = ExtResource("2_j4br7")
 
-[sub_resource type="Theme" id="Theme_v23u6"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mfksy"]
-texture = ExtResource("2_vvlvd")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3myte"]
-texture = ExtResource("3_asbvt")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b453b"]
-texture = ExtResource("4_61xuw")
-
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hs515"]
 texture = ExtResource("6_bukvb")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mtred"]
 texture = ExtResource("6_bukvb")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c1vy1"]
+texture = ExtResource("4_61xuw")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i6qgs"]
+texture = ExtResource("3_asbvt")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1rkks"]
+texture = ExtResource("2_vvlvd")
 
 [node name="Shop_Menu" type="Control"]
 process_mode = 3
@@ -70,21 +68,6 @@ offset_bottom = -52.0
 scale = Vector2(8.05617, 8.27631)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_styles/normal = SubResource("StyleBoxTexture_heu0m")
-
-[node name="Return_Button" type="Button" parent="."]
-process_mode = 3
-texture_filter = 1
-layout_mode = 0
-offset_left = 809.0
-offset_top = 483.0
-offset_right = 1360.0
-offset_bottom = 807.0
-scale = Vector2(0.766237, 0.841148)
-theme = SubResource("Theme_v23u6")
-theme_override_font_sizes/font_size = 39
-theme_override_styles/normal = SubResource("StyleBoxTexture_mfksy")
-theme_override_styles/hover = SubResource("StyleBoxTexture_3myte")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_b453b")
 
 [node name="CorruptionSword" type="Button" parent="."]
 texture_filter = 1
@@ -163,7 +146,33 @@ TO THE LEFT
 ONCE YOU HAVE 
 15 COINS!\""
 
-[connection signal="pressed" from="Return_Button" to="." method="_on_return_button_pressed"]
-[connection signal="pressed" from="CorruptionSword" to="." method="_on_button_pressed"]
+[node name="NotEnoughCoins_L" type="Label" parent="."]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 56.0
+offset_top = 560.0
+offset_right = 940.0
+offset_bottom = 697.0
+rotation = -0.326351
+theme_override_colors/font_color = Color(0.898039, 0.85098, 0.345098, 1)
+theme_override_font_sizes/font_size = 100
+text = "Not Enough Coins!"
+
+[node name="Leave" type="Button" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 800.0
+offset_top = 484.0
+offset_right = 1030.0
+offset_bottom = 595.0
+scale = Vector2(1.51397, 1.9308)
+theme_override_font_sizes/font_size = 75
+theme_override_styles/normal = SubResource("StyleBoxTexture_c1vy1")
+theme_override_styles/hover = SubResource("StyleBoxTexture_i6qgs")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_1rkks")
+
 [connection signal="pressed" from="CorruptionSword" to="." method="_on_corruption_sword_pressed"]
+[connection signal="pressed" from="CorruptionSword" to="." method="_on_button_pressed"]
 [connection signal="visibility_changed" from="CorruptionSword" to="." method="_on_corruption_sword_visibility_changed"]
+[connection signal="pressed" from="Leave" to="." method="_on_leave_pressed"]

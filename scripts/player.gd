@@ -1,8 +1,8 @@
 extends CharacterBody2D
-var has_sword: bool = false
+var has_sword: bool = false#Says that the player does not have sword to begin with
 @onready var animated_sprite_2d = %AnimatedSprite2D
 @onready var sword_sound = $"Sword Sound"
-
+#creates the sword sound variable to it can play
 
 
 
@@ -13,12 +13,12 @@ const KNIGHT_PLAYER__MALE = preload("res://assets/Sprites/Characters/KnightPlaye
 
 
 
-#creates the sword sound variable to it can play
+
 #-------------------------------------------------------------------------------
-var SPEED = 200.0
-var JUMP_VELOCITY = -250.0
-var coins = 0
-var weapon_equip: bool
+var SPEED = 200.0#player speed
+var JUMP_VELOCITY = -250.0#player Gravity/Jump
+var coins = 0#Default coin amount 
+var weapon_equip: bool#creates the weapon bool
 #speed+gravity variables
 #-------------------------------------------------------------------------------
 @export var maxHealth: int = 100
@@ -42,10 +42,8 @@ var gravity: float = ProjectSettings.get_setting("physics/2d/default_gravity")
 var attack_damage: int = 10
 var attack_cooldown := false
 #------------------------------------------------------------------------------
-
-var comment_test = 2 
+ 
 	
-
 
 #-------------------------------------------------------------------------------
 func _ready() -> void:
