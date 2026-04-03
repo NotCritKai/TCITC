@@ -13,7 +13,6 @@ config_version=5
 config/name="TCITC"
 run/main_scene="res://scenes/Main_Menu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
-config/icon="res://icon.svg"
 
 [audio]
 
@@ -38,6 +37,7 @@ folder_colors={
 "res://assets/Inventory Assets/": "blue",
 "res://assets/Inventory Assets/Inventory Items/": "blue",
 "res://assets/Main_Menu_Assets/": "blue",
+"res://assets/Pause_Menu_Assets/": "blue",
 "res://assets/Shop_Assets/": "blue",
 "res://assets/Sounds/": "green",
 "res://assets/Sprites/": "yellow",
