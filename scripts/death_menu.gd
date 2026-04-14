@@ -17,9 +17,11 @@ func _on_quit_pressed():
 #-------------------------------------------------------------------------------
 
 #-------------------------------------------------------------------------------
-#Death menu code is here for some reason....
 func _on_try_again_pressed():#restarts main scene 1 
 	get_tree().change_scene_to_file("res://scenes/Scene1GAME.tscn")
+	
+func _on_main_menu_pressed():
+	get_tree().change_scene_to_file("res://scenes/Main_Menu.tscn")
 #-------------------------------------------------------------------------------
 
 #-------------------------------------------------------------------------------
@@ -46,10 +48,3 @@ func _on_corruption_sword_pressed():
 		$NotEnoughCoins_L.visible = true 
 		
 #-------------------------------------------------------------------------------
-
-	
-
-	
-
-
-
