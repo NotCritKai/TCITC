@@ -33,7 +33,7 @@ unique_name_in_owner = true
 texture_filter = 1
 position = Vector2(7, 12)
 sprite_frames = ExtResource("2_1i2wc")
-animation = &"idle"
+animation = &"sword_attack"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(6, 10)

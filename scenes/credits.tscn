@@ -17,6 +17,14 @@ offset_top = -166.0
 offset_right = -320.0
 offset_bottom = -126.0
 scale = Vector2(48.72, 27.1901)
+color = Color(0.768627, 0.717647, 0.929412, 1)
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect"]
+offset_left = -99.8358
+offset_top = 255.608
+offset_right = -90.8358
+offset_bottom = 266.608
+scale = Vector2(48.72, 27.1901)
 
 [node name="Label" type="Label" parent="."]
 texture_filter = 1
