@@ -4,7 +4,7 @@ extends Area2D
 #-------------------------------------------------------------------------------
 func _on_body_entered(_body):
 	print("You Died!")#prints that the player died
-	timer.start()
+	timer.start()#stars the timer (obviously) 
 #-------------------------------------------------------------------------------
 #When the timer is changed due to damage taken it will switch to the death scene
 func _on_timer_timeout():

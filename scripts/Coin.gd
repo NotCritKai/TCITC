@@ -4,7 +4,7 @@ extends Area2D
 #main variables 
 #-------------------------------------------------------------------------------
 func _on_body_entered(_body):
-	game_manager.add_point()
+	game_manager.add_point()#calls add point
 	pickup_coins_animation.play("pickup")
 	#when player touches coin it adds a point and plays the pickup sound
 #-------------------------------------------------------------------------------

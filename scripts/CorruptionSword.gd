@@ -11,3 +11,4 @@ func _on_pressed():
 		print(Gamemanager.score)
 	else:
 		print("Not Enough Coins!")
+#if the player does not have enough coins then it prints in the tester

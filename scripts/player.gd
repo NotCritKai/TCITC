@@ -7,8 +7,8 @@ var has_sword: bool = false#Says that the player does not have sword to begin wi
 
 
 #preloads the character images to change between them quickly
-const KNIGHT_PLAYER__FEMALE = preload("res://scenes/KnightPlayer._Female.tres")
-const KNIGHT_PLAYER__MALE = preload("res://scenes//KnightPlayer._Male.tres")
+const KNIGHT_PLAYER__FEMALE = preload("res://scenes/KnightPlayer._Female.tres")#Female
+const KNIGHT_PLAYER__MALE = preload("res://scenes//KnightPlayer._Male.tres")#Male
 
 
 
@@ -17,8 +17,9 @@ const KNIGHT_PLAYER__MALE = preload("res://scenes//KnightPlayer._Male.tres")
 #-------------------------------------------------------------------------------
 var SPEED = 200.0#player speed
 var JUMP_VELOCITY = -250.0#player Gravity/Jump
-var coins = 0#Default coin amount 
+var coins = 0#starting coin amount 
 var weapon_equip: bool#creates the weapon bool
+
 #speed+gravity variables
 #-------------------------------------------------------------------------------
 @export var maxHealth: int = 100
@@ -39,7 +40,7 @@ var gravity: float = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 #-------------------------------------------------------------------------------
 #Attack variables
-var attack_damage: int = 10
+var attack_damage: int = 10#damage the player deals
 var attack_cooldown := false
 #------------------------------------------------------------------------------
  
@@ -52,7 +53,7 @@ func _ready() -> void:
 	
 	health_bar.max_value = maxHealth
 	health_bar.value = currentHealth
-	#if the gamemanager is skin it chnages to female otherwise it is the male one when buttons are pressed. 
+	#if the gamemanager has skin as true it chnages to the female skin otherwise it is the male one when buttons are pressed. 
 	if Gamemanager.skin:
 		animated_sprite_2d.sprite_frames = KNIGHT_PLAYER__FEMALE
 	else:

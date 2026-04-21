@@ -5,7 +5,7 @@ extends Control
 #creates f to attack variable so it can be used for scene 1 
 
 #-------------------------------------------------------------------------------
-#Shop code
+#Shop code????
 
 func _on_leave_pressed():
 	get_tree().paused = false #Unpauses everything
@@ -13,20 +13,20 @@ func _on_leave_pressed():
 
 func _on_quit_pressed():
 	get_tree().quit()#When the player presses quit it closes the game completely
-#Shop code
+#Shop code?????
 #-------------------------------------------------------------------------------
 
 #-------------------------------------------------------------------------------
 func _on_try_again_pressed():#restarts main scene 1 
 	get_tree().change_scene_to_file("res://scenes/Scene1GAME.tscn")
-	
-func _on_main_menu_pressed():
+
+func _on_main_menu_pressed():	#goes to the main menu
 	get_tree().change_scene_to_file("res://scenes/Main_Menu.tscn")
 #-------------------------------------------------------------------------------
 
 #-------------------------------------------------------------------------------
 #when the button is pressed in the shop 
-#it enables the player and the sword and the button dissapears
+#it enables the player with the sword and the button dissapears
 func _on_corruption_sword_pressed():
 	var player = get_tree().root.get_node("Game/Player")#gets the gm =GameManager 
 	var gm = get_tree().current_scene.get_node("GameManager")#makes gm =GameManager 
@@ -36,7 +36,7 @@ func _on_corruption_sword_pressed():
 		gm.subtract_point()#Subtracts 15 coins 
 		get_tree().paused = false#paused in shop scene is false
 		visible = false#Closes the shop scene
-		queue_free()#Extra Close 
+		queue_free()#Extra close variable 
 		
 		$CSLABEL.visible = false#Makes all the labels invis
 		$Instructions.visible = true #Makes the instructions visible in shop scene
@@ -45,6 +45,6 @@ func _on_corruption_sword_pressed():
 	else:
 		get_tree().paused = false
 		player.has_sword = false#Player doesnt have sword
-		$NotEnoughCoins_L.visible = true 
+		$NotEnoughCoins_L.visible = true #says the player does not have enough coins
 		
 #-------------------------------------------------------------------------------

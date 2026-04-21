@@ -61,7 +61,7 @@ func is_player_in_range() -> bool:
 #-------------------------------------------------------------------------------
 #enemy_damages_player_on_collision
 func _on_area_2d_body_entered(body):
-	print("Enemy collided with:", body.name) #when enemy hits player it prints
+	print("enemy collided with ", body.name) #when enemy hits player it prints
 	if body.has_method("take_damage"):
 		#deals damage to the player when body has been breached
 		body.take_damage(damage)
@@ -75,7 +75,7 @@ func take_damage(amount: int) -> void:
 	print("Enemy took", amount, "damage. Health:", current_health)#prints enemy damage
 
 	if current_health <= 0:
-		die()#if the enemy has health below zero it calls die()
+		die()#if the enemy has health below zero it calls die() and kills it
 		
 #-------------------------------------------------------------------------------
 	

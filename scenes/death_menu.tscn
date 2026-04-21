@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://c1ftujv5o5u0l"]
+[gd_scene load_steps=17 format=3 uid="uid://c1ftujv5o5u0l"]
 
 [ext_resource type="Script" path="res://scripts/death_menu.gd" id="1_mr7k3"]
 [ext_resource type="Texture2D" uid="uid://debfxhk6oic4a" path="res://assets/Main_Menu_Assets/10.png" id="2_jxxqc"]
@@ -6,10 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dc2pchq8u5o4s" path="res://assets/Main_Menu_Assets/12.png" id="4_5bs00"]
 [ext_resource type="Texture2D" uid="uid://bjqqiurmstpwq" path="res://assets/Main_Menu_Assets/13.png" id="5_vkawr"]
 [ext_resource type="Texture2D" uid="uid://bf6juqt0m73wk" path="res://assets/Main_Menu_Assets/3.png" id="6_o6a1m"]
-[ext_resource type="Texture2D" uid="uid://cst3hnbptb5oo" path="res://assets/Main_Menu_Assets/33.png" id="6_xd1lh"]
-[ext_resource type="Texture2D" uid="uid://bvofepfiw281a" path="res://assets/Main_Menu_Assets/34.png" id="7_h02kk"]
 [ext_resource type="Texture2D" uid="uid://ctx62isclk0xb" path="res://assets/Main_Menu_Assets/2.png" id="7_h252v"]
-[ext_resource type="Texture2D" uid="uid://bg1bb8huy2iwb" path="res://assets/Main_Menu_Assets/35.png" id="8_b8n8u"]
 [ext_resource type="Texture2D" uid="uid://dfn2r6ghmwou7" path="res://assets/Main_Menu_Assets/5.png" id="8_pch3m"]
 [ext_resource type="AudioStream" uid="uid://b40rles6ywja" path="res://assets/Sounds/TCITC Death Music.mp3" id="9_mqcaw"]
 
@@ -24,15 +21,6 @@ texture = ExtResource("4_5bs00")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gbayw"]
 texture = ExtResource("5_vkawr")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cxsh8"]
-texture = ExtResource("6_xd1lh")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_orl7n"]
-texture = ExtResource("7_h02kk")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kt71g"]
-texture = ExtResource("8_b8n8u")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4r8m1"]
 texture = ExtResource("6_o6a1m")
@@ -68,30 +56,13 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_cvw4h")
 
 [node name="TryAgain" type="Button" parent="."]
 layout_mode = 0
-<<<<<<< HEAD
 offset_left = 315.0
 offset_top = 283.0
 offset_right = 745.0
 offset_bottom = 487.0
-=======
-offset_left = 384.0
-offset_top = 257.0
-offset_right = 728.0
-offset_bottom = 461.0
->>>>>>> 335fd52e8406ca09a621a912269abdc08c8464f4
 theme_override_styles/normal = SubResource("StyleBoxTexture_i63c6")
 theme_override_styles/hover = SubResource("StyleBoxTexture_svk63")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_gbayw")
-
-[node name="MainMenu" type="Button" parent="."]
-layout_mode = 0
-offset_left = 384.0
-offset_top = 357.0
-offset_right = 728.0
-offset_bottom = 561.0
-theme_override_styles/normal = SubResource("StyleBoxTexture_cxsh8")
-theme_override_styles/hover = SubResource("StyleBoxTexture_orl7n")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_kt71g")
 
 [node name="Quit" type="Button" parent="."]
 layout_mode = 0
@@ -108,5 +79,4 @@ stream = ExtResource("9_mqcaw")
 autoplay = true
 
 [connection signal="pressed" from="TryAgain" to="." method="_on_try_again_pressed"]
-[connection signal="pressed" from="MainMenu" to="." method="_on_main_menu_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

@@ -1,5 +1,5 @@
 extends CharacterBody2D
-
+#SAME PLAYER SCRIPT JUST FEMALE VERSION
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
