@@ -15,7 +15,7 @@ var score = 1#Score only increases by 1 at a time.
 
 #-------------------------------------------------------------------------------
 func _on_go_to_shop_button_pressed():
-	var shop_scene = load("res://scenes/shop_menu.tscn")#loads thw shop  
+	var shop_scene = load("res://scenes/shop_menu.tscn")#loads the shop  
 	var shop = shop_scene.instantiate()#initiates shop OVERLAY
 	get_tree().current_scene.get_node("GameManager/CanvasLayer2").add_child(shop)
 	get_tree().paused = true #pauses
@@ -26,7 +26,7 @@ func _on_pause_button_pressed():
 	var pause_scene = load("res://scenes/pause_menu.tscn")#loads the menu  
 	var pause = pause_scene.instantiate()#initiates menu 
 	get_tree().current_scene.get_node("GameManager/CanvasLayer2/Pause_Button").add_child(pause)
-	get_tree().paused = true #pauses
+	get_tree().paused = true #pauses scene
 #-------------------------------------------------------------------------------
 var playerWeaponEquip: bool
 #-------------------------------------------------------------------------------
