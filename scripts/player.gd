@@ -116,12 +116,12 @@ func _physics_process(delta: float) -> void:
 	#Flips the player and hitbox when facing diff directions (L and R)
 	if direction > 0:
 		animsprite.flip_h = false
-	elif has_sword:
-		$AttackArea.position.x = -abs($AttackArea.position.x)
+		if has_sword:
+			$AttackArea.position.x = abs($AttackArea.position.x)
 	if direction < 0:
 		animsprite.flip_h = true
-	elif has_sword:
-		$AttackArea.position.x = abs($AttackArea.position.x)
+		if has_sword:
+			$AttackArea.position.x = -abs($AttackArea.position.x)
 #-------------------------------------------------------------------------------
 		
 		

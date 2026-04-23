@@ -41,6 +41,7 @@ folder_colors={
 "res://assets/Shop_Assets/": "blue",
 "res://assets/Sounds/": "green",
 "res://assets/Sprites/": "yellow",
+"res://assets/Win_Screne_Assets/": "blue",
 "res://scenes/": "red",
 "res://scripts/": "orange"
 }
