@@ -56,10 +56,10 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_cvw4h")
 
 [node name="TryAgain" type="Button" parent="."]
 layout_mode = 0
-offset_left = 315.0
-offset_top = 283.0
-offset_right = 745.0
-offset_bottom = 487.0
+offset_left = 333.0
+offset_top = 335.0
+offset_right = 763.0
+offset_bottom = 539.0
 theme_override_styles/normal = SubResource("StyleBoxTexture_i63c6")
 theme_override_styles/hover = SubResource("StyleBoxTexture_svk63")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_gbayw")
