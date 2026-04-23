@@ -1,13 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://b68ns53vnimu3"]
+[gd_scene load_steps=5 format=3 uid="uid://b68ns53vnimu3"]
 
-[ext_resource type="Texture2D" uid="uid://cygly8x1k5olg" path="res://assets/Win_Screne_Assets/ConfettiGD.png" id="1_00i0n"]
+[ext_resource type="Texture2D" uid="uid://d3v0a6rh06ehs" path="res://assets/Win_Screne_Assets/confetti.png" id="1_1xwdw"]
+[ext_resource type="AudioStream" uid="uid://ctqf5hd506e5d" path="res://assets/Sounds/CrowdCheering.mp3" id="2_g4qcw"]
 
 [sub_resource type="GDScript" id="GDScript_3qpxn"]
 script/source = "extends Control
 
 func _ready():
 	$Confetti.emitting = true
-
+	$Win.play()
 func _on_restarts_button_pressed():
 	get_tree().change_scene_to_file(\"res://scenes/Character_Selction.tscn\")
 "
@@ -53,22 +54,27 @@ text = "Play Again?
 flat = true
 
 [node name="Confetti" type="CPUParticles2D" parent="."]
-position = Vector2(584, -116)
+position = Vector2(544, 336)
 emitting = false
 lifetime = 5.0
 one_shot = true
 explosiveness = 0.8
-randomness = 0.2
+randomness = 1.0
 lifetime_randomness = 0.1
-texture = ExtResource("1_00i0n")
+texture = ExtResource("1_1xwdw")
 emission_shape = 3
-emission_rect_extents = Vector2(400, 10)
-gravity = Vector2(0, 200)
+emission_rect_extents = Vector2(500, 10)
+gravity = Vector2(0, 100)
 initial_velocity_min = 20.0
 initial_velocity_max = 40.0
 angle_min = 90.0
 angle_max = 90.0
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="Win" type="AudioStreamPlayer2D" parent="."]
+process_mode = 3
+position = Vector2(-416, 2720)
+stream = ExtResource("2_g4qcw")
+volume_db = 15.0
+autoplay = true
 
 [connection signal="pressed" from="restarts_button" to="." method="_on_restarts_button_pressed"]
