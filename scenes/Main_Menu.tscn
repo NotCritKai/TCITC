@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://bkjdjq0pbt8ys"]
+[gd_scene load_steps=20 format=3 uid="uid://bkjdjq0pbt8ys"]
 
 [ext_resource type="Script" path="res://scripts/Main_Menu.gd" id="1_mf5wf"]
 [ext_resource type="Texture2D" uid="uid://bbxu20lqtd8pg" path="res://assets/Main_Menu_Assets/Add a heading.png" id="2_ymvil"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bf6juqt0m73wk" path="res://assets/Main_Menu_Assets/3.png" id="6_insx3"]
 [ext_resource type="Texture2D" uid="uid://ctx62isclk0xb" path="res://assets/Main_Menu_Assets/2.png" id="7_wrfhq"]
 [ext_resource type="Texture2D" uid="uid://dfn2r6ghmwou7" path="res://assets/Main_Menu_Assets/5.png" id="8_facpk"]
+[ext_resource type="Texture2D" uid="uid://dsis5lil6ju4q" path="res://assets/Main_Menu_Assets/Corrutption Flakes.png" id="10_u63kr"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oramu"]
 texture = ExtResource("2_ymvil")
@@ -94,6 +95,26 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_r6w42")
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_ps2ol")
 autoplay = true
+
+[node name="Flakes" type="CPUParticles2D" parent="."]
+position = Vector2(544, -512)
+amount = 7
+lifetime = 8.0
+preprocess = 4.0
+speed_scale = 0.2
+lifetime_randomness = 1.0
+texture = ExtResource("10_u63kr")
+emission_shape = 1
+emission_sphere_radius = 90.0
+gravity = Vector2(0, 250)
+initial_velocity_min = 20.0
+initial_velocity_max = 40.0
+angular_velocity_min = 5.0
+angular_velocity_max = 5.0
+damping_min = 0.1
+damping_max = 0.1
+angle_min = 90.0
+angle_max = 90.0
 
 [connection signal="pressed" from="Button" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_quit_pressed"]
